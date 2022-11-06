@@ -32,4 +32,9 @@ class TipoDeAmenaza
 
         return $this;
     }
+
+    public function  __toString() {
+        return $this-> getNombreTipoDeAmenaza();
+    }
+    
 }

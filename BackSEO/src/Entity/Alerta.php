@@ -24,7 +24,7 @@ class Alerta
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    private ?GravedadAmenaza $nivelGravedad = null;
+    private ?GravedadAmenaza $nivelgravedad = null;
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
@@ -33,7 +33,6 @@ class Alerta
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
     private ?TiempoAmenaza $tiempoDesarrollo = null;
-
     
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
@@ -89,21 +88,10 @@ class Alerta
         return $this;
     }
 
-    public function getNivelgravedad(): ?GravedadAmenaza
-    {
-        return $this->$nivelGravedad;
-    }
-
-    public function setNivelgravedad(?GravedadAmenaza $nivelGravedad): self
-    {
-        $this->nivelGravedad = $nivelGravedad;
-
-        return $this;
-    }
 
     public function getSuperficieAfectada(): ?SuperficieAmenaza
     {
-        return $this->$superficieAfectada;
+        return $this->superficieAfectada;
     }
 
     public function setSuperficieAfectada(?SuperficieAmenaza $superficieAfectada): self
@@ -115,7 +103,7 @@ class Alerta
     
     public function getTiempoDesarrollo(): ?TiempoAmenaza
     {
-        return $this->$tiempoDesarrollo;
+        return $this->tiempoDesarrollo;
     }
 
     public function setTiempoDesarrollo(?TiempoAmenaza $tiempoDesarrollo): self
@@ -127,7 +115,7 @@ class Alerta
 
     public function getNombreTipoDeAmenaza(): ?TipoDeAmenaza
     {
-        return $this->$nombreTipoDeAmenaza ;
+        return $this->nombreTipoDeAmenaza ;
     }
 
     public function setNombreTipoDeAmenaza(?TipoDeAmenaza $nombreTipoDeAmenaza): self
@@ -136,6 +124,20 @@ class Alerta
 
         return $this;
     }
+
+
+    public function getNivelgravedad(): ?GravedadAmenaza
+    {
+        return $this->nivelgravedad;
+    }
+
+    public function setNivelgravedad(?GravedadAmenaza $nivelgravedad): self
+    {
+        $this->nivelgravedad = $nivelgravedad;
+
+        return $this;
+    }
+
 
     public function getNombreContacto(): ?string
     {
@@ -173,8 +175,5 @@ class Alerta
         return $this;
     }
    
-
-
-
 
 }

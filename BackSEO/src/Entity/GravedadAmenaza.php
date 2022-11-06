@@ -33,7 +33,7 @@ class GravedadAmenaza
         return $this;
     }
 
-    //public function __toString() {
-    //    return $this->getNivelgravedad();
-    //}
+    public function  __toString() {
+        return $this->getNivelgravedad();
+    }
 }
