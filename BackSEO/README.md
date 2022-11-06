@@ -11,3 +11,5 @@ DATABASE_URL="mysql://root@127.0.0.1:3306/alertseo"
 php bin/console make:migration
 php bin/console doctrine:migrations:migrate
 
+
+
