@@ -22,6 +22,23 @@ class Alerta
     #[ORM\Column(length: 500)]
     private ?string $descripcion = null;
 
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?GravedadAmenaza $nivelGravedad = null;
+
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?SuperficieAmenaza $superficieAfectada = null;
+
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?TiempoAmenaza $tiempoDesarrollo = null;
+
+    
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?TipoDeAmenaza $nombreTipoDeAmenaza = null;
+
     #[ORM\Column(length: 255)]
     private ?string $nombreContacto = null;
 
@@ -72,6 +89,54 @@ class Alerta
         return $this;
     }
 
+    public function getNivelgravedad(): ?GravedadAmenaza
+    {
+        return $this->$nivelGravedad;
+    }
+
+    public function setNivelgravedad(?GravedadAmenaza $nivelGravedad): self
+    {
+        $this->nivelGravedad = $nivelGravedad;
+
+        return $this;
+    }
+
+    public function getSuperficieAfectada(): ?SuperficieAmenaza
+    {
+        return $this->$superficieAfectada;
+    }
+
+    public function setSuperficieAfectada(?SuperficieAmenaza $superficieAfectada): self
+    {
+        $this->superficieAfectada= $superficieAfectada;
+
+        return $this;
+    }
+    
+    public function getTiempoDesarrollo(): ?TiempoAmenaza
+    {
+        return $this->$tiempoDesarrollo;
+    }
+
+    public function setTiempoDesarrollo(?TiempoAmenaza $tiempoDesarrollo): self
+    {
+        $this->tiempoDesarrollo= $tiempoDesarrollo;
+
+        return $this;
+    }
+
+    public function getNombreTipoDeAmenaza(): ?TipoDeAmenaza
+    {
+        return $this->$nombreTipoDeAmenaza ;
+    }
+
+    public function setNombreTipoDeAmenaza(?TipoDeAmenaza $nombreTipoDeAmenaza): self
+    {
+        $this->nombreTipoDeAmenaza= $nombreTipoDeAmenaza;
+
+        return $this;
+    }
+
     public function getNombreContacto(): ?string
     {
         return $this->nombreContacto;
@@ -107,4 +172,9 @@ class Alerta
 
         return $this;
     }
+   
+
+
+
+
 }

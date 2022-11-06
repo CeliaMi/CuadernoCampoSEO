@@ -14,21 +14,21 @@ class TiempoAmenaza
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?int $tiempoDesarollo = null;
+    private ?int $tiempoDesarrollo = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getTiempoDesarollo(): ?int
+    public function getTiempoDesarrollo(): ?int
     {
-        return $this->tiempoDesarollo;
+        return $this->tiempoDesarrollo;
     }
 
-    public function setTiempoDesarollo(int $tiempoDesarollo): self
+    public function setTiempoDesarollo(int $tiempoDesarrollo): self
     {
-        $this->tiempoDesarollo = $tiempoDesarollo;
+        $this->tiempoDesarrollo = $tiempoDesarrollo;
 
         return $this;
     }
