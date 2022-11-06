@@ -88,6 +88,18 @@ class Alerta
         return $this;
     }
 
+    public function getNivelgravedad(): ?GravedadAmenaza
+    {
+        return $this->nivelgravedad;
+    }
+
+    public function setNivelgravedad(?GravedadAmenaza $nivelgravedad): self
+    {
+        $this->nivelgravedad = $nivelgravedad;
+
+        return $this;
+    }
+
 
     public function getSuperficieAfectada(): ?SuperficieAmenaza
     {
@@ -124,20 +136,6 @@ class Alerta
 
         return $this;
     }
-
-
-    public function getNivelgravedad(): ?GravedadAmenaza
-    {
-        return $this->nivelgravedad;
-    }
-
-    public function setNivelgravedad(?GravedadAmenaza $nivelgravedad): self
-    {
-        $this->nivelgravedad = $nivelgravedad;
-
-        return $this;
-    }
-
 
     public function getNombreContacto(): ?string
     {

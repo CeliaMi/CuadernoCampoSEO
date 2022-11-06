@@ -18,7 +18,7 @@ class AlertaType extends AbstractType
             ->add('nombreContacto')
             ->add('emailContacto')
             ->add('telefonoContacto')
-            ->add('nivelGravedad')
+            ->add('nivelgravedad')
             ->add('superficieAfectada')
             ->add('tiempoDesarrollo')
             ->add('nombreTipoDeAmenaza')
