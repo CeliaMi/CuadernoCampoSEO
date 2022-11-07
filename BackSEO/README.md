@@ -6,7 +6,10 @@ tenemos que  crear una base de datos local con el mismo nombre en este caso : al
 abajo te dejo el enlace para que puedas verlo.
 DATABASE_URL="mysql://root@127.0.0.1:3306/alertseo"
 
-2.Migra las entidades a tu base de datos
+2. Introducir el comando
+composer require symfony/runtime
+
+3.Migra las entidades a tu base de datos
 
 php bin/console make:migration
 php bin/console doctrine:migrations:migrate
