@@ -23,3 +23,8 @@ button{
     background-color: #68BE5E;
     border-radius: 6px;
 }
+
+.errorText{
+    color:rgb(247, 77, 77);
+    font-style: italic;
+}
