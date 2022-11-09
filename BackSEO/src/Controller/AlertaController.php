@@ -21,24 +21,24 @@ class AlertaController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'app_alerta_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, AlertaRepository $alertaRepository): Response
-    {
-        $alertum = new Alerta();
-        $form = $this->createForm(AlertaType::class, $alertum);
-        $form->handleRequest($request);
+    // #[Route('/new', name: 'app_alerta_new', methods: ['GET', 'POST'])]
+    // public function new(Request $request, AlertaRepository $alertaRepository): Response
+    // {
+    //     $alertum = new Alerta();
+    //     $form = $this->createForm(AlertaType::class, $alertum);
+    //     $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $alertaRepository->save($alertum, true);
+    //     if ($form->isSubmitted() && $form->isValid()) {
+    //         $alertaRepository->save($alertum, true);
 
-            return $this->redirectToRoute('app_alerta_index', [], Response::HTTP_SEE_OTHER);
-        }
+    //         return $this->redirectToRoute('app_alerta_index', [], Response::HTTP_SEE_OTHER);
+    //     }
 
-        return $this->renderForm('alerta/new.html.twig', [
-            'alertum' => $alertum,
-            'form' => $form,
-        ]);
-    }
+    //     return $this->renderForm('alerta/new.html.twig', [
+    //         'alertum' => $alertum,
+    //         'form' => $form,
+    //     ]);
+    // }
 
     #[Route('/{id}', name: 'app_alerta_show', methods: ['GET'])]
     public function show(Alerta $alertum): Response
