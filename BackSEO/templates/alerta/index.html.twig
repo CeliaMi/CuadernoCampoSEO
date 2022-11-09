@@ -29,8 +29,8 @@
                 <td>{{ alertum.emailContacto }}</td>
                 <td>{{ alertum.telefonoContacto }}</td>
                 <td>
-                    <a href="{{ path('app_alerta_show', {'id': alertum.id}) }}">show</a>
-                    <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}">edit</a>
+                <button><a href="{{ path('app_alerta_show', {'id': alertum.id}) }}">show</a></button>
+                <button><a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}">edit</a></button>
                 </td>
             </tr>
         {% else %}

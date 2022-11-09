@@ -17,3 +17,9 @@ margin:7%;
     margin:auto;
 
 }
+
+button{
+    color:white;
+    background-color: #68BE5E;
+    border-radius: 6px;
+}
