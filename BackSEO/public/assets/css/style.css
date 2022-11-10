@@ -4,6 +4,18 @@ background-color: #CCE5C9;
 margin:7%;
 
 }
+/*.hero {
+    clip-path: circle(55.9% at 50% 0);
+    min-height: calc(100vh - 100px);
+}*/
+
+.tituloPortada {
+color: #ffffff;
+}
+
+.hero {
+
+}
 
 .card{
     padding:5%;
@@ -15,7 +27,6 @@ margin:7%;
     width: 300px;
     justify-content: center;
     margin:auto;
-
 }
 
 button{

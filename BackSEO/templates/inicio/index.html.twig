@@ -1,18 +1,42 @@
-{% extends 'base.html.twig' %}
 
-{% block title %}Seo Alert{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="asests/style.css" rel="stylesheet" type="text/css">
+        <title>{% block title %}SeoAlert{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml, <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>🚩</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-<section>
-    <h1> ¿Has visto una Amenaza para la Biodiversidad?</h1>
-    <p>Te damos a la Bienvenida a nuestro sistema de Alertas</p>
-    <div class="example-wrapper">
-        <button><a href="{{ path('app_alerta_new') }}">Alertar</a></button>
-        <button><a href="{{ path('app_alerta_index') }}">soy admin</a></button>
-    </div>
-</section>
-{% endblock %}
+        <!-- Custom -->
+        <link rel="stylesheet" href="/assets/css/style.css">
+
+        {% endblock %}
+    </head>
+
+        {% block body %}
+    <body>
+
+    <section>
+        <div class="hero">
+            <img class="imgPortada" src="{{ asset('assets/img/bosque.jpg') }}" alt="Imagen de bosque" />
+            <h1 class="tituloPortada">SEOAlert</h1>
+        </div>
+        <div class="container">
+            <h1 class=> ¿Has visto una Amenaza para la Biodiversidad?</h1>
+            <p>Te damos a la Bienvenida a nuestro sistema de Alertas</p>
+            <div class="botonesPortada">
+                <button><a href="{{ path('app_alerta_new') }}">Alertar</a></button>
+                <button><a href="{{ path('app_alerta_index') }}">Soy admin</a></button>
+            </div>
+            <div class="logoSEO">
+                <img src="{{ asset('assets/img/logoSEO_sf.png')}}" alt="Logo SEO" />
+            </div>
+        </div>
+    </section>
+    
+    </body>
+    {% endblock %}
+    </html>
+
