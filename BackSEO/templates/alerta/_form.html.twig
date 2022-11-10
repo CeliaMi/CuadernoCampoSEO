@@ -1,17 +1,10 @@
-{{ form_start(form) }}
-    <div class='heading-bar'>
-        <div class='go-back'>
-            <a href="{{ path('app_alerta_new') }}"><i class="fa-solid fa-chevron-left"></i>
-        </div>
-    </div>
+{% block body %}
 
-    <div class='new-form'>
-        <div class="my-custom-class-for-errors">
-            {{ form_errors(form) }}
-        </div>
-
-        <div class="row">
-            <div class="set-amenaza">
+    <div class="container p-5"> 
+        <div class="row text-center justify-content-center align-items-center" >
+            <div>                   
+                    {{form_start(form)}}
+                <div class="set-amenaza">
                 {{ form_label(form.nombreTipoDeAmenaza, 'Tipo de Amenaza') }}
                 {{ form_widget(form.nombreTipoDeAmenaza) }}
             </div>
@@ -51,13 +44,14 @@
                 {{ form_label(form.telefonoContacto, 'Teléfono de contacto') }}
                 {{ form_widget(form.telefonoContacto) }}
             </div>
-            
-        </div>
-        <div class='acciones-btn'>
+            </div>
+            <div class='acciones-btn'>
             <button class="btn btn-success">{{ button_label|default('Enviar') }}</button>
         </div>
+        </div>
+        {{form_end(form)}}
     </div>
-{{ form_end(form) }}
 
-{% block body %}
+
+
 {% endblock %}
