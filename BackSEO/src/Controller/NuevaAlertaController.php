@@ -20,9 +20,10 @@ class NuevaAlertaController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('exito', 'Alerta Recibida');
             $alertaRepository->save($alertum, true);
 
-            return $this->redirectToRoute('app_inicio', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_alerta_new', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('/new.html.twig', [
