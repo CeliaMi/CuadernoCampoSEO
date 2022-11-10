@@ -8,6 +8,8 @@ DATABASE_URL="mysql://root@127.0.0.1:3306/alertseo"
 
 2. Introducir el comando
 composer require symfony/runtime
+composer require symfony/asset
+
 
 3. Migra las entidades a tu base de datos
 
