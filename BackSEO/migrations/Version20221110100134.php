@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20221107082457 extends AbstractMigration
+final class Version20221110100134 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -25,6 +25,7 @@ final class Version20221107082457 extends AbstractMigration
         $this->addSql('CREATE TABLE superficie_amenaza (id INT AUTO_INCREMENT NOT NULL, superficie_afectada INT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE tiempo_amenaza (id INT AUTO_INCREMENT NOT NULL, tiempo_desarrollo INT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE tipo_de_amenaza (id INT AUTO_INCREMENT NOT NULL, nombre_tipo_de_amenaza INT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE user (id INT AUTO_INCREMENT NOT NULL, email VARCHAR(180) NOT NULL, roles LONGTEXT NOT NULL COMMENT \'(DC2Type:json)\', password VARCHAR(255) NOT NULL, UNIQUE INDEX UNIQ_8D93D649E7927C74 (email), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE messenger_messages (id BIGINT AUTO_INCREMENT NOT NULL, body LONGTEXT NOT NULL, headers LONGTEXT NOT NULL, queue_name VARCHAR(190) NOT NULL, created_at DATETIME NOT NULL, available_at DATETIME NOT NULL, delivered_at DATETIME DEFAULT NULL, INDEX IDX_75EA56E0FB7336F0 (queue_name), INDEX IDX_75EA56E0E3BD61CE (available_at), INDEX IDX_75EA56E016BA31DB (delivered_at), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('ALTER TABLE alerta ADD CONSTRAINT FK_4C3B123849405A9 FOREIGN KEY (nivelgravedad_id) REFERENCES gravedad_amenaza (id)');
         $this->addSql('ALTER TABLE alerta ADD CONSTRAINT FK_4C3B1233D65129E FOREIGN KEY (superficie_afectada_id) REFERENCES superficie_amenaza (id)');
@@ -44,6 +45,7 @@ final class Version20221107082457 extends AbstractMigration
         $this->addSql('DROP TABLE superficie_amenaza');
         $this->addSql('DROP TABLE tiempo_amenaza');
         $this->addSql('DROP TABLE tipo_de_amenaza');
+        $this->addSql('DROP TABLE user');
         $this->addSql('DROP TABLE messenger_messages');
     }
 }
