@@ -12,16 +12,17 @@ class AlertaType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+            ->add('nombreTipoDeAmenaza')
             ->add('ubicacion') 
             ->add('foto')
             ->add('descripcion')
-            ->add('nombreContacto')
-            ->add('emailContacto')
-            ->add('telefonoContacto')
             ->add('nivelgravedad')
             ->add('superficieAfectada')
             ->add('tiempoDesarrollo')
-            ->add('nombreTipoDeAmenaza')
+            ->add('nombreContacto')
+            ->add('emailContacto')
+            ->add('telefonoContacto')
+            
         ;
     }
 

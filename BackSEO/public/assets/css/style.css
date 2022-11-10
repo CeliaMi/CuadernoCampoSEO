@@ -1,0 +1,30 @@
+body{
+
+background-color: #CCE5C9;
+margin:7%;
+
+}
+
+.card{
+    padding:5%;
+}
+
+.login{
+    display:flex;
+    flex-direction:column;
+    width: 300px;
+    justify-content: center;
+    margin:auto;
+
+}
+
+button{
+    color:white;
+    background-color: #68BE5E;
+    border-radius: 6px;
+}
+
+.errorText{
+    color:rgb(247, 77, 77);
+    font-style: italic;
+}

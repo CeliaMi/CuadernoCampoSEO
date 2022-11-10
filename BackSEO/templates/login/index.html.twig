@@ -3,11 +3,8 @@
 {# ... #}
 
 {% block body %}
-    {% if error %}
-        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
 
-    <form action="{{ path('app_login') }}" method="post">
+    <form action="{{ path('app_login') }}" method="post" class="login">
         <label for="username">Email:</label>
         <input type="text" id="username" name="_username" value="{{ last_username }}"/>
 
@@ -16,7 +13,11 @@
 
         
         <input type="hidden" name="app_alerta_index" value="/alerta"/> 
-
         <button type="submit">login</button>
+        {% if error %}
+        <div class="errorText">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
     </form>
+
+    
 {% endblock %}
