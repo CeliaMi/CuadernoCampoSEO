@@ -3,66 +3,75 @@
     padding: 0;
     box-sizing: border-box;
     }
-    
+   
 body {
     background-color: #CCE5C9;
     }
-    
+   
 .contenido {
     display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 800px;
     margin: auto;
+    padding: 60px;
+    font-size: x-large;
 }
-
+.contenido p {
+    font-size: x-large;
+    padding: 15px;
+}
+ 
 .baner {
     display: flex;
     justify-content: center;
     text-align: center;
     position: relative;
-    clip-path: circle(50% at 50% 0)
+   
 }
 .baner img{
-    max-width: max-content;
+ /*width: 1200px;*/
+ height: 200px;
+ display: flex;
+ border-bottom-left-radius: 200px;
+ border-bottom-right-radius: 200px;
+
 }
+ 
 .baner h1{
     color: #ffffff;
     position: absolute;
-    top: 30%;
-    left: 40%;
-    font-size: 6rem;
+    top: 25%;
+    left: 46%;
+    font-size: 4rem;
     }
-
+ 
 /*.contenido*/
 /*.contenido h2*/
 /*.contenido p*/
-/*.contenido botonesPortada*/
-/*.contenido logoSEO{
-    padding: 100px;
-}*/
-    
-/*.card{
-    padding:5%;
+
+.botonesPortada {
+    padding: 50px;
 }
 
-.login{
-    display:flex;
-    flex-direction:column;
-    width: 300px;
-    justify-content: center;
-    margin:auto;
-}*/
+.logoSEO{
+    padding: 100px;
+}
 
 button{
     color:white;
     background-color: #68BE5E;
     border-radius: 6px;
     border-color: #68BE5E;
+    height: 30px;
 }
 
-/*.errorText{
-    color:rgb(247, 77, 77);
-    font-style: italic;
-}*/
+.btnalertar{
+width: 60px;
+}
+
+.btnadmin {
+width: 80px;
+}
+ 
+
