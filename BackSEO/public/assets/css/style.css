@@ -38,7 +38,9 @@ margin:7%;
  }
 
  .mundito {
-    width: 200px
+    width: 300px;
+    display: flex;
+    justify-content: center;
  }
 
 
