@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Alerta{% endblock %}
+{% block title %}Editar Alerta{% endblock %}
 
 {% block body %}
-    <h1>Edit Alerta</h1>
+    <h1>Editar Alerta</h1>
 
-    {{ include('alerta/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('alerta/_form.html.twig', {'button_label': 'Actualizar'}) }}
 
-    <button><a href="{{ path('app_alerta_index') }}">back to list</a></button>
+    <button><a href="{{ path('app_alerta_index') }}">Volver a la lista</a></button>
 
     {{ include('alerta/_delete_form.html.twig') }}
 {% endblock %}
