@@ -10,7 +10,7 @@
         {% block stylesheets %}
 
         <!-- Custom -->
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/inicio.css">
 
         {% endblock %}
     </head>
@@ -19,12 +19,13 @@
     <body>
 
     <section>
-        <div class="hero">
+        <div class="baner">
             <img class="imgPortada" src="{{ asset('assets/img/bosque.jpg') }}" alt="Imagen de bosque" />
             <h1 class="tituloPortada">SEOAlert</h1>
         </div>
-        <div class="container">
-            <h1 class=> ¿Has visto una Amenaza para la Biodiversidad?</h1>
+    
+        <div class="contenido">
+            <h2> ¿Has visto una Amenaza para la Biodiversidad?</h1>
             <p>Te damos a la Bienvenida a nuestro sistema de Alertas</p>
             <div class="botonesPortada">
                 <button><a href="{{ path('app_alerta_new') }}">Alertar</a></button>
@@ -35,7 +36,7 @@
             </div>
         </div>
     </section>
-    
+    <footer> </footer>
     </body>
     {% endblock %}
     </html>

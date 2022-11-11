@@ -1,21 +1,20 @@
-
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body{
-background-color: #CCE5C9;
-margin:7%;
-}
-
-.contenedor {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+body {
+    background-color: #CCE5C9;
+    }
+    
+.contenido {
     display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 200px;
+    width: 800px;
+    margin: auto;
 }
 
 .baner {
@@ -25,17 +24,16 @@ margin:7%;
     position: relative;
     clip-path: circle(50% at 50% 0)
 }
-.hero img{
-    background-size: auto;
-    width: fit-content;
+.baner img{
+    max-width: max-content;
 }
-.hero h1{
+.baner h1{
     color: #ffffff;
     position: absolute;
-    top: 20%;
-    left: 50%;
+    top: 30%;
+    left: 40%;
     font-size: 6rem;
- }
+    }
 
 /*.contenido*/
 /*.contenido h2*/
@@ -44,7 +42,7 @@ margin:7%;
 /*.contenido logoSEO{
     padding: 100px;
 }*/
-  
+    
 /*.card{
     padding:5%;
 }
@@ -61,6 +59,7 @@ button{
     color:white;
     background-color: #68BE5E;
     border-radius: 6px;
+    border-color: #68BE5E;
 }
 
 /*.errorText{
