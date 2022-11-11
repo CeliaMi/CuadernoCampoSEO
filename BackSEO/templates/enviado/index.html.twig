@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Enviado{% endblock %}
+
+{% block body %}
+<div class="card m-0 vh-100 row justify-content-center align-items-center">
+    <div class="clearfix">    
+        {% for message in app.flashes('exito') %}
+            <h3 class="alert text-center">
+                {{ message }}
+            </h3>
+        {% endfor %}
+    </div>
+    <div class="card border-light mundito">
+        <img src="{{ asset('assets/img/Group 3.svg') }}" alt="Biodiversidad" />
+    </div>
+
+
+</div>
+{% endblock %}
