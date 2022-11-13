@@ -23,25 +23,35 @@
         {% block body %}
     <body>
 
-    <section>
-        <div class="baner">
-            <img class="imgPortada" src="{{ asset('assets/img/bosque.jpg') }}" alt="Imagen de bosque" />
-            <h1 class="tituloPortada">SEOAlert</h1>
-        </div>
-    
-        <div class="contenido">
-            <h2> ¿Has visto una Amenaza para la Biodiversidad?</h1>
-            <p>Te damos a la Bienvenida a nuestro sistema de Alertas</p>
-            <div class="botonesPortada">
-                <button class="btnalertar"><a href="{{ path('app_alerta_new') }}">Alertar</a></button>
-                <button class="btnadmin"><a href="{{ path('app_alerta_index') }}">Soy admin</a></button>
+        <nav>
+            <button class="btnadmin"><a href="{{ path('app_alerta_index') }}">Admin</a></button>
+        </nav>
+
+        <section>
+
+            <div class="baner">
+                {# <img class="imgPortada" src="{{ asset('assets/img/bannerBosque.jpg') }}" alt="Imagen de bosque" /> #}
+                <h1 class="tituloPortada">SEOAlert</h1>
             </div>
-            <div class="logoSEO">
-                <img src="{{ asset('assets/img/logoSEO_sf.png')}}" alt="Logo SEO" />
+
+            <div class="contenido">
+
+                <div class="textoPortada">
+                    <h2> ¿Has visto una Amenaza para la Biodiversidad?</h1>
+                    <p>Te damos a la Bienvenida a nuestro sistema de Alertas</p>
+                </div>  
+
+                <div class="divBotonPrincipal">
+                    <button class="btnalertar"><a href="{{ path('app_alerta_new') }}">Alertar</a></button>
+                </div>
+
+                <div class="logoSEO">
+                    <img src="{{ asset('assets/img/logoSEO_sf.png')}}" alt="Logo SEO" />
+                </div>
+
             </div>
-        </div>
-    </section>
-    <footer> </footer>
+
+        </section>
     </body>
     {% endblock %}
     </html>

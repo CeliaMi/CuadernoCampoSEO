@@ -3,25 +3,55 @@
     padding: 0;
     box-sizing: border-box;
     }
-   
-body {
-    background-color: #CCE5C9;
+
+section{
+        height: 100%;
     }
    
-.contenido {
-    display: block;
+body {
+        background-color: #CCE5C9;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+a{
+        color: white;
+    }
+    
+button{
+        color:white;
+        background-color: #68BE5E;
+        border-radius: 6px;
+        border-color: #68be5e00;
+        height: 30px;
+}
+
+
+/* parte superior */
+
+nav{
+    display: flex;
+    justify-content: end;
+}
+
+.btnadmin {
+    width: 80px;
+    background-color: #4a4d4948;
+    border-color: #68be5e00;
+    border-radius: 0px;
+    
+    
+}
+
+.tituloPortada{
+    color: #ffffff;
+    /* position: absolute;  ATENCIÓN:ACTIVAR CUANDO SE PONGA EL BANNER*/
+    display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-    padding: 60px;
-    font-size: x-large;
-}
-.contenido p {
-    font-size: x-large;
-    padding: 15px;
-}
- 
+    top: 25%;
+    font-size: 3rem;
+    margin-top: 20px;
+    }
+
 .baner {
     display: flex;
     justify-content: center;
@@ -29,49 +59,65 @@ body {
     position: relative;
    
 }
-.baner img{
- /*width: 1200px;*/
- height: 200px;
- display: flex;
- border-bottom-left-radius: 200px;
- border-bottom-right-radius: 200px;
 
+.imgPortada{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+} 
+ 
+
+/* .baner img{
+    width: 1200px;
+    width: 100%;
+    display: flex;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+} */
+
+
+
+/* parte media */
+   
+.contenido {
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-size: x-large;
+    max-width: 500px;
 }
- 
-.baner h1{
-    color: #ffffff;
-    position: absolute;
-    top: 25%;
-    left: 46%;
-    font-size: 4rem;
-    }
- 
-/*.contenido*/
-/*.contenido h2*/
-/*.contenido p*/
 
-.botonesPortada {
+.textoPortada{
+    margin: auto;
+    max-width: 300px;
+}
+
+p {
+    font-size: large;
+    padding: 15px;
+}
+
+
+.divBotonPrincipal {
     padding: 50px;
 }
 
-.logoSEO{
-    padding: 100px;
-}
-
-button{
-    color:white;
-    background-color: #68BE5E;
-    border-radius: 6px;
-    border-color: #68BE5E;
-    height: 30px;
-}
-
 .btnalertar{
-width: 60px;
+    width: 200px;
+    height: 40px;
 }
 
-.btnadmin {
-width: 80px;
+
+/* parte inferior */
+
+.logoSEO{
+    margin:auto;
+    width: 100px;
 }
+
+
  
 
