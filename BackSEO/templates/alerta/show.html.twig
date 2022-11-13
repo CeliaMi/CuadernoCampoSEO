@@ -3,7 +3,7 @@
 {% block title %}Alerta{% endblock %}
 
 {% block body %}
-    <h1>Alerta</h1>
+    <h1 class="title">Alerta</h1>
 
     <table class="table">
         <tbody>
@@ -50,7 +50,7 @@
         </tbody>
     </table>
 
-    <button><a href="{{ path('app_alerta_index') }}">Volver a la lista</a></button>
+    <button><a href="{{ path('app_alerta_index') }}">Volver</a></button>
 
     <button><a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}">Editar</a></button>
 

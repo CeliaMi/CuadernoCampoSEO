@@ -10,6 +10,16 @@ background-color: #CCE5C9;
 margin:7%;
 }
 
+
+button{
+    color:white;
+    background-color: #68BE5E;
+    border-radius: 6px;
+    border-color: #68be5e00;
+    height: 30px;
+    width: 100px;
+}
+
 .contenedor {
     display: block;
     justify-content: center;
@@ -37,18 +47,17 @@ margin:7%;
     font-size: 6rem;
  }
 
+ /* FORMULARIO */
+
  .mundito {
     width: 300px;
     display: flex;
     justify-content: center;
  }
- #map { 
-    height: 10px;
-    width: 10px;
- }
+
 
  .card{
-    max-width: 500px;
+    max-width: 600px;
     min-width: 200px;
     margin:auto;
  }
@@ -61,6 +70,7 @@ margin:7%;
  label{
     font-size: small;
  }
+
  h4{
     max-width:50%;
     margin-top: 50px;
@@ -70,29 +80,19 @@ margin:7%;
     max-width: 400px;
     min-width: 200px;
  }
+
+ /* LOGIN */
  
-
-
-
-/*.contenido*/
-/*.contenido h2*/
-/*.contenido p*/
-/*.contenido botonesPortada*/
-/*.contenido logoSEO{
-    padding: 100px;
-}*/
-  
-/*.card{
-    padding:5%;
-}
-
-.login{
+ .login{
+    max-width: 500px;
+    height: 400px;
+    width: 300px;
     display:flex;
     flex-direction:column;
-    width: 300px;
     justify-content: center;
     margin:auto;
-}*/
+ }
+
 
 button{
     color:white;
@@ -101,7 +101,21 @@ button{
     margin-top: 15px;
 }
 
-/*.errorText{
+.errorText{
     color:rgb(247, 77, 77);
     font-style: italic;
-}*/
+}
+
+/* SOW */
+
+.table {
+    padding:10px;
+    margin:10px;
+}
+
+/* MAPA */
+
+#map { 
+    height: 10px;
+    width: 10px;
+ }
