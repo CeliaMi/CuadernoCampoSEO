@@ -1,46 +1,51 @@
 {% block body %}
 
     <div class="container p-5"> 
-        <div class="row text-center justify-content-center align-items-center" >
+        <div>
+            <h4>¿Qué ocurre?</h4>
             <div>                   
-                    {{form_start(form)}}
-                <div class="set-amenaza">
+                {{form_start(form)}}
+                <div class="set">
                 {{ form_label(form.nombreTipoDeAmenaza, 'Tipo de Amenaza') }}
                 {{ form_widget(form.nombreTipoDeAmenaza) }}
             </div>
-            <div class="set-ubicacion">
+            <h4>¿Dónde?</h4>
+            <div class="set">
                 {{ form_label(form.ubicacion, 'Ubicación') }}
                 {{ form_widget(form.ubicacion) }}
             </div>
-            <div class="set-foto">
+            <div class="set">
                 {{ form_label(form.foto, 'Foto') }}
                 {{ form_widget(form.foto) }}
             </div>
-            <div class="set-descripcion">
+            <div class="set">
                 {{ form_label(form.descripcion, 'Descripción') }}
                 {{ form_widget(form.descripcion) }}
             </div>
-            <div class="set-gravedad">
+            <h4>Ayudanos a determinar el nivel de alerta</h4>
+            <div class="set">
                 {{ form_label(form.nivelgravedad, 'Nivel de Gravedad') }}
                 {{ form_widget(form.nivelgravedad) }}
             </div>
-            <div class="set-superficie">
+            <div class="set">
                 {{ form_label(form.superficieAfectada, 'Superficie Afectada') }}
                 {{ form_widget(form.superficieAfectada) }}
             </div>
-            <div class="set-tiempo">
+            <div class="set">
                 {{ form_label(form.tiempoDesarrollo, 'Tiempo de Desarrollo') }}
                 {{ form_widget(form.tiempoDesarrollo) }}
             </div>
-            <div class="set-nombre">
+            <h4>Contacto</h4>
+            <h6>Si nos hiciera falta más información sobre la amenaza necesitariamos ponernos en contacto contigo...</h6>
+            <div class="set">
                 {{ form_label(form.nombreContacto, 'Nombre de contacto') }}
                 {{ form_widget(form.nombreContacto) }}
             </div>
-            <div class="set-email">
+            <div class="set">
                 {{ form_label(form.emailContacto, 'Email de contacto') }}
                 {{ form_widget(form.emailContacto) }}
             </div>
-            <div class="set-telefono">
+            <div class="set">
                 {{ form_label(form.telefonoContacto, 'Teléfono de contacto') }}
                 {{ form_widget(form.telefonoContacto) }}
             </div>
@@ -56,6 +61,8 @@
             {{ message }}
         </div>
     {% endfor %}
+
+    
 
 
 
