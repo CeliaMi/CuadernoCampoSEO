@@ -14,6 +14,7 @@
                 {{ form_label(form.ubicacion, 'Ubicación') }}
                 {{ form_widget(form.ubicacion) }}
             </div>
+            <div id="map"></div>
             <div class="set">
                 {{ form_label(form.foto, 'Foto') }}
                 {{ form_widget(form.foto) }}
@@ -57,12 +58,34 @@
             <button class="btn btn-success">{{ button_label|default('Enviar') }}</button>
         </div>
         </div>
+        <script>
+            var map = L.map('map').locate({setView: true, maxZoom:12});
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                // para elegir el aspecto del mapa (http://leaflet-extras.github.io/leaflet-providers/preview/)
+                attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+            }).addTo(map);
+            
+
+            var mimarcador = L.marker([40.425882,-2.873293],{draggable:true}).addTo(map);
+            mimarcador.on("dragend",() => alert(mimarcador.getLatLng()));
+            
+
+            function errorLocalizacion(e) {
+            alert("No es posible encontrar su ubicación. Es posible que tenga que activar la geolocalización.");
+            }
+            map.on('locationerror', errorLocalizacion);
+            map.on('locationfound', buscarLocalizacion);
+            map.locate({setView: true, maxZoom:12});
+
+        </script>
         {{form_end(form)}}
     </div>
     {% for message in app.flashes('exito') %}
         <div class="alert alert-success">
             {{ message }}
         </div>
+
+
     {% endfor %}
 
     
