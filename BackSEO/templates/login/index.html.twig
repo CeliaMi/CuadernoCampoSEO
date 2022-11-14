@@ -4,7 +4,13 @@
 
 {% block body %}
 
+   
+
     <form action="{{ path('app_login') }}" method="post" class="login">
+
+        <div class="logoSEO">
+            <img src="{{ asset('assets/img/logoSEO_sf.png')}}" alt="Logo SEO" />
+        </div>
         
             <label for="username">Email:</label>
             <input type="text" id="username" name="_username" value="{{ last_username }}"/>
@@ -13,7 +19,7 @@
             <input type="password" id="password" name="_password"/>
         
             <input type="hidden" name="app_alerta_index" value="/alerta"/> 
-            <button type="submit">login</button>
+            <button type="submit">Entrar</button>
         
         {% if error %}
         <div class="errorText">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
