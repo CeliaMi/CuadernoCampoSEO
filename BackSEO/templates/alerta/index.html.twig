@@ -30,8 +30,8 @@
                 <td>{{ alertum.emailContacto }}</td>
                 <td>{{ alertum.telefonoContacto }}</td> #}
                 <td>
-                <button><a href="{{ path('app_alerta_show', {'id': alertum.id}) }}">Mostrar</a></button>
-                <button><a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}">Editar</a></button>
+                <a href="{{ path('app_alerta_show', {'id': alertum.id}) }}"><button>{{ button_label|default('Mostrar') }}</button></a>
+                <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button>{{ button_label|default('Editar') }}</button></a>
                 </td>
             </tr>
         {% else %}
@@ -41,5 +41,5 @@
         {% endfor %}
         </tbody>
     </table>
-    <button><a href="{{ path('app_logout') }}">Salir</a> </button>
+    <a href="{{ path('app_logout') }}"><button>{{ button_label|default('Salir') }}</button></a>
 {% endblock %}
