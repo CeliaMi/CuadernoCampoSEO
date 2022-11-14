@@ -85,12 +85,13 @@ button{
  
  .login{
     max-width: 500px;
-    height: 400px;
+    height: 325px;
     width: 300px;
     display:flex;
     flex-direction:column;
     justify-content: center;
     margin:auto;
+    margin-bottom: 50px;
  }
 
 
@@ -170,4 +171,10 @@ nav{
     height: 390px;
     width: 390px;
     margin: 10px;
+}
+
+.logoSEO{
+    display: flex;
+    align-self: center;
+    width: 100px;
 }
