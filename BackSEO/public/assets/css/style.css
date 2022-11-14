@@ -7,7 +7,6 @@ box-sizing: border-box;
 
 body{
 background-color: #CCE5C9;
-margin:7%;
 }
 
 
@@ -106,10 +105,12 @@ button{
 }
 
 .btnSalir {
-    width: 100px;
+    width: 80px;
     background-color: #4a4d4948;
     border-color: #68be5e00;
-    border-radius: 0px;    
+    border-radius: 0px;
+    margin-top: 0px; 
+       
     
 }
 
