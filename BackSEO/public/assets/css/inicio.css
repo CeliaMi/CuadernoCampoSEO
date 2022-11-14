@@ -3,38 +3,43 @@
     padding: 0;
     box-sizing: border-box;
     }
-    
+   
 body {
     background-color: #CCE5C9;
     }
-    
+   
 .contenido {
     display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 800px;
     margin: auto;
 }
-
+ 
 .baner {
     display: flex;
     justify-content: center;
     text-align: center;
     position: relative;
-    clip-path: circle(50% at 50% 0)
+   
 }
 .baner img{
-    max-width: max-content;
+    /*width: 1200px;*/
+    height: 200px;
+    display: flex;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    
 }
+ 
 .baner h1{
     color: #ffffff;
     position: absolute;
-    top: 30%;
-    left: 40%;
+    top: 20%;
+    left: 44%;
     font-size: 6rem;
     }
-
+ 
 /*.contenido*/
 /*.contenido h2*/
 /*.contenido p*/
@@ -42,11 +47,11 @@ body {
 /*.contenido logoSEO{
     padding: 100px;
 }*/
-    
+   
 /*.card{
     padding:5%;
 }
-
+ 
 .login{
     display:flex;
     flex-direction:column;
@@ -54,15 +59,16 @@ body {
     justify-content: center;
     margin:auto;
 }*/
-
+ 
 button{
     color:white;
     background-color: #68BE5E;
     border-radius: 6px;
     border-color: #68BE5E;
 }
-
+ 
 /*.errorText{
     color:rgb(247, 77, 77);
     font-style: italic;
 }*/
+ 
