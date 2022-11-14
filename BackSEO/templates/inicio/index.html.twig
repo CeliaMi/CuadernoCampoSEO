@@ -26,7 +26,7 @@
     <body>
 
         <nav>
-            <button class="btnadmin"><a href="{{ path('app_alerta_index') }}">Admin</a></button>
+            <a href="{{ path('app_alerta_index') }}"><button class="btnadmin">{{ button_label|default('Admin') }}</button></a>
         </nav>
 
         <section>
@@ -44,7 +44,7 @@
                 </div>  
 
                 <div class="divBotonPrincipal">
-                    <button class="btnalertar"><a href="{{ path('app_alerta_new') }}">Alertar</a></button>
+                    <a href="{{ path('app_alerta_new') }}"><button class="btnalertar">{{ button_label|default('Alertar') }}</button></a>
                 </div>
 
                 <div class="logoSEO">

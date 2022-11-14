@@ -7,7 +7,7 @@
 
     {{ include('alerta/_form.html.twig', {'button_label': 'Actualizar'}) }}
 
-    <button><a href="{{ path('app_alerta_index') }}">Volver</a></button>
+    <a href="{{ path('app_alerta_index') }}"><button>{{ button_label|default('Volver') }}</button></a>
 
     {{ include('alerta/_delete_form.html.twig') }}
 {% endblock %}

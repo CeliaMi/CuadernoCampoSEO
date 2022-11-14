@@ -50,9 +50,9 @@
         </tbody>
     </table>
 
-    <button><a href="{{ path('app_alerta_index') }}">Volver</a></button>
-
-    <button><a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}">Editar</a></button>
+    <a href="{{ path('app_alerta_index') }}"><button>{{ button_label|default('Volver') }}</button></a>
+    
+    <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button>{{ button_label|default('Editar') }}</button></a>
 
     {{ include('alerta/_delete_form.html.twig') }}
 {% endblock %}
