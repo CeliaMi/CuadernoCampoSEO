@@ -2,20 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+}
 
-section{
-        height: 100%;
-    }
-   
 body {
         background-color: #CCE5C9;
         font-family: Arial, Helvetica, sans-serif;
-    }
+}
+
+section{
+    height: 100%;
+}
 
 a{
         color: white;
-    }
+}
     
 button{
         color:white;
@@ -37,9 +37,7 @@ nav{
     width: 80px;
     background-color: #4a4d4948;
     border-color: #68be5e00;
-    border-radius: 0px;
-    
-    
+    border-radius: 0px;  
 }
 
 .tituloPortada{
@@ -50,14 +48,18 @@ nav{
     top: 25%;
     font-size: 3rem;
     margin-top: 20px;
-    }
+}
 
-.baner {
+.banner {
     display: flex;
     justify-content: center;
     text-align: center;
+<<<<<<< HEAD
     position: relative;
 
+=======
+    position: relative;  
+>>>>>>> d28b063c9a520e8260eab505604ef0b8a6ceeb80
 }
 .baner img{
     /*width: 1200px;*/

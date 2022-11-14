@@ -138,6 +138,12 @@ button{
 
 .btnEditar{
     margin-left: 15px;
+    border-radius: 6px;
+    border-color: #68be5e00;
+    height: 30px;
+    width:35px;
+    color:white;
+    background-color: #CCE5C9;
 }
 
 .btnBorrar{
