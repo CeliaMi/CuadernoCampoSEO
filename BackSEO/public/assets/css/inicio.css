@@ -3,25 +3,61 @@
     padding: 0;
     box-sizing: border-box;
     }
-   
-body {
-    background-color: #CCE5C9;
+
+section{
+        height: 100%;
     }
    
-.contenido {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
+body {
+        background-color: #CCE5C9;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+a{
+        color: white;
+    }
+    
+button{
+        color:white;
+        background-color: #68BE5E;
+        border-radius: 6px;
+        border-color: #68be5e00;
+        height: 30px;
 }
- 
+
+
+/* parte superior */
+
+nav{
+    display: flex;
+    justify-content: end;
+}
+
+.btnadmin {
+    width: 80px;
+    background-color: #4a4d4948;
+    border-color: #68be5e00;
+    border-radius: 0px;
+    
+    
+}
+
+.tituloPortada{
+    color: #ffffff;
+    /* position: absolute;  ATENCIÓN:ACTIVAR CUANDO SE PONGA EL BANNER*/
+    display: flex;
+    justify-content: center;
+    top: 25%;
+    font-size: 3rem;
+    margin-top: 20px;
+    }
+
 .baner {
     display: flex;
     justify-content: center;
     text-align: center;
     position: relative;
-   
+
 }
 .baner img{
     /*width: 1200px;*/
@@ -33,42 +69,53 @@ body {
 }
  
 .baner h1{
-    color: #ffffff;
-    position: absolute;
-    top: 20%;
-    left: 44%;
-    font-size: 6rem;
-    }
- 
-/*.contenido*/
-/*.contenido h2*/
-/*.contenido p*/
-/*.contenido botonesPortada*/
-/*.contenido logoSEO{
-    padding: 100px;
-}*/
+    width: 1200px;
+    width: 100%;
+    display: flex;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+} */
+
+
+
+/* parte media */
    
-/*.card{
-    padding:5%;
+.contenido {
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-size: x-large;
+    max-width: 500px;
 }
- 
-.login{
-    display:flex;
-    flex-direction:column;
-    width: 300px;
-    justify-content: center;
+
+.textoPortada{
+    margin: auto;
+    max-width: 300px;
+}
+
+p {
+    font-size: large;
+    padding: 15px;
+}
+
+
+.divBotonPrincipal {
+    padding: 50px;
+}
+
+.btnalertar{
+    width: 200px;
+    height: 40px;
+}
+
+
+/* parte inferior */
+
+.logoSEO{
     margin:auto;
-}*/
- 
-button{
-    color:white;
-    background-color: #68BE5E;
-    border-radius: 6px;
-    border-color: #68BE5E;
+    width: 100px;
 }
- 
-/*.errorText{
-    color:rgb(247, 77, 77);
-    font-style: italic;
-}*/
+
+
  
