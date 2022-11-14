@@ -7,7 +7,6 @@ box-sizing: border-box;
 
 body{
 background-color: #CCE5C9;
-margin:7%;
 }
 
 
@@ -99,6 +98,54 @@ button{
     background-color: #68BE5E;
     border-radius: 6px;
     margin-top: 15px;
+}
+
+.btnVolver{
+    margin-left: 15px;
+}
+
+.btnSalir {
+    width: 80px;
+    background-color: #4a4d4948;
+    border-color: #68be5e00;
+    border-radius: 0px;
+    margin-top: 0px; 
+       
+    
+}
+
+.btnEmoji1 {
+    border-radius: 6px;
+    border-color: #68be5e00;
+    height: 30px;
+    width:35px;
+    color:white;
+    background-color: #CCE5C9;
+    margin-right: 5.5px;
+}
+
+.btnEmoji2 {
+    border-radius: 6px;
+    border-color: #68be5e00;
+    height: 30px;
+    width:35px;
+    color:white;
+    background-color: #CCE5C9;
+    margin-left: 7px;
+    margin-right: 5.5px;
+}
+
+.btnBorrar{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    background-color: #fd4f4f;
+    height: 30px;
+    width:35px;
+}
+
+nav{
+    display: flex;
+    justify-content: end;
 }
 
 .errorText{

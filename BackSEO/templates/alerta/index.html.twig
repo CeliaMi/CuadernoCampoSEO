@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block title %}Alertas{% endblock %}
 
@@ -30,8 +30,8 @@
                 <td>{{ alertum.emailContacto }}</td>
                 <td>{{ alertum.telefonoContacto }}</td> #}
                 <td>
-                <a href="{{ path('app_alerta_show', {'id': alertum.id}) }}"><button>{{ button_label|default('Mostrar') }}</button></a>
-                <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button>{{ button_label|default('Editar') }}</button></a>
+                <a href="{{ path('app_alerta_show', {'id': alertum.id}) }}"><button class='btnEmoji1'>{{ button_label|default('👁') }}</button></a>
+                <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button class='btnEmoji2'>{{ button_label|default('✏') }}</button></a>
                 </td>
             </tr>
         {% else %}
@@ -41,5 +41,4 @@
         {% endfor %}
         </tbody>
     </table>
-    <a href="{{ path('app_logout') }}"><button>{{ button_label|default('Salir') }}</button></a>
 {% endblock %}
