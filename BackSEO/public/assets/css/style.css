@@ -59,6 +59,7 @@ button{
     max-width: 600px;
     min-width: 200px;
     margin:auto;
+    margin-top: 50px;
  }
 
  .title{
@@ -131,8 +132,11 @@ button{
     width:35px;
     color:white;
     background-color: #CCE5C9;
-    margin-left: 7px;
     margin-right: 5.5px;
+}
+
+.btnEditar{
+    margin-left: 15px;
 }
 
 .btnBorrar{
