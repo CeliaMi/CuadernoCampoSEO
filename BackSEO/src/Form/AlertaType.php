@@ -6,6 +6,8 @@ use App\Entity\Alerta;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\IsTrue;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class AlertaType extends AbstractType
 {
@@ -22,7 +24,14 @@ class AlertaType extends AbstractType
             ->add('nombreContacto')
             ->add('emailContacto')
             ->add('telefonoContacto')
-            
+            ->add('agreeTerms', CheckboxType::class, [
+                'mapped' => false,
+                'constraints' => [
+                    new IsTrue([
+                        'message' => 'You should agree to our terms.',
+                    ]),
+                ],
+            ])
         ;
     }
 
