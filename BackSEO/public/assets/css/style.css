@@ -59,6 +59,7 @@ button{
     max-width: 600px;
     min-width: 200px;
     margin:auto;
+    margin-top: 50px;
  }
 
  .title{
@@ -101,12 +102,6 @@ button{
 }
 
 .btnVolver{
-    border-radius: 6px;
-    border-color: #68be5e00;
-    height: 30px;
-    width:35px;
-    color:white;
-    background-color: #CCE5C9;
     margin-left: 15px;
 }
 
@@ -141,12 +136,6 @@ button{
 }
 
 .btnEditar{
-    border-radius: 6px;
-    border-color: #68be5e00;
-    height: 30px;
-    width:35px;
-    color:white;
-    background-color: #CCE5C9;
     margin-left: 15px;
 }
 
