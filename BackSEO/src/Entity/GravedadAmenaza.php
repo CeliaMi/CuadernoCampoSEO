@@ -16,6 +16,9 @@ class GravedadAmenaza
     #[ORM\Column]
     private ?int $nivelgravedad = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $nombreCampoGravedadAmenaza = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,5 +38,17 @@ class GravedadAmenaza
 
     public function  __toString() {
         return $this->getNivelgravedad();
+    }
+
+    public function getNombreCampoGravedadAmenaza(): ?string
+    {
+        return $this->nombreCampoGravedadAmenaza;
+    }
+
+    public function setNombreCampoGravedadAmenaza(string $nombreCampoGravedadAmenaza): self
+    {
+        $this->nombreCampoGravedadAmenaza = $nombreCampoGravedadAmenaza;
+
+        return $this;
     }
 }

@@ -16,6 +16,9 @@ class TiempoAmenaza
     #[ORM\Column]
     private ?int $tiempoDesarrollo = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $NombreCampoTiempoDesarrollo = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,5 +38,17 @@ class TiempoAmenaza
 
     public function  __toString() {
         return $this->getTiempoDesarrollo();
+    }
+
+    public function getNombreCampoTiempoDesarrollo(): ?string
+    {
+        return $this->NombreCampoTiempoDesarrollo;
+    }
+
+    public function setNombreCampoTiempoDesarrollo(string $NombreCampoTiempoDesarrollo): self
+    {
+        $this->NombreCampoTiempoDesarrollo = $NombreCampoTiempoDesarrollo;
+
+        return $this;
     }
 }

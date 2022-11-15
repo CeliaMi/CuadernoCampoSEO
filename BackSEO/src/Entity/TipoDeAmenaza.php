@@ -14,19 +14,22 @@ class TipoDeAmenaza
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?int $nombreTipoDeAmenaza = null;
+    private ?string $nombreTipoDeAmenaza = null;
+
+    #[ORM\Column(length: 255)]
+    private ?int $valorTipoDeAmenaza = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getNombreTipoDeAmenaza(): ?int
+    public function getNombreTipoDeAmenaza(): ?string
     {
         return $this->nombreTipoDeAmenaza;
     }
 
-    public function setNombreTipoDeAmenaza(int $nombreTipoDeAmenaza): self
+    public function setNombreTipoDeAmenaza(string $nombreTipoDeAmenaza): self
     {
         $this->nombreTipoDeAmenaza = $nombreTipoDeAmenaza;
 
@@ -35,6 +38,19 @@ class TipoDeAmenaza
 
     public function  __toString() {
         return $this-> getNombreTipoDeAmenaza();
+            // $this-> getValorTipoDeAmenaza();
     }
     
+    public function getValorTipoDeAmenaza(): ?int
+    {
+        return $this->valorTipoDeAmenaza;
+    }
+
+    public function setValorTipoDeAmenaza(int $valorTipoDeAmenaza): self
+    {
+        $this->valorTipoDeAmenaza = $valorTipoDeAmenaza;
+
+        return $this;
+    }
+
 }

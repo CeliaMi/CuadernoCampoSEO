@@ -16,6 +16,9 @@ class SuperficieAmenaza
     #[ORM\Column]
     private ?int $superficieAfectada = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $NombreCampoSuperficieAfectada = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,6 +38,18 @@ class SuperficieAmenaza
 
     public function __toString() {
         return $this->getSuperficieAfectada();
+    }
+
+    public function getNombreCampoSuperficieAfectada(): ?string
+    {
+        return $this->NombreCampoSuperficieAfectada;
+    }
+
+    public function setNombreCampoSuperficieAfectada(string $NombreCampoSuperficieAfectada): self
+    {
+        $this->NombreCampoSuperficieAfectada = $NombreCampoSuperficieAfectada;
+
+        return $this;
     }
     
 }
