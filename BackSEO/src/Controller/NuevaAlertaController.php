@@ -20,7 +20,7 @@ class NuevaAlertaController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->addFlash('exito', 'Gracias por ayudarnos a preservar la biodiversidad 💚');
+            $this->addFlash('exito', 'Gracias por ayudarnos a preservar la biodiversidad.');
             $alertaRepository->save($alertum, true);
 
             return $this->redirectToRoute('app_enviado', [], Response::HTTP_SEE_OTHER);

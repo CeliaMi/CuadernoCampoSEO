@@ -4,6 +4,9 @@
 
 {% block body %}
 <div class="card m-0 vh-100 justify-content-center align-items-center">
+        <div class="logoSEO">
+            <img src="{{ asset('assets/img/logoSEO_sf.png')}}" alt="Logo SEO" />
+        </div>
         {% for message in app.flashes('exito') %}
             <h3 class="alert text-center">
                 {{ message }}
@@ -13,6 +16,8 @@
         <div class="mundito">
             <img src="{{ asset('assets/img/Group 3.svg') }}" alt="Biodiversidad" />
         </div>
+        <p class='textito'>Puedes contactar con nosotros a través de nuestra web <a class='enlacito' href="https://seo.org/">https://seo.org/</a> </p> 
+        <p class='textito'> O a través de nuestro correo eléctronico <a class='enlacito' href="mailto:seo@seo.org">seo@seo.org</a></p>
         <a href="{{ path('app_logout') }}"><button class='align-items-center'>{{ button_label|default('Salir') }}</button></a>
 </div>
 {% endblock %}

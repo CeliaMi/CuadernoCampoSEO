@@ -184,3 +184,13 @@ nav{
     align-self: center;
     width: 100px;
 }
+
+.textito{
+    font-size: small;
+    margin-top: 15px;
+    color: rgb(128, 127, 127);
+}
+
+.enlacito{
+    color: rgb(128, 127, 127);;
+}
