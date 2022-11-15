@@ -47,6 +47,24 @@ class Alerta
     #[ORM\Column(length: 20, nullable: true)]
     private ?string $telefonoContacto = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $espacioProtegido = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $planDeGestion = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $actividadesDeConservacion = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $organizaciones = null;
+
+    #[ORM\Column(length: 500, nullable: true)]
+    private ?string $observaciones = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $IBA = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -169,6 +187,78 @@ class Alerta
     public function setTelefonoContacto(?string $telefonoContacto): self
     {
         $this->telefonoContacto = $telefonoContacto;
+
+        return $this;
+    }
+
+    public function getEspacioProtegido(): ?string
+    {
+        return $this->espacioProtegido;
+    }
+
+    public function setEspacioProtegido(string $espacioProtegido): self
+    {
+        $this->espacioProtegido = $espacioProtegido;
+
+        return $this;
+    }
+
+    public function getPlanDeGestion(): ?string
+    {
+        return $this->planDeGestion;
+    }
+
+    public function setPlanDeGestion(string $planDeGestion): self
+    {
+        $this->planDeGestion = $planDeGestion;
+
+        return $this;
+    }
+
+    public function getActividadesDeConservacion(): ?string
+    {
+        return $this->actividadesDeConservacion;
+    }
+
+    public function setActividadesDeConservacion(string $actividadesDeConservacion): self
+    {
+        $this->actividadesDeConservacion = $actividadesDeConservacion;
+
+        return $this;
+    }
+
+    public function getOrganizaciones(): ?string
+    {
+        return $this->organizaciones;
+    }
+
+    public function setOrganizaciones(string $organizaciones): self
+    {
+        $this->organizaciones = $organizaciones;
+
+        return $this;
+    }
+
+    public function getObservaciones(): ?string
+    {
+        return $this->observaciones;
+    }
+
+    public function setObservaciones(?string $observaciones): self
+    {
+        $this->observaciones = $observaciones;
+
+        return $this;
+    }
+
+    public function getIBA(): ?string
+    {
+        return $this->IBA;
+    }
+
+    public function setIBA(string $IBA): self
+    {
+        $this->IBA = $IBA;
 
         return $this;
     }

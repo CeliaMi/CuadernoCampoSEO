@@ -24,6 +24,12 @@ class AlertaType extends AbstractType
             ->add('nombreContacto')
             ->add('emailContacto')
             ->add('telefonoContacto')
+            ->add('observaciones')
+            ->add('espacioProtegido')
+            ->add('planDeGestion')
+            ->add('actividadesDeConservacion')
+            ->add('organizaciones')
+            ->add('IBA')
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [
@@ -34,7 +40,6 @@ class AlertaType extends AbstractType
             ])
         ;
     }
-
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
