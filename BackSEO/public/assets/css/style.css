@@ -1,7 +1,5 @@
 
 * {
-margin: 0;
-padding: 0;
 box-sizing: border-box;
 }
 
@@ -55,11 +53,13 @@ button{
  }
 
 
- .card-user{
+ .card-admin{
     max-width: 800px;
     min-width: 100px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
     margin:auto;
-    margin-top: 50px;
  }
 
  .card{
@@ -174,9 +174,11 @@ nav{
 /* SOW */
 
 .table {
-    margin:50px;
-    height: 100px;
+    margin:20px;
+    max-width: 400px;
     font-size: small;
+    margin:auto;
+    margin-bottom: 10px;
     
 }
 
@@ -184,7 +186,7 @@ nav{
 
 #map { 
     height: 390px;
-    width: 390px;
+    width: 200px;
     margin: 10px;
 }
 
