@@ -37,7 +37,7 @@ class GravedadAmenaza
     }
 
     public function  __toString() {
-        return $this->getNivelgravedad();
+        return $this->getNombreCampoGravedadAmenaza();
     }
 
     public function getNombreCampoGravedadAmenaza(): ?string

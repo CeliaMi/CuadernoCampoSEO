@@ -37,7 +37,7 @@ class SuperficieAmenaza
     }
 
     public function __toString() {
-        return $this->getSuperficieAfectada();
+        return $this->getNombreCampoSuperficieAfectada();
     }
 
     public function getNombreCampoSuperficieAfectada(): ?string

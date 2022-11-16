@@ -24,15 +24,15 @@ class Alerta
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    private ?GravedadAmenaza $nivelgravedad = null;
+    private ?GravedadAmenaza $nombreCampoGravedadAmenaza = null;
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    private ?SuperficieAmenaza $superficieAfectada = null;
+    private ?SuperficieAmenaza $NombreCampoSuperficieAfectada = null;
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    private ?TiempoAmenaza $tiempoDesarrollo = null;
+    private ?TiempoAmenaza $NombreCampoTiempoDesarrollo = null;
     
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
@@ -106,39 +106,39 @@ class Alerta
         return $this;
     }
 
-    public function getNivelgravedad(): ?GravedadAmenaza
+    public function getNombreCampoGravedadAmenaza(): ?GravedadAmenaza
     {
-        return $this->nivelgravedad;
+        return $this->nombreCampoGravedadAmenaza;
     }
 
-    public function setNivelgravedad(?GravedadAmenaza $nivelgravedad): self
+    public function setNombreCampoGravedadAmenaza(?GravedadAmenaza $nombreCampoGravedadAmenaza): self
     {
-        $this->nivelgravedad = $nivelgravedad;
+        $this->nombreCampoGravedadAmenaza = $nombreCampoGravedadAmenaza;
 
         return $this;
     }
 
 
-    public function getSuperficieAfectada(): ?SuperficieAmenaza
+    public function getNombreCampoSuperficieAfectada(): ?SuperficieAmenaza
     {
-        return $this->superficieAfectada;
+        return $this->NombreCampoSuperficieAfectada;
     }
 
-    public function setSuperficieAfectada(?SuperficieAmenaza $superficieAfectada): self
+    public function setNombreCampoSuperficieAfectada(?SuperficieAmenaza $NombreCampoSuperficieAfectada): self
     {
-        $this->superficieAfectada= $superficieAfectada;
+        $this->NombreCampoSuperficieAfectada = $NombreCampoSuperficieAfectada;
 
         return $this;
     }
     
-    public function getTiempoDesarrollo(): ?TiempoAmenaza
+    public function getNombreCampoTiempoDesarrollo(): ?TiempoAmenaza
     {
-        return $this->tiempoDesarrollo;
+        return $this->NombreCampoTiempoDesarrollo;
     }
 
-    public function setTiempoDesarrollo(?TiempoAmenaza $tiempoDesarrollo): self
+    public function setNombreCampoTiempoDesarrollo(?TiempoAmenaza $NombreCampoTiempoDesarrollo): self
     {
-        $this->tiempoDesarrollo= $tiempoDesarrollo;
+        $this->NombreCampoTiempoDesarrollo = $NombreCampoTiempoDesarrollo;
 
         return $this;
     }

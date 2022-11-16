@@ -37,7 +37,7 @@ class TiempoAmenaza
     }
 
     public function  __toString() {
-        return $this->getTiempoDesarrollo();
+        return $this->getNombreCampoTiempoDesarrollo();
     }
 
     public function getNombreCampoTiempoDesarrollo(): ?string

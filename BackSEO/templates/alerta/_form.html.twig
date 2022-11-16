@@ -25,16 +25,16 @@
             </div>
             <h4>Ayudanos a determinar el nivel de alerta</h4>
             <div class="set">
-                {{ form_label(form.nivelgravedad, 'Nivel de Gravedad') }}
-                {{ form_widget(form.nivelgravedad) }}
+                {{ form_label(form.nombreCampoGravedadAmenaza, 'Nivel de Gravedad') }}
+                {{ form_widget(form.nombreCampoGravedadAmenaza) }}
             </div>
             <div class="set">
-                {{ form_label(form.superficieAfectada, 'Superficie Afectada') }}
-                {{ form_widget(form.superficieAfectada) }}
+                {{ form_label(form.NombreCampoSuperficieAfectada, 'Superficie Afectada') }}
+                {{ form_widget(form.NombreCampoSuperficieAfectada) }}
             </div>
             <div class="set">
-                {{ form_label(form.tiempoDesarrollo, 'Tiempo de Desarrollo') }}
-                {{ form_widget(form.tiempoDesarrollo) }}
+                {{ form_label(form.NombreCampoTiempoDesarrollo, 'Tiempo de Desarrollo') }}
+                {{ form_widget(form.NombreCampoTiempoDesarrollo) }}
             </div>
             <h4>Contacto</h4>
             <h6>Si nos hiciera falta más información sobre la amenaza necesitariamos ponernos en contacto contigo...</h6>
@@ -84,23 +84,30 @@
         </div>
         </div>
         <script>
+            
+            //bibliografía (https://leafletjs.com/reference.html).
+
             var map = L.map('map').locate({setView: true, maxZoom:12});
             L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
                 // para elegir el aspecto del mapa (http://leaflet-extras.github.io/leaflet-providers/preview/)
                 attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
             }).addTo(map);
             
+    
+            function buscarLocalizacion(e) {
+                moveMarker(e.latlng);
+            };
 
-            var mimarcador = L.marker([40.425882,-2.873293],{draggable:true}).addTo(map);
-            mimarcador.on("dragend",() => alert(mimarcador.getLatLng()));
-            
+            function moveMarker(a){
+                var mimarker = L.marker(a,{draggable:true}).addTo(map);
+                mimarker.on("dragend",() => alert(mimarker.getLatLng()));  
+            };
 
             function errorLocalizacion(e) {
             alert("No es posible encontrar su ubicación. Es posible que tenga que activar la geolocalización.");
             }
             map.on('locationerror', errorLocalizacion);
             map.on('locationfound', buscarLocalizacion);
-            map.locate({setView: true, maxZoom:12});
 
         </script>
         {{form_end(form)}}
