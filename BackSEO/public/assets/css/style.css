@@ -55,9 +55,16 @@ button{
  }
 
 
+ .card-user{
+    max-width: 800px;
+    min-width: 100px;
+    margin:auto;
+    margin-top: 50px;
+ }
+
  .card{
     max-width: 600px;
-    min-width: 200px;
+    min-width: 100px;
     margin:auto;
     margin-top: 50px;
  }
@@ -167,8 +174,10 @@ nav{
 /* SOW */
 
 .table {
-    padding:10px;
-    margin:10px;
+    margin:50px;
+    height: 100px;
+    font-size: small;
+    
 }
 
 /* MAPA */
