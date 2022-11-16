@@ -7,7 +7,42 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: AlertaRepository::class)]
 class Alerta
-{
+{   const TIPOAMENAZA = [
+        'Expansión agrícola e intensificación' => '1',
+        'Desarrollo residencial y comercial'=> '2',
+        'Producción energética y minería'=> '3',
+        'Infraestructuras lineales: carreteras, trenes, tendidos eléctricos,…'=> '4',
+        'Sobreexplotación, persecución y control de especies'=> '5',
+        'Molestias humanas y perturbación'=> '6',
+        'Modificación de sistemas naturales: incendios, canales, embalses,…'=> '7',
+        'Especies invasoras'=> '8',
+        'Contaminación'=> '9',
+        'Eventos geológicos: terremotos, erupciones, tsunamis,…'=> '10',
+        'Cambio climático'=> '11'
+    ];
+
+    
+    const SEVERIDAD = [
+        'muy poco' => '0',
+        'poco'=> '1',
+        'Moderado'=> '2',
+        'Alto'=> '3',
+    ];
+
+    const SUPERFICIE = [
+        'Muy poco (<10%)' => '0',
+        'Poco (10-50%)'=> '1',
+        'Moderada (50-90%)'=> '2',
+        'Alto (>90%)'=> '3',
+    ];
+
+    const TIEMPO = [
+        'Ocurrió en el pasado' => '0',
+        'Ocurrirá en más de 4 años' => '1',
+        'Ocurrirá en menos de 4 años'=> '2',
+        'Ocurre en la actualidad'=> '3',
+    ];
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -21,22 +56,6 @@ class Alerta
 
     #[ORM\Column(length: 500)]
     private ?string $descripcion = null;
-
-    #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?GravedadAmenaza $nombreCampoGravedadAmenaza = null;
-
-    #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?SuperficieAmenaza $NombreCampoSuperficieAfectada = null;
-
-    #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?TiempoAmenaza $NombreCampoTiempoDesarrollo = null;
-    
-    #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?TipoDeAmenaza $nombreTipoDeAmenaza = null;
 
     #[ORM\Column(length: 255)]
     private ?string $nombreContacto = null;
@@ -64,6 +83,18 @@ class Alerta
 
     #[ORM\Column(length: 255)]
     private ?string $IBA = null;
+
+    #[ORM\Column]
+    private ?int $severidadAmenaza = null;
+
+    #[ORM\Column]
+    private ?int $superficieAfectada = null;
+
+    #[ORM\Column]
+    private ?int $tiempoDesarrollo = null;
+
+    #[ORM\Column]
+    private ?int $tipoAmenaza = null;
 
     public function getId(): ?int
     {
@@ -106,54 +137,6 @@ class Alerta
         return $this;
     }
 
-    public function getNombreCampoGravedadAmenaza(): ?GravedadAmenaza
-    {
-        return $this->nombreCampoGravedadAmenaza;
-    }
-
-    public function setNombreCampoGravedadAmenaza(?GravedadAmenaza $nombreCampoGravedadAmenaza): self
-    {
-        $this->nombreCampoGravedadAmenaza = $nombreCampoGravedadAmenaza;
-
-        return $this;
-    }
-
-
-    public function getNombreCampoSuperficieAfectada(): ?SuperficieAmenaza
-    {
-        return $this->NombreCampoSuperficieAfectada;
-    }
-
-    public function setNombreCampoSuperficieAfectada(?SuperficieAmenaza $NombreCampoSuperficieAfectada): self
-    {
-        $this->NombreCampoSuperficieAfectada = $NombreCampoSuperficieAfectada;
-
-        return $this;
-    }
-    
-    public function getNombreCampoTiempoDesarrollo(): ?TiempoAmenaza
-    {
-        return $this->NombreCampoTiempoDesarrollo;
-    }
-
-    public function setNombreCampoTiempoDesarrollo(?TiempoAmenaza $NombreCampoTiempoDesarrollo): self
-    {
-        $this->NombreCampoTiempoDesarrollo = $NombreCampoTiempoDesarrollo;
-
-        return $this;
-    }
-
-    public function getNombreTipoDeAmenaza(): ?TipoDeAmenaza
-    {
-        return $this->nombreTipoDeAmenaza ;
-    }
-
-    public function setNombreTipoDeAmenaza(?TipoDeAmenaza $nombreTipoDeAmenaza): self
-    {
-        $this->nombreTipoDeAmenaza= $nombreTipoDeAmenaza;
-
-        return $this;
-    }
 
     public function getNombreContacto(): ?string
     {
@@ -259,6 +242,54 @@ class Alerta
     public function setIBA(string $IBA): self
     {
         $this->IBA = $IBA;
+
+        return $this;
+    }
+
+    public function getSeveridadAmenaza(): ?int
+    {
+        return $this->severidadAmenaza;
+    }
+
+    public function setSeveridadAmenaza(int $severidadAmenaza): self
+    {
+        $this->severidadAmenaza = $severidadAmenaza;
+
+        return $this;
+    }
+
+    public function getSuperficieAfectada(): ?int
+    {
+        return $this->superficieAfectada;
+    }
+
+    public function setSuperficieAfectada(int $superficieAfectada): self
+    {
+        $this->superficieAfectada = $superficieAfectada;
+
+        return $this;
+    }
+
+    public function getTiempoDesarrollo(): ?int
+    {
+        return $this->tiempoDesarrollo;
+    }
+
+    public function setTiempoDesarrollo(int $tiempoDesarrollo): self
+    {
+        $this->tiempoDesarrollo = $tiempoDesarrollo;
+
+        return $this;
+    }
+
+    public function getTipoAmenaza(): ?int
+    {
+        return $this->tipoAmenaza;
+    }
+
+    public function setTipoAmenaza(int $tipoAmenaza): self
+    {
+        $this->tipoAmenaza = $tipoAmenaza;
 
         return $this;
     }
