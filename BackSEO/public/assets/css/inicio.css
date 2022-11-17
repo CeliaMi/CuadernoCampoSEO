@@ -54,12 +54,7 @@ nav{
     display: flex;
     justify-content: center;
     text-align: center;
-<<<<<<< HEAD
-    position: relative;
-
-=======
     position: relative;  
->>>>>>> d28b063c9a520e8260eab505604ef0b8a6ceeb80
 }
 .baner img{
     /*width: 1200px;*/
