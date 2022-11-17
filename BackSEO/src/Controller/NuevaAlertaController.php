@@ -12,6 +12,9 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\String\Slugger\SluggerInterface;
+use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+
 
 class NuevaAlertaController extends AbstractController
 {
@@ -44,6 +47,9 @@ class NuevaAlertaController extends AbstractController
 
                 $alertum->setFoto($newFilename);
             }
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($foto);
+            $em->flush($foto);
 
 
 
