@@ -11,7 +11,7 @@
         <tbody>
             <tr>
                 <th>Tipo de Amenaza</th>
-                <td>{{ alertum.nombreTipoDeAmenaza }}</td>
+                 <td>{{ alertum.tipoAmenaza }}</td>
             </tr>
             <tr>
                 <th>Ubicación</th>
@@ -27,14 +27,14 @@
             </tr>
             <tr>
                 <th>Gravedad</th>
-                <td>{{ alertum.nivelgravedad }}</td>
+                {<td>{{ alertum.severidadAmenaza }}</td> 
             </tr>
             <tr>
                 <th>Superficie</th>
-                <td>{{ alertum.superficieAfectada }}</td>
+                <td>{{ alertum.superficieAfectada }}</td> 
             </tr>
                 <th>Gravedad</th>
-                <td>{{ alertum.tiempoDesarrollo}}</td>
+                 <td>{{ alertum.tiempoDesarrollo}}</td> 
             </tr>
             <tr>
             <tr>
@@ -52,8 +52,8 @@
         </tbody>
     </table>
 
-    
-    <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button class='btnEditar'>{{ button_label|default('✏') }}</button></a>
-
-    {{ include('alerta/_delete_form.html.twig') }}
+    <div class="butonContainer">
+        <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button class='btnEditar'>{{ button_label|default('✏') }}</button></a>
+        {{ include('alerta/_delete_form.html.twig') }}
+    </div>
 {% endblock %}

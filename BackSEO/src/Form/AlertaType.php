@@ -8,19 +8,29 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class AlertaType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('nombreTipoDeAmenaza')
+            ->add('tipoAmenaza', ChoiceType::class, [
+                'choices'=>Alerta::TIPOAMENAZA  
+                ])
             ->add('ubicacion') 
             ->add('foto')
             ->add('descripcion')
-            ->add('nivelgravedad')
-            ->add('superficieAfectada')
-            ->add('tiempoDesarrollo')
+            ->add('severidadAmenaza', ChoiceType::class, [
+                'choices'=>Alerta::SEVERIDAD
+            ])
+            ->add('superficieAfectada', ChoiceType::class, [
+                'choices'=>Alerta::SUPERFICIE
+            ])
+            ->add('tiempoDesarrollo', ChoiceType::class, [
+                'choices'=>Alerta::TIEMPO
+            ])
             ->add('nombreContacto')
             ->add('emailContacto')
             ->add('telefonoContacto')
@@ -46,4 +56,5 @@ class AlertaType extends AbstractType
             'data_class' => Alerta::class,
         ]);
     }
+
 }
