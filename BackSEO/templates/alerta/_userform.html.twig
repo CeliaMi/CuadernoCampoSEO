@@ -36,6 +36,31 @@
                 {{ form_label(form.tiempoDesarrollo, 'Tiempo de Desarrollo') }}
                 {{ form_widget(form.tiempoDesarrollo) }}
             </div>
+            <h4>Información complementaria</h4>
+             <div class="set">
+            {{ form_label(form.IBA, '¿Esta dentro de una zona IBA?') }}
+            {{ form_widget(form.IBA) }}
+            </div>
+            <div class="set">
+            {{ form_label(form.espacioProtegido, '¿Esta todo el área o una parte legalmente protegido?') }}
+            {{ form_widget(form.espacioProtegido) }}
+            </div>
+            <div class="set">
+            {{ form_label(form.planDeGestion, '¿Hay algún plan de gestión en la zona?') }}
+            {{ form_widget(form.planDeGestion) }}
+            </div>
+            <div class="set">
+            {{ form_label(form.actividadesDeConservacion, '¿Se llevan a cabo actividades de conservación en el área?') }}
+            {{ form_widget(form.actividadesDeConservacion) }}
+            </div>
+            <div class="set">
+            {{ form_label(form.organizaciones, '¿Hay organizaciones revirtiendo esta amenaza ya?') }}
+            {{ form_widget(form.organizaciones) }}
+            </div>
+            <div class="set">
+            {{ form_label(form.observaciones, 'Observaciones') }}
+            {{ form_widget(form.observaciones) }}
+            </div>
             <h4>Contacto</h4>
             <h6>Si necesitamos más información nos gustaria contactar contigo...</h6>
             <div class="set">
@@ -50,30 +75,7 @@
                 {{ form_label(form.telefonoContacto, 'Teléfono') }}
                 {{ form_widget(form.telefonoContacto) }}
             </div>
-            <div class="set">
-            {{ form_label(form.observaciones, 'Observaciones') }}
-            {{ form_widget(form.observaciones) }}
-            </div>
-            <div class="set">
-            {{ form_label(form.espacioProtegido, 'Espacio protegido') }}
-            {{ form_widget(form.espacioProtegido) }}
-            </div>
-            <div class="set">
-            {{ form_label(form.planDeGestion, 'Plan de gestión') }}
-            {{ form_widget(form.planDeGestion) }}
-            </div>
-            <div class="set">
-            {{ form_label(form.actividadesDeConservacion, 'Actividades de conservacion') }}
-            {{ form_widget(form.actividadesDeConservacion) }}
-            </div>
-            <div class="set">
-            {{ form_label(form.organizaciones, 'Organizaciones') }}
-            {{ form_widget(form.organizaciones) }}
-            </div>
-            <div class="set">
-            {{ form_label(form.IBA, 'IBA') }}
-            {{ form_widget(form.IBA) }}
-            </div>
+            
             {{ form_row(form.agreeTerms) }}
             <div class="g-recaptcha"
               data-sitekey="6LdVfvsiAAAAAFxkRYUuO9HlfizXqeQgpI1RC1Rz">
