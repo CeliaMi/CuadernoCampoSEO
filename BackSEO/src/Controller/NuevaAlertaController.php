@@ -47,9 +47,9 @@ class NuevaAlertaController extends AbstractController
 
                 $alertum->setFoto($newFilename);
             }
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($foto);
-            $em->flush($foto);
+            // $em = $this->getDoctrine()->getManager();
+            // $em->persist($foto);
+            // $em->flush($foto);
 
 
 
