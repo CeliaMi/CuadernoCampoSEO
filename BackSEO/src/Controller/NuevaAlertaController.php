@@ -26,30 +26,31 @@ class NuevaAlertaController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->addFlash('exito', 'Gracias por ayudarnos a preservar la biodiversidad.');
-            $alertaRepository->save($alertum, true);
-            $foto = $form->get('foto')->getData();
+            $brochureFile = $form->get('foto')->getData();
             
-            if ($foto) {
-                $originalFilename = pathinfo($foto->getClientOriginalName(), PATHINFO_FILENAME);
+            if ($brochureFile) {
+                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
                 $safeFilename = $slugger->slug($originalFilename);
-                $newFilename = $safeFilename.'-'.uniqid().'.'.$foto->guessExtension();
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$brochureFile->guessExtension();
 
                 try {
-                    $foto->move(
+                    $brochureFile->move(
                         $this->getParameter('foto_directory'),
                         $newFilename
                     );
                 } catch (FileException $e) {
-                    throw new Exception( message: 'Upsi');
+                    throw new Exception('Upsi');
                 }
 
 
                 $alertum->setFoto($newFilename);
             }
-            // $em = $this->getDoctrine()->getManager();
-            // $em->persist($foto);
-            // $em->flush($foto);
+            $this->addFlash('exito', 'Gracias por ayudarnos a preservar la biodiversidad.');
+            $alertaRepository->save($alertum, true);
+            
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($alertum);
+            $em->flush();
 
 
 
