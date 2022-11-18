@@ -5,8 +5,11 @@
 }
 
 body {
-        background-color: #CCE5C9;
-        font-family: Arial, Helvetica, sans-serif;
+    background-color: #CCE5C9;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: 'Inter', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Space Mono', monospace;
 }
 
 section{
@@ -14,15 +17,15 @@ section{
 }
 
 a{
-        color: white;
+    color: white;
 }
     
 button{
-        color:white;
-        background-color: #68BE5E;
-        border-radius: 6px;
-        border-color: #68be5e00;
-        height: 30px;
+    color:white;
+    background-color: #68BE5E;
+    border-radius: 6px;
+    border-color: #68be5e00;
+    height: 30px;
 }
 
 
@@ -66,7 +69,7 @@ nav{
 } 
  
 
-/* .baner img{
+/* .banner img{
     width: 1200px;
     width: 100%;
     display: flex;
@@ -89,7 +92,7 @@ nav{
 
 .textoPortada{
     margin: auto;
-    max-width: 300px;
+    max-width: 300px; 
 }
 
 p {
