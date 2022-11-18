@@ -18,12 +18,11 @@
                 <td>{{ alertum.ubicacion }}</td>
             </tr>
             <tr>
-                <th>Foto</th>
-                    <img src="{{ asset('upload/' ~ alertum.foto) }}" width="150px">
-                <td>{{ alertum.foto }}</td>
+                <th>Foto</th>   
+                <td><img src="{{ asset('upload/' ~ alertum.foto) }}" width="150px"></td>
             </tr>
             <tr>
-                <th>Descripcion</th>
+                <th>Descripción</th>
                 <td>{{ alertum.descripcion }}</td>
             </tr>
             <tr>
@@ -43,15 +42,15 @@
                 <td>{{ alertum.tiempoDesarrollo + alertum.superficieAfectada + alertum.severidadAmenaza }}</td> 
             </tr>
             <tr>
-                <th>Nombre de Contacto</th>
+                <th>Nombre</th>
                 <td>{{ alertum.nombreContacto }}</td>
             </tr>
             <tr>
-                <th>Email de Contacto</th>
+                <th>Email</th>
                 <td>{{ alertum.emailContacto }}</td>
             </tr>
             <tr>
-                <th>Teléfono de Contacto</th>
+                <th>Teléfono</th>
                 <td>{{ alertum.telefonoContacto }}</td>
             </tr>
         </tbody>
