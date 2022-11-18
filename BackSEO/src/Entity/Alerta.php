@@ -96,6 +96,9 @@ class Alerta
     #[ORM\Column]
     private ?int $tipoAmenaza = null;
 
+    // #[ORM\Column]
+    // private ?int $sumatorio = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -294,5 +297,16 @@ class Alerta
         return $this;
     }
    
+    // public function getSumatorio(): ?int
+    // {
+    //     return $this->sumatorio;
+    // }
+
+    // public function setSumatorio(): self
+    // {
+    //     $this->$sumatorio = $tipoAmenaza+$tiempoDesarrollo+$superficieAfectada;
+
+    //     return $this;
+    // }
 
 }

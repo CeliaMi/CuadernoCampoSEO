@@ -6,7 +6,7 @@
             <div>                   
                 {{form_start(form)}}
                 <div class="set">
-                {{ form_label(form.tipoAmenaza, 'tipo de Amenaza') }}
+                {{ form_label(form.tipoAmenaza, 'Tipo de Amenaza') }}
                 {{ form_widget(form.tipoAmenaza) }} 
             </div>
             <h4>¿Dónde?</h4>
@@ -36,44 +36,46 @@
                 {{ form_label(form.tiempoDesarrollo, 'Tiempo de Desarrollo') }}
                 {{ form_widget(form.tiempoDesarrollo) }}
             </div>
-            <h4>Contacto</h4>
-            <h6>Si nos hiciera falta más información sobre la amenaza necesitariamos ponernos en contacto contigo...</h6>
-            <div class="set">
-                {{ form_label(form.nombreContacto, 'Nombre de contacto') }}
-                {{ form_widget(form.nombreContacto) }}
+            <h4>Información complementaria</h4>
+             <div class="set">
+            {{ form_label(form.IBA, '¿Esta dentro de una zona IBA?') }}
+            {{ form_widget(form.IBA) }}
             </div>
             <div class="set">
-                {{ form_label(form.emailContacto, 'Email de contacto') }}
-                {{ form_widget(form.emailContacto) }}
-            </div>
-            <div class="set">
-                {{ form_label(form.telefonoContacto, 'Teléfono de contacto') }}
-                {{ form_widget(form.telefonoContacto) }}
-            </div>
-            <div class="set">
-            {{ form_label(form.observaciones, 'observaciones') }}
-            {{ form_widget(form.observaciones) }}
-            </div>
-            <div class="set">
-            {{ form_label(form.espacioProtegido, 'espacioProtegido') }}
+            {{ form_label(form.espacioProtegido, '¿Esta todo el área o una parte legalmente protegido?') }}
             {{ form_widget(form.espacioProtegido) }}
             </div>
             <div class="set">
-            {{ form_label(form.planDeGestion, 'planDeGestion') }}
+            {{ form_label(form.planDeGestion, '¿Hay algún plan de gestión en la zona?') }}
             {{ form_widget(form.planDeGestion) }}
             </div>
             <div class="set">
-            {{ form_label(form.actividadesDeConservacion, 'actividadesDeConservacion') }}
+            {{ form_label(form.actividadesDeConservacion, '¿Se llevan a cabo actividades de conservación en el área?') }}
             {{ form_widget(form.actividadesDeConservacion) }}
             </div>
             <div class="set">
-            {{ form_label(form.organizaciones, 'organizaciones') }}
+            {{ form_label(form.organizaciones, '¿Hay organizaciones revirtiendo esta amenaza ya?') }}
             {{ form_widget(form.organizaciones) }}
             </div>
             <div class="set">
-            {{ form_label(form.IBA, 'IBA') }}
-            {{ form_widget(form.IBA) }}
+            {{ form_label(form.observaciones, 'Observaciones') }}
+            {{ form_widget(form.observaciones) }}
             </div>
+            <h4>Contacto</h4>
+            <h6>Si necesitamos más información nos gustaria contactar contigo...</h6>
+            <div class="set">
+                {{ form_label(form.nombreContacto, 'Nombre') }}
+                {{ form_widget(form.nombreContacto) }}
+            </div>
+            <div class="set">
+                {{ form_label(form.emailContacto, 'Email') }}
+                {{ form_widget(form.emailContacto) }}
+            </div>
+            <div class="set">
+                {{ form_label(form.telefonoContacto, 'Teléfono') }}
+                {{ form_widget(form.telefonoContacto) }}
+            </div>
+            
             {{ form_row(form.agreeTerms) }}
             <div class="g-recaptcha"
               data-sitekey="6LdVfvsiAAAAAFxkRYUuO9HlfizXqeQgpI1RC1Rz">
