@@ -44,16 +44,9 @@ button{
     font-size: 6rem;
  }
 
- /* FORMULARIO */
+/* FORMULARIO */
 
- .mundito {
-    width: 300px;
-    display: flex;
-    justify-content: center;
- }
-
-
- .card-admin{
+.card-admin{
     max-width: 800px;
     min-width: 100px;
     background-color: white;
@@ -88,107 +81,7 @@ button{
     min-width: 200px;
  }
 
- /* LOGIN */
- 
- .login{
-    max-width: 500px;
-    height: 325px;
-    width: 300px;
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    margin:auto;
-    margin-bottom: 50px;
- }
-
-
-button{
-    color:white;
-    background-color: #68BE5E;
-    border-radius: 6px;
-    margin-top: 15px;
-}
-
-.btnVolver{
-    margin-left: 15px;
-}
-
-.btnSalir {
-    width: 80px;
-    background-color: #4a4d4948;
-    border-color: #68be5e00;
-    border-radius: 0px;
-    margin-top: 0px; 
-       
-    
-}
-
-.btnEmoji1 {
-    border-radius: 6px;
-    border-color: #68be5e00;
-    height: 30px;
-    width:35px;
-    color:white;
-    background-color: #CCE5C9;
-    margin-right: 5.5px;
-}
-
-.btnEmoji2 {
-    border-radius: 6px;
-    border-color: #68be5e00;
-    height: 30px;
-    width:35px;
-    color:white;
-    background-color: #CCE5C9;
-    margin-right: 5.5px;
-}
-
-.butonContainer{
-    display:block;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    
-}
-.btnEditar{
-    margin-left: 15px;
-    border-radius: 6px;
-    border-color: #68be5e00;
-    height: 30px;
-    width:35px;
-    color:white;
-    background-color: #CCE5C9;
-}
-
-.btnBorrar{
-    margin-left: 15px;
-    background-color: #fd4f4f;
-    height: 30px;
-    width:35px;
-}
-
-nav{
-    display: flex;
-    justify-content: end;
-}
-
-.errorText{
-    color:rgb(247, 77, 77);
-    font-style: italic;
-}
-
-/* SOW */
-
-.table {
-    margin:20px;
-    max-width: 400px;
-    font-size: small;
-    margin:auto;
-    margin-bottom: 10px;
-    
-}
-
-/* MAPA */
+/* FORMULARIO/MAPA */
 
 #map { 
     height: 380px;
@@ -219,7 +112,7 @@ nav{
 
 
 
-/* RESPUESTA FORMULARIO */
+/* FORMULARIO/RESPUESTA */
 
 
 .logoSEO{
@@ -236,4 +129,110 @@ nav{
 
 .enlacito{
     color: rgb(128, 127, 127);;
+}
+
+ .mundito {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+ }
+
+ /* LOGIN */
+ 
+ .login{
+    max-width: 500px;
+    height: 325px;
+    width: 300px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    margin:auto;
+    margin-bottom: 50px;
+ }
+
+ .errorText{
+    color:rgb(247, 77, 77);
+    font-style: italic;
+}
+
+  /* ADMIN */
+
+nav{
+    display: flex;
+    justify-content: end;
+}
+
+button{
+    color:white;
+    background-color: #68BE5E;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.btnVolver{
+    margin-left: 15px;
+    background-color: #ffffff48;
+    color:#68BE5E;
+}
+
+.btnSalir {
+    width: 80px;
+    background-color: #4a4d4948;
+    border-color: #68be5e00;
+    border-radius: 0px;
+    margin-top: 0px;     
+}
+
+.btnEmoji1 {
+    border-radius: 6px;
+    border-color: #68be5e00;
+    height: 30px;
+    width:35px;
+    color:white;
+    background-color:#1D9BD5;
+    margin-right: 5.5px;
+}
+
+.btnEmoji2 {
+    border-radius: 6px;
+    border-color: #68be5e00;
+    height: 30px;
+    width:35px;
+    color:white;
+    background-color: #CCE5C9;
+    margin-right: 5.5px;
+}
+
+.butonContainer{
+    display:block;
+    display: flex;
+    justify-content: center;
+    margin: auto;    
+}
+.btnEditar{
+    margin-left: 15px;
+    border-radius: 6px;
+    border-color: #68be5e00;
+    height: 30px;
+    width:35px;
+    color:white;
+    background-color: #CCE5C9;
+}
+
+.btnBorrar{
+    margin-left: 15px;
+    background-color: #fd4f4f;
+    height: 30px;
+    width:35px;
+}
+
+/* ADMIN/SOW */
+
+.table {
+    margin:20px;
+    max-width: 400px;
+    font-size: small;
+    margin:auto;
+    margin-bottom: 10px;
+    
 }
