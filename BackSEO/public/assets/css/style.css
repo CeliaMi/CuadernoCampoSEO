@@ -191,10 +191,30 @@ nav{
 /* MAPA */
 
 #map { 
-    height: 150px;
+    height: 380px;
     width: 380px;
     margin: 10px;
 }
+
+.invisible{
+    opacity: 0%;
+    height: 1px;
+}
+
+.visualizacionUbicacion{
+    height: 20px;
+    display: inline-flex;
+    background-color: red;
+}
+
+.ubicacion{
+    height: 20px;
+    display: inline-flex;
+}
+
+
+
+/* RESPUESTA FORMULARIO */
 
 
 .logoSEO{
