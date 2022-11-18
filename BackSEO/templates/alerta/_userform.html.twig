@@ -75,8 +75,11 @@
                 {{ form_label(form.telefonoContacto, 'Teléfono') }}
                 {{ form_widget(form.telefonoContacto) }}
             </div>
-            
-            {{ form_row(form.agreeTerms) }}
+            <br>
+            <a class="enlacito" href="https://seo.org/consentimiento/">Aquí puedes leer nuestras condiciones</a>
+            <div>
+                {{ form_row(form.agreeTerms) }}
+            </div>
             <div class="g-recaptcha"
               data-sitekey="6LdVfvsiAAAAAFxkRYUuO9HlfizXqeQgpI1RC1Rz">
             </div>
@@ -98,22 +101,12 @@
     
             function buscarLocalizacion(e) {
                 moveMarker(e.latlng);
-                console.log(e.latlng);
             };
 
             function moveMarker(a){
                 var mimarker = L.marker(a,{draggable:true}).addTo(map);
-                // var inputUbicacion = document.getElementById('alerta_ubicacion');
-                // // mimarker.on("dragend",() => alert(mimarker.getLatLng()));
-                // mimarker.on("dragend",() => inputUbicacion.innerHTML = mimarker.getLatLng());    
-
-                mimarker.on("dragend", function(e) {
-                var position = mimarker.getLatLng();
-                var lacosa = document.getElementById('alerta_ubicacion');
-                lacosa.value = `${position.lat},${position.lng}`;
-                });
+                mimarker.on("dragend",() => alert(mimarker.getLatLng()));  
             };
-            
 
             function errorLocalizacion(e) {
             alert("No es posible encontrar su ubicación. Es posible que tenga que activar la geolocalización.");
