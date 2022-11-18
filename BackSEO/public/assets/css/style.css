@@ -203,13 +203,18 @@ nav{
 
 .visualizacionUbicacion{
     height: 20px;
-    display: inline-flex;
-    background-color: red;
+    margin:auto;
 }
 
 .ubicacion{
-    height: 20px;
-    display: inline-flex;
+    width: 400px;
+    height: 35px;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #cdcccc;
+    /* background-color: #E9ECEF; */
+    padding: 4px;
+
 }
 
 

@@ -10,12 +10,14 @@
                 {{ form_widget(form.tipoAmenaza) }} 
             </div>
             <h4>¿Dónde?</h4>
+            <p>Arrastra el marcador para indicar la ubicación de tu alerta. El punto de partida es tu ubicación actual</p>
             <div class="invisible">
                 {{ form_label(form.ubicacion, 'Ubicación') }}
                 {{ form_widget(form.ubicacion) }}
             </div>
-            <div class="ubicacion">Ubicación:<p id='visualizacionUbicacion'></p></div>
             <div id= 'map'></div>
+            {{ form_label(form.ubicacion, 'Ubicación') }}
+            <div class="ubicacion"><p id='visualizacionUbicacion'></p></div>
             <div class="set">
                 {{ form_label(form.foto, 'Foto') }}
                 {{ form_widget(form.foto) }}
