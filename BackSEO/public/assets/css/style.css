@@ -4,9 +4,7 @@ box-sizing: border-box;
 
 body{
     background-color: #CCE5C9;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Playfair Display', serif;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 
