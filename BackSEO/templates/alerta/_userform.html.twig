@@ -98,12 +98,22 @@
     
             function buscarLocalizacion(e) {
                 moveMarker(e.latlng);
+                console.log(e.latlng);
             };
 
             function moveMarker(a){
                 var mimarker = L.marker(a,{draggable:true}).addTo(map);
-                mimarker.on("dragend",() => alert(mimarker.getLatLng()));  
+                // var inputUbicacion = document.getElementById('alerta_ubicacion');
+                // // mimarker.on("dragend",() => alert(mimarker.getLatLng()));
+                // mimarker.on("dragend",() => inputUbicacion.innerHTML = mimarker.getLatLng());    
+
+                mimarker.on("dragend", function(e) {
+                var position = mimarker.getLatLng();
+                var lacosa = document.getElementById('alerta_ubicacion');
+                lacosa.value = `${position.lat},${position.lng}`;
+                });
             };
+            
 
             function errorLocalizacion(e) {
             alert("No es posible encontrar su ubicación. Es posible que tenga que activar la geolocalización.");
