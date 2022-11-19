@@ -11,10 +11,10 @@ use App\Repository\AlertaRepository;
 use App\Entity\Alerta;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 
-class ResponseJsonController extends AbstractController
+class ResponseXmlController extends AbstractController
 {
-    #[Route('/response/json', name: 'app_response_json',methods: ['GET',"POST"])]
-    public function responseJson(Request $request, AlertaRepository $alertaRepository): Response
+    #[Route('/response/xml', name: 'app_response_xml',methods: ['GET',"POST"])]
+    public function responseXml(Request $request, AlertaRepository $alertaRepository): Response
     {    
         $amenaza = $this->getDoctrine()
         ->getRepository(Alerta::class)
@@ -26,8 +26,14 @@ class ResponseJsonController extends AbstractController
                 'TipoAlerta' => $p->getTipoAmenaza(),
                 'Descripcion'=> $p ->getDescripcion(),
             ];
+            
         }
-        return $this->json($data);
+        $xmlEncoder = new XmlEncoder();
+
+        $response = new Response();
+        $response->setContent($xmlEncoder->encode($data, 'xml'));
+        $response->headers->set('Content-Type', 'xml');
+        return $response;
+  }
         
-    }
 }
