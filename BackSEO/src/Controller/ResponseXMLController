@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\ResponseJson;
+
+class InicioController extends AbstractController
+{
+    #[Route('/XML', name: 'response_XML')]
+    public function ResponseXML()
+    {
+        $xml = new SimpleXMLElement($amenaza);
+        array_walk_recursive($test_array, array ($xml, 'addChild'));
+        print $xml->asXML();
+
+         return  $xml->asXML();
+    }
+}
+
+
+
+
+
+
+
+$xml = new SimpleXMLElement('<root/>');
+array_walk_recursive($test_array, array ($xml, 'addChild'));
+print $xml->asXML();

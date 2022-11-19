@@ -26,7 +26,7 @@
                 var position = mimarker.getLatLng();
                 // pintar en HTML latlng
                 var inputUbicacion = document.getElementById('alerta_ubicacion');
-                var visualizacion = document.getElementById('visualizacionUbicacion')
+                var visualizacion = document.getElementById('visualizacionUbicacion');
                 inputUbicacion.value = `${position.lat},${position.lng}`;
                 visualizacion.innerHTML = `${position.lat},${position.lng}`;
                 // mapa centrado en función del marcador

@@ -8,7 +8,6 @@
     <table class="table">
         <thead>
             <tr>
-
                 <th>Foto</th>
                 <th>Descripción</th>
                 <th>Nivel</th>
@@ -21,9 +20,9 @@
             <tr>
                 {# <td>{{ alertum.id }}</td> #} 
                 <td><img src="{{ asset('upload/' ~ alertum.foto) }}" width="150px"></td>
-                <td>{{ alertum.tiempoDesarrollo + alertum.superficieAfectada + alertum.severidadAmenaza }}</td>
-                <td>{{ alertum.descripcion }}</td>
-                <td>{{ alertum.TipoAmenaza }}</td> 
+                <td id='Nivel'>{{ alertum.tiempoDesarrollo + alertum.superficieAfectada + alertum.severidadAmenaza }}</td>
+                <td id='Descripcion'>{{ alertum.descripcion }}</td>
+                <td id='Tipo'>{{ alertum.TipoAmenaza }}</td> 
                 {# <td>{{ alertum.superficieAfectada }}</td> #}
                 {#<td>{{ alertum.nombreContacto }}</td>
                 <td>{{ alertum.emailContacto }}</td>
@@ -38,6 +37,9 @@
                 <td colspan="8">No records found</td>
             </tr>
         {% endfor %}
+        <button id='boton-xml'>XML</button>
+        <button id='boton-txt'>TXT</button>
         </tbody>
     </table>
+    <script src="/assets/js/createXML.js"></script>
 {% endblock %}
