@@ -10,6 +10,9 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Repository\AlertaRepository;
 use App\Entity\Alerta;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
+use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
+use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\Filesystem\Path;
 
 class ResponseXmlController extends AbstractController
 {
