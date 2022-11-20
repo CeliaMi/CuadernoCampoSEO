@@ -10,9 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Repository\AlertaRepository;
 use App\Entity\Alerta;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
-// use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
-// use Symfony\Component\Filesystem\Filesystem;
-// use Symfony\Component\Filesystem\Path;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 
 class ResponseXmlController extends AbstractController
 {
@@ -35,7 +33,6 @@ class ResponseXmlController extends AbstractController
                 'Gravedad' => $p->getSeveridadAmenaza(),
                 'Nombre' => $p->getNombreContacto(),
                 'Email' => $p->getEmailContacto(),
-
             ];
         }
         //Convierto el Array a formato XML
@@ -44,7 +41,27 @@ class ResponseXmlController extends AbstractController
         $response = new Response();
         $response->setContent($xmlEncoder->encode($data, 'xml'));
         $response->headers->set('Content-Type', 'xml');
-        return $response;
+                // Proporcione un nombre para su archivo con extensión
+                $filename = 'Alerta.xml';
+        
+                // El contenido creado dinámicamente del archivo
+                $fileContent = $response;
+                
+                // Devuelve una respuesta con un contenido específico
+                $respuesta= new Response($fileContent);
+        
+                // Crea la disposición del archivo
+                $disposition = $respuesta->headers->makeDisposition(
+
+                    ResponseHeaderBag::DISPOSITION_ATTACHMENT,
+                    $filename
+                );
+        
+                // Establecer la disposición del contenido
+                $respuesta->headers->set('Content-Disposition', $disposition);
+        
+                // Dispatch request
+                return $respuesta;
   }
         
 }
