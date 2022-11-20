@@ -10,15 +10,16 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Repository\AlertaRepository;
 use App\Entity\Alerta;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
-use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
-use Symfony\Component\Filesystem\Filesystem;
-use Symfony\Component\Filesystem\Path;
+// use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
+// use Symfony\Component\Filesystem\Filesystem;
+// use Symfony\Component\Filesystem\Path;
 
 class ResponseXmlController extends AbstractController
 {
     #[Route('/response/xml', name: 'app_response_xml',methods: ['GET',"POST"])]
     public function responseXml(Request $request, AlertaRepository $alertaRepository): Response
-    {    
+    {   
+        //creo un array con los datos
         $amenaza = $this->getDoctrine()
         ->getRepository(Alerta::class)
         ->findAll();
@@ -29,8 +30,8 @@ class ResponseXmlController extends AbstractController
                 'TipoAlerta' => $p->getTipoAmenaza(),
                 'Descripcion'=> $p ->getDescripcion(),
             ];
-            
         }
+        //Convierto el Array a formato XML
         $xmlEncoder = new XmlEncoder();
 
         $response = new Response();

@@ -61,7 +61,6 @@
             {{ form_widget(form.observaciones) }}
             </div>
             <h4>Contacto</h4>
-            <h6>Si necesitamos más información nos gustaria contactar contigo...</h6>
             <div class="set">
                 {{ form_label(form.nombreContacto, 'Nombre') }}
                 {{ form_widget(form.nombreContacto) }}
@@ -78,33 +77,7 @@
             <button class="btnalert">{{ button_label|default('Enviar') }}</button>
         </div>
         </div>
-        <script>
-            
-            //bibliografía (https://leafletjs.com/reference.html).
-
-            var map = L.map('map').locate({setView: true, maxZoom:12});
-            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-                // para elegir el aspecto del mapa (http://leaflet-extras.github.io/leaflet-providers/preview/)
-                attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-            }).addTo(map);
-            
-    
-            function buscarLocalizacion(e) {
-                moveMarker(e.latlng);
-            };
-
-            function moveMarker(a){
-                var mimarker = L.marker(a,{draggable:true}).addTo(map);
-                mimarker.on("dragend",() => alert(mimarker.getLatLng()));  
-            };
-
-            function errorLocalizacion(e) {
-            alert("No es posible encontrar su ubicación. Es posible que tenga que activar la geolocalización.");
-            }
-            map.on('locationerror', errorLocalizacion);
-            map.on('locationfound', buscarLocalizacion);
-
-        </script>
+        <script src="/assets/js/mapAdminForm.js"></script>
         {{form_end(form)}}
     </div> 
 
