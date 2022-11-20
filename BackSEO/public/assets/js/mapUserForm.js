@@ -7,6 +7,16 @@
                 attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
             }).addTo(map);
             
+            var myIcon = L.icon({
+
+                iconUrl: 'https://www.svgrepo.com/show/32372/placeholder.svg',           
+                iconSize:     [38, 95], // size of the icon
+                shadowSize:   [50, 64], // size of the shadow
+                iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+                shadowAnchor: [4, 62],  // the same for the shadow
+                popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+
+            });
     
             function buscarLocalizacion(e) {
                 moveMarker(e.latlng);
@@ -21,7 +31,7 @@
              //  moveMarker actualiza latlng en funcion de donde se posicione el marcador.
 
             function moveMarker(a){
-                var mimarker = L.marker(a,{draggable:true}).addTo(map);               
+                var mimarker = L.marker(a,{icon: myIcon, draggable:true}).addTo(map);               
                 mimarker.on("dragend", function(e) {
                 var position = mimarker.getLatLng();
                 // pintar en HTML latlng
