@@ -28,7 +28,14 @@ class ResponseXmlController extends AbstractController
             $data[] = [
                 'id' => $p->getId(),
                 'TipoAlerta' => $p->getTipoAmenaza(),
-                'Descripcion'=> $p ->getDescripcion(),
+                'Descripcion'=> $p->getDescripcion(),
+                'Ubicación' => $p->getUbicacion(),
+                'Tiempo de Desarrollo' => $p->getTiempoDesarrollo(),
+                'Superficie afectada' => $p->getSuperficieAfectada(),
+                'Gravedad' => $p->getSeveridadAmenaza(),
+                'Nombre' => $p->getNombreContacto(),
+                'Email' => $p->getEmailContacto(),
+
             ];
         }
         //Convierto el Array a formato XML
