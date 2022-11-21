@@ -13,6 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Validator\Constraints\File;
+use App\Entity\Respuestas;
 
 class AlertaType extends AbstractType
 {
@@ -20,7 +21,7 @@ class AlertaType extends AbstractType
     {
         $builder
             ->add('tipoAmenaza', ChoiceType::class, [
-                'choices'=>Alerta::TIPOAMENAZA,
+                'choices'=>Respuestas::TIPOAMENAZA,
                 'placeholder' => 'Seleccione una opción',  
                 ])
             ->add('ubicacion')
@@ -31,26 +32,41 @@ class AlertaType extends AbstractType
             ])
             ->add('descripcion')
             ->add('severidadAmenaza', ChoiceType::class, [
-                'choices'=>Alerta::SEVERIDAD,
+                'choices'=>Respuestas::SEVERIDAD,
                 'placeholder' => 'Seleccione una opción',
             ])
             ->add('superficieAfectada', ChoiceType::class, [
-                'choices'=>Alerta::SUPERFICIE,
+                'choices'=>Respuestas::SUPERFICIE,
                 'placeholder' => 'Seleccione una opción',
             ])
             ->add('tiempoDesarrollo', ChoiceType::class, [
-                'choices'=>Alerta::TIEMPO,
+                'choices'=>Respuestas::TIEMPO,
                 'placeholder' => 'Seleccione una opción',
             ])
             ->add('nombreContacto')
             ->add('emailContacto')
             ->add('telefonoContacto')
             ->add('observaciones')
-            ->add('espacioProtegido')
-            ->add('planDeGestion')
-            ->add('actividadesDeConservacion')
-            ->add('organizaciones')
-            ->add('IBA')
+            ->add('espacioProtegido', ChoiceType::class, [
+                'choices'=>Respuestas::RESPUESATIPO,
+                'placeholder' => 'Seleccione una opción',
+                ])
+            ->add('planDeGestion',ChoiceType::class, [
+                'choices'=>Respuestas::RESPUESATIPO,
+                'placeholder' => 'Seleccione una opción',
+                ])
+            ->add('actividadesDeConservacion', ChoiceType::class, [
+                'choices'=>Respuestas::RESPUESATIPO,
+                'placeholder' => 'Seleccione una opción',
+                ])
+            ->add('organizaciones', ChoiceType::class, [
+                'choices'=>Respuestas::RESPUESATIPO,
+                'placeholder' => 'Seleccione una opción',
+                ])
+            ->add('IBA', ChoiceType::class, [
+                'choices'=>Respuestas::RESPUESATIPO,
+                'placeholder' => 'Seleccione una opción',
+                ])
             ->add('agreeTerms', CheckboxType::class, [
                 'label' => 'Sí, he leído y acepto las condiciones',
                 'mapped' => false,
