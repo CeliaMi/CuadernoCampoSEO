@@ -20,7 +20,8 @@ class AlertaType extends AbstractType
     {
         $builder
             ->add('tipoAmenaza', ChoiceType::class, [
-                'choices'=>Alerta::TIPOAMENAZA  
+                'choices'=>Alerta::TIPOAMENAZA,
+                'placeholder' => 'Seleccione una opción',  
                 ])
             ->add('ubicacion')
             ->add('foto', FileType::class, [
@@ -30,13 +31,16 @@ class AlertaType extends AbstractType
             ])
             ->add('descripcion')
             ->add('severidadAmenaza', ChoiceType::class, [
-                'choices'=>Alerta::SEVERIDAD
+                'choices'=>Alerta::SEVERIDAD,
+                'placeholder' => 'Seleccione una opción',
             ])
             ->add('superficieAfectada', ChoiceType::class, [
-                'choices'=>Alerta::SUPERFICIE
+                'choices'=>Alerta::SUPERFICIE,
+                'placeholder' => 'Seleccione una opción',
             ])
             ->add('tiempoDesarrollo', ChoiceType::class, [
-                'choices'=>Alerta::TIEMPO
+                'choices'=>Alerta::TIEMPO,
+                'placeholder' => 'Seleccione una opción',
             ])
             ->add('nombreContacto')
             ->add('emailContacto')
