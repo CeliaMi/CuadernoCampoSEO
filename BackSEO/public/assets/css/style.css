@@ -190,8 +190,13 @@ button{
     margin-top: 15px;
 }
 
-.btnVolver{
+.btnVolver1{
     margin-left: 15px;
+    background-color: #ffffff48;
+    color:#68BE5E;
+}
+
+.btnVolver2{
     background-color: #ffffff48;
     color:#68BE5E;
 }
@@ -231,7 +236,7 @@ button{
     justify-content: center;
     margin: auto;    
 }
-.btnEditar{
+/* .btnEditar{
     margin-left: 15px;
     border-radius: 6px;
     border-color: #68be5e00;
@@ -239,14 +244,14 @@ button{
     width:35px;
     color:white;
     background-color: #CCE5C9;
-}
+} */
 
 .btnBorrar{
-    margin-left: 15px;
     background-color: #fd4f4f;
     height: 30px;
     width:35px;
 }
+
 
 /* ADMIN/SOW */
 

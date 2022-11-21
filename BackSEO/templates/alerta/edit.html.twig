@@ -5,11 +5,12 @@
 {% block body %}
     <h1 class="title" >Editar Alerta</h1>
 
-    <a href="{{ path('app_alerta_index') }}"><button class='btnVolver'>{{ button_label|default('Volver') }}</button></a>
+    <a href="{{ path('app_alerta_index') }}"><button class='btnVolver1'>{{ button_label|default('Volver') }}</button></a>
 
     {{ include('alerta/_form.html.twig', {'button_label': 'Actualizar'}) }}
-
-    <a href="{{ path('app_alerta_index') }}"><button class='btnVolver'>{{ button_label|default('Volver') }}</button></a>
-
+    
     {{ include('alerta/_delete_form.html.twig') }}
+
+    <a href="{{ path('app_alerta_index') }}"><button class='btnVolver2'>{{ button_label|default('Volver') }}</button></a>
+
 {% endblock %}
