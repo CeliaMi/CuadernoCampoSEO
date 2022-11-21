@@ -3,7 +3,7 @@ box-sizing: border-box;
 }
 
 body{
-    background-color: #CCE5C9;
+    background-color: #1D9BD5;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     min-width: 100px;
 }
@@ -39,7 +39,7 @@ button{
     margin:auto;
  }
 
- .card-user{
+ .carduser{
     max-width: 600px;
     min-width: 90px;
     margin:auto;
@@ -115,6 +115,7 @@ button{
     border: 1px solid #cdcccc;
     /* background-color: #E9ECEF; */
     padding: 4px;
+
 }
 
 
@@ -187,8 +188,9 @@ button{
     width: 80px;
     background-color: #4a4d4948;
     border-color: #68be5e00;
-    border-radius: 0px;
-    margin-top: 0px;     
+    border-radius: 8px; 
+    color:white;
+    margin:10px;    
 }
 
 .btnEmoji1 {

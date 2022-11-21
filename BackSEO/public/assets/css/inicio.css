@@ -5,7 +5,8 @@
 }
 
 body {
-    background-color: #CCE5C9;
+    background-blend-mode: #1d9bd5;
+    background-image: url(../img/fondoAZUL_SEO.png);
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
@@ -18,11 +19,12 @@ a{
 }
     
 button{
-    color:white;
-    background-color: #68BE5E;
+    color:  #ffffff;
+    background-color:#68BE5E;
     border-radius: 6px;
     border-color: #68be5e00;
     height: 30px;
+    font-weight:bold;
 }
 
 
@@ -37,11 +39,13 @@ nav{
     width: 80px;
     background-color: #4a4d4948;
     border-color: #68be5e00;
-    border-radius: 0px;  
+    border-radius: 8px; 
+    color:white;
+    margin:10px;
 }
 
 .tituloPortada{
-    color: #1D9BD5;
+    color: rgb(255, 255, 255);
     /* position: absolute;  ATENCIÓN:ACTIVAR CUANDO SE PONGA EL BANNER*/
     display: flex;
     justify-content: center;
@@ -82,6 +86,12 @@ nav{
 
 /* parte media */
    
+h2{
+    color:#000000;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
 .contenido {
     display: block;
     align-items: center;
@@ -99,6 +109,7 @@ nav{
 p {
     font-size: large;
     padding: 15px;
+    color:rgb(0, 0, 0);
 }
 
 
@@ -109,6 +120,9 @@ p {
 .btnalertar{
     width: 200px;
     height: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: large;
+
 }
 
 
@@ -117,6 +131,11 @@ p {
 .logoSEO{
     margin:auto;
     width: 100px;
+}
+
+.imgLogoSEO{
+    width: 80px; 
+    opacity: 50%;
 }
 
 
