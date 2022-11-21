@@ -10,11 +10,14 @@
                 {{ form_widget(form.tipoAmenaza) }} 
             </div>
             <h4>¿Dónde?</h4>
-            <div class="set">
+            <p>Arrastra el marcador para indicar la ubicación de tu alerta. El punto de partida es tu ubicación actual</p>
+            <div class="invisible">
                 {{ form_label(form.ubicacion, 'Ubicación') }}
                 {{ form_widget(form.ubicacion) }}
             </div>
-            <div id="map"></div>
+            <div id= 'map'></div>
+            {{ form_label(form.ubicacion, 'Ubicación') }}
+            <div class="ubicacion"><p id='visualizacionUbicacion'></p></div>
             <div class="set">
                 {{ form_label(form.foto, 'Foto') }}
                 {{ form_widget(form.foto) }}
@@ -75,8 +78,11 @@
                 {{ form_label(form.telefonoContacto, 'Teléfono') }}
                 {{ form_widget(form.telefonoContacto) }}
             </div>
-            
-            {{ form_row(form.agreeTerms) }}
+            <br>
+            <a class="enlacito" href="https://seo.org/consentimiento/">Aquí puedes leer nuestras condiciones</a>
+            <div>
+                {{ form_row(form.agreeTerms) }}
+            </div>
             <div class="g-recaptcha"
               data-sitekey="6LdVfvsiAAAAAFxkRYUuO9HlfizXqeQgpI1RC1Rz">
             </div>
@@ -85,58 +91,12 @@
             <button class="btnalert">{{ button_label|default('Enviar') }}</button>
         </div>
         </div>
-        <script>
-            
-            //bibliografía (https://leafletjs.com/reference.html).
-
-            var map = L.map('map').locate({setView: true, maxZoom:12});
-            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-                // para elegir el aspecto del mapa (http://leaflet-extras.github.io/leaflet-providers/preview/)
-                attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-            }).addTo(map);
-            
-    
-            function buscarLocalizacion(e) {
-                moveMarker(e.latlng);
-                console.log(e.latlng);
-            };
-
-            function moveMarker(a){
-                var mimarker = L.marker(a,{draggable:true}).addTo(map);
-                // var inputUbicacion = document.getElementById('alerta_ubicacion');
-                // // mimarker.on("dragend",() => alert(mimarker.getLatLng()));
-                // mimarker.on("dragend",() => inputUbicacion.innerHTML = mimarker.getLatLng());    
-
-                mimarker.on("dragend", function(e) {
-                var position = mimarker.getLatLng();
-                var inputUbicacion = document.getElementById('alerta_ubicacion');
-                inputUbicacion.value = `${position.lat},${position.lng}`;
-                window.addEventListener("load", map.fitBounds([
-                [ mimarker.getLatLng().lat, mimarker.getLatLng().lng]
-                ]));
-
-                });
-
-
-
-            };
-            
-        
-            function errorLocalizacion(e) {
-            alert("No es posible encontrar su ubicación. Es posible que tenga que activar la geolocalización.");
-            }
-            map.on('locationerror', errorLocalizacion);
-            map.on('locationfound', buscarLocalizacion);
-
-        </script>
         {{form_end(form)}}
     </div>
     {% for message in app.flashes('exito') %}
         <div class="alert alert-success">
             {{ message }}
         </div>
-
-
     {% endfor %}
 
 {% endblock %}

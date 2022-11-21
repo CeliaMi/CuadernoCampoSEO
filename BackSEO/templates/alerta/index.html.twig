@@ -8,23 +8,23 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Ubicación</th>
                 <th>Foto</th>
-                <th>Tipo de Amenaza</th>
+                <th>Descripción</th>
+                <th>Nivel</th>
+                <th>Tipo</th>
                 <th>Opciones</th>
             </tr>
         </thead>
         <tbody>
         {% for alertum in alertas %}
             <tr>
-                {# <td>{{ alertum.id }}</td> #}
-                <td>{{ alertum.ubicacion }}</td>
-                <td>{{ alertum.foto }}</td>
-                 <td>{{ alertum.TipoAmenaza }}</td> 
+                {# <td>{{ alertum.id }}</td> #} 
+                <td><img src="{{ asset('upload/' ~ alertum.foto) }}" width="150px"></td>
+                <td id='Nivel'>{{ alertum.tiempoDesarrollo + alertum.superficieAfectada + alertum.severidadAmenaza }}</td>
+                <td id='Descripcion'>{{ alertum.descripcion }}</td>
+                <td id='Tipo'>{{ alertum.TipoAmenaza }}</td> 
                 {# <td>{{ alertum.superficieAfectada }}</td> #}
-
-                {# <td>{{ alertum.descripcion }}</td>
-                <td>{{ alertum.nombreContacto }}</td>
+                {#<td>{{ alertum.nombreContacto }}</td>
                 <td>{{ alertum.emailContacto }}</td>
                 <td>{{ alertum.telefonoContacto }}</td> #}
                 <td>

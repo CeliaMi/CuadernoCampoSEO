@@ -44,16 +44,9 @@ button{
     font-size: 6rem;
  }
 
- /* FORMULARIO */
+/* FORMULARIO */
 
- .mundito {
-    width: 300px;
-    display: flex;
-    justify-content: center;
- }
-
-
- .card-admin{
+.card-admin{
     max-width: 800px;
     min-width: 100px;
     background-color: white;
@@ -88,6 +81,63 @@ button{
     min-width: 200px;
  }
 
+/* FORMULARIO/MAPA */
+
+#map { 
+    height: 380px;
+    width: 380px;
+    margin: 10px;
+}
+
+.invisible{
+    opacity: 0%;
+    height: 1px;
+}
+
+.visualizacionUbicacion{
+    height: 20px;
+    margin:auto;
+}
+
+.ubicacion{
+    width: 400px;
+    height: 35px;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #cdcccc;
+    /* background-color: #E9ECEF; */
+    padding: 4px;
+
+}
+
+
+
+/* FORMULARIO/RESPUESTA */
+
+
+.logoSEO{
+    display: flex;
+    align-self: center;
+    width: 100px;
+}
+
+.textito{
+    font-size: small;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color: rgb(128, 127, 127);
+}
+
+.enlacito{
+    color: rgb(128, 127, 127);;
+}
+
+ .mundito {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+ }
+
  /* LOGIN */
  
  .login{
@@ -101,6 +151,17 @@ button{
     margin-bottom: 50px;
  }
 
+ .errorText{
+    color:rgb(247, 77, 77);
+    font-style: italic;
+}
+
+  /* ADMIN */
+
+nav{
+    display: flex;
+    justify-content: end;
+}
 
 button{
     color:white;
@@ -111,6 +172,8 @@ button{
 
 .btnVolver{
     margin-left: 15px;
+    background-color: #ffffff48;
+    color:#68BE5E;
 }
 
 .btnSalir {
@@ -118,9 +181,7 @@ button{
     background-color: #4a4d4948;
     border-color: #68be5e00;
     border-radius: 0px;
-    margin-top: 0px; 
-       
-    
+    margin-top: 0px;     
 }
 
 .btnEmoji1 {
@@ -129,7 +190,7 @@ button{
     height: 30px;
     width:35px;
     color:white;
-    background-color: #CCE5C9;
+    background-color:#1D9BD5;
     margin-right: 5.5px;
 }
 
@@ -147,8 +208,7 @@ button{
     display:block;
     display: flex;
     justify-content: center;
-    margin: auto;
-    
+    margin: auto;    
 }
 .btnEditar{
     margin-left: 15px;
@@ -167,17 +227,7 @@ button{
     width:35px;
 }
 
-nav{
-    display: flex;
-    justify-content: end;
-}
-
-.errorText{
-    color:rgb(247, 77, 77);
-    font-style: italic;
-}
-
-/* SOW */
+/* ADMIN/SOW */
 
 .table {
     margin:20px;
@@ -186,29 +236,4 @@ nav{
     margin:auto;
     margin-bottom: 10px;
     
-}
-
-/* MAPA */
-
-#map { 
-    height: 150px;
-    width: 380px;
-    margin: 10px;
-}
-
-
-.logoSEO{
-    display: flex;
-    align-self: center;
-    width: 100px;
-}
-
-.textito{
-    font-size: small;
-    margin-top: 15px;
-    color: rgb(128, 127, 127);
-}
-
-.enlacito{
-    color: rgb(128, 127, 127);;
 }

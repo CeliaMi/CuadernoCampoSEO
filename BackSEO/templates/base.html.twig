@@ -2,7 +2,6 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="asests/style.css" rel="stylesheet" type="text/css">
         <title>{% block title %}SeoAlert{% endblock %}</title>
         <!-- Favicon para diferentes navegadores -->
         <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon_color/apple-icon-57x57.png">
@@ -51,8 +50,8 @@
             <a href="{{ path('app_logout') }}"><button class='btnSalir'>{{ button_label|default('Inicio') }}</button></a>
         </nav>
         <section class="card">
-            {% block body %}{% endblock %}
+            {% block body %}
+            {% endblock %}
         </section>
-    
     </body>
 </html>

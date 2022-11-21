@@ -41,7 +41,7 @@ nav{
 }
 
 .tituloPortada{
-    color: #ffffff;
+    color: #1D9BD5;
     /* position: absolute;  ATENCIÓN:ACTIVAR CUANDO SE PONGA EL BANNER*/
     display: flex;
     justify-content: center;
@@ -55,15 +55,25 @@ nav{
     justify-content: center;
     text-align: center;
     position: relative;  
+    height: 100px;
+    margin: 30px;
+   
 }
 .baner img{
     /*width: 1200px;*/
     height: 200px;
     display: flex;
+<<<<<<< HEAD
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px;
     
 }
+=======
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    
+} 
+>>>>>>> 591a1d4f31e724dedde0932c11ec01bc5412aa5c
  
 <<<<<<< HEAD
 .baner h1{
