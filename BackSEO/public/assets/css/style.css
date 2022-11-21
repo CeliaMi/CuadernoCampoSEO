@@ -5,6 +5,7 @@ box-sizing: border-box;
 body{
     background-color: #CCE5C9;
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    min-width: 100px;
 }
 
 
@@ -23,26 +24,9 @@ button{
     align-items: center;
     text-align: center;
     width: 200px;
+    min-width: 90px;
 }
 
-.banner {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    clip-path: circle(50% at 50% 0)
-}
-.hero img{
-    background-size: auto;
-    width: fit-content;
-}
-.hero h1{
-    color: #ffffff;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    font-size: 6rem;
- }
 
 /* FORMULARIO */
 
@@ -55,6 +39,13 @@ button{
     margin:auto;
  }
 
+ .card-user{
+    max-width: 600px;
+    min-width: 90px;
+    margin:auto;
+    margin-top: 10px;
+ }
+
  .card{
     max-width: 600px;
     min-width: 100px;
@@ -62,23 +53,35 @@ button{
     margin-top: 50px;
  }
 
+ .question{
+    background-color: #ffffff;
+    margin:20px;
+    padding:10%;
+    border-radius: 8px;
+    min-width: 80px;
+ }
+ 
+
  .title{
     text-align: center;
-    margin-top:40px;
+    margin:40px;
+    color:white;
  }
 
  label{
-    font-size: small;
+    font-size:medium;
+    margin-top: 10px;
  }
+
 
  h4{
     max-width:50%;
-    margin-top: 50px;
+    margin-top: 10px;
  }
 
  .set{
     max-width: 400px;
-    min-width: 200px;
+    min-width: 80px;
  }
 
 ::placeholder{
@@ -88,7 +91,8 @@ button{
 
 #map { 
     height: 380px;
-    width: 380px;
+    max-width: 380px;
+    min-width: 80px;
     margin: 10px;
 }
 
@@ -103,14 +107,14 @@ button{
 }
 
 .ubicacion{
-    width: 400px;
+    max-width: 400px;
+    min-width: 80px;
     height: 35px;
     display: block;
     border-radius: 5px;
     border: 1px solid #cdcccc;
     /* background-color: #E9ECEF; */
     padding: 4px;
-
 }
 
 

@@ -3,8 +3,7 @@
 {# ... #}
 
 {% block body %}
-
-
+<section class="card">
 
     <form action="{{ path('app_login') }}" method="post" class="login">
 
@@ -25,6 +24,8 @@
         <div class="errorText">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
         {% endif %}
     </form>
+
+</section>
 
 
 {% endblock %}

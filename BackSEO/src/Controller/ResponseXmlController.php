@@ -40,7 +40,7 @@ class ResponseXmlController extends AbstractController
 
         $response = new Response();
         $response->setContent($xmlEncoder->encode($data, 'xml'));
-        $response->headers->set('Content-Type', 'xml',);
+        $response->headers->set('Content-Type', 'xml');
 
                 // Proporcione un nombre para su archivo con extensión
                 $filename = 'Alerta.xml';

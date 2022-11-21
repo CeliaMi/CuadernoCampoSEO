@@ -49,9 +49,7 @@
         <nav>
             <a href="{{ path('app_logout') }}"><button class='btnSalir'>{{ button_label|default('Inicio') }}</button></a>
         </nav>
-        <section class="card">
             {% block body %}
             {% endblock %}
-        </section>
     </body>
 </html>
