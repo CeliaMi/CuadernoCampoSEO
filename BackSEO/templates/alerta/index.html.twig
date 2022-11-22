@@ -4,39 +4,35 @@
 
 {% block body %}
     <h1 class="title">Alertas</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Foto</th>
-                <th>Nivel</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-                <th>Opciones</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for alertum in alertas %}
-            <tr>
-                {# <td>{{ alertum.id }}</td> #} 
-                <td><img src="{{ asset('upload/' ~ alertum.foto) }}" width="150px"></td>
-                <td id='Nivel'>{{ alertum.tiempoDesarrollo + alertum.superficieAfectada + alertum.severidadAmenaza }}</td>
-                <td id='Descripcion'>{{ alertum.descripcion }}</td>
-                <td id='Tipo'>{{ alertum.TipoAmenaza }}</td> 
-                {# <td>{{ alertum.superficieAfectada }}</td> #}
-                {#<td>{{ alertum.nombreContacto }}</td>
-                <td>{{ alertum.emailContacto }}</td>
-                <td>{{ alertum.telefonoContacto }}</td> #}
-                <td>
-                <a href="{{ path('app_alerta_show', {'id': alertum.id}) }}"><button class='btnEmojiVer'>{{ button_label|default('') }}<img class ="emojiVer" src="\assets\img\ver.png" alt="Ver" /></button></a>
-                <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button class='btnEmojiEditar'>{{ button_label|default('') }}<img class ="emojiEditar" src="\assets\img\editar.png" alt="Editar" /></button></a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="8">No records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <section class="card-admin">  
+        <table class="table table-hover table-bordered">
+            <thead class='thead-dark'>
+                <tr class='thead-dark'>
+                    <th class='thead-dark'>Foto</th>
+                    <th>Nivel</th>
+                    <th>Descripción</th>
+                    <th>Tipo</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for alertum in alertas %}
+                <tr>
+                    <td><img src="{{ asset('upload/' ~ alertum.foto) }}" width="150px"></td>
+                    <td id='Nivel'>{{ alertum.tiempoDesarrollo + alertum.superficieAfectada + alertum.severidadAmenaza }}</td>
+                    <td id='Descripcion'>{{ alertum.descripcion }}</td>
+                    <td id='Tipo'>{{ alertum.TipoAmenaza }}</td> 
+                    <td>
+                    <a href="{{ path('app_alerta_show', {'id': alertum.id}) }}"><button class='btnEmojiVer'>{{ button_label|default('') }}<img class ="emojiVer" src="\assets\img\ver.png" alt="Ver" /></button></a>
+                    <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button class='btnEmojiEditar'>{{ button_label|default('') }}Editar <img class ="emojiEditar" src="\assets\img\editar.png" alt="Editar"/></button></a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="8">No records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
 {% endblock %}

@@ -68,10 +68,7 @@ class AlertaType extends AbstractType
             ->add('emailContacto')
             ->add('telefonoContacto')
             ->add('agreeTerms', CheckboxType::class, [
-<<<<<<< HEAD
-=======
                 // 'label' => 'Sí, he leído y acepto las condiciones',
->>>>>>> fc4f4ed552e675f3d7e242c2aee74598f96c7fb3
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([

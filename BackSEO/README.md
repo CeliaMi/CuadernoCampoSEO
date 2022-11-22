@@ -11,6 +11,7 @@ composer require symfony/runtime
 composer require symfony/asset
 composer require symfony/security-bundle
 <!-- composer require symfony/filesystem -->
+composer require symfony/serializer
 
 
 3. Migra las entidades a tu base de datos

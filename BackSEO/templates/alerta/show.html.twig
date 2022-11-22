@@ -3,61 +3,67 @@
 {% block title %}Alerta{% endblock %}
 
 {% block body %}
-    <h1 class="title">Alerta</h1>
+    <h1 class="title">Alerta {{ alertum.id }}</h1>
+    <section class="card-admin">   
 
-    <a href="{{ path('app_alerta_index') }}"><button class='btnVolver2'>{{ button_label|default('Volver') }}</button></a>
+        <a href="{{ path('app_alerta_index') }}"><button class='btnSalir'>{{ button_label|default('Volver') }}</button></a>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Tipo de Amenaza</th>
-                 <td>{{ alertum.tipoAmenaza }}</td>
-            </tr>
-            <tr>
-                <th>Ubicación</th>
-                <td>{{ alertum.ubicacion }}</td>
-            </tr>
-            <tr>
-                <th>Foto</th>   
-                <td><img src="{{ asset('upload/' ~ alertum.foto) }}" width="150px"></td>
-            </tr>
-            <tr>
-                <th>Descripción</th>
-                <td>{{ alertum.descripcion }}</td>
-            </tr>
-            <tr>
-                <th>Gravedad de la amenaza</th>
-                <td>{{ alertum.severidadAmenaza }}</td> 
-            </tr>
-            <tr>
-                <th>Superficie afectada</th>
-                <td>{{ alertum.superficieAfectada }}</td> 
-            </tr>
-                <th>Gravedad en el tiempo</th>
-                <td>{{ alertum.tiempoDesarrollo }}</td> 
-            </tr>
-            <tr>
-                <th>Impacto de la amenaza</th>
-                {# <td>{{ alertum.sumatorio }}</td> #}
-                <td>{{ alertum.tiempoDesarrollo + alertum.superficieAfectada + alertum.severidadAmenaza }}</td> 
-            </tr>
-            <tr>
-                <th>Nombre</th>
-                <td>{{ alertum.nombreContacto }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ alertum.emailContacto }}</td>
-            </tr>
-            <tr>
-                <th>Teléfono</th>
-                <td>{{ alertum.telefonoContacto }}</td>
-            </tr>
-        </tbody>
-    </table>
+        <table class="table">
+            <tbody>
+            <div class="container">
+                <div>
+                    <td><img class='imgSow' src="{{ asset('upload/' ~ alertum.foto) }}"></td>
+                <div>
+                <div>
+                    </tr>
+                    <tr>
+                        <th class='thead-light'>Tipo de Amenaza</th>
+                        <td>{{ alertum.tipoAmenaza }}</td>
+                    </tr>
+                        <tr>
+                        <th>Ubicación</th>
+                        <td>{{ alertum.ubicacion }}</td>
+                    </tr>
+                    <tr>
+                        <th>Descripción</th>
+                        <td>{{ alertum.descripcion }}</td>
+                    </tr>
+                    <tr>
+                        <th>Gravedad de la amenaza</th>
+                        <td>{{ alertum.severidadAmenaza }}</td> 
+                    </tr>
+                    <tr>
+                        <th>Superficie afectada</th>
+                        <td>{{ alertum.superficieAfectada }}</td> 
+                    </tr>
+                        <th>Gravedad en el tiempo</th>
+                        <td>{{ alertum.tiempoDesarrollo }}</td> 
+                    </tr>
+                    <tr>
+                        <th>Impacto de la amenaza</th>
+                        {# <td>{{ alertum.sumatorio }}</td> #}
+                        <td>{{ alertum.tiempoDesarrollo + alertum.superficieAfectada + alertum.severidadAmenaza }}</td> 
+                    </tr>
+                    <tr>
+                        <th>Nombre</th>
+                        <td>{{ alertum.nombreContacto }}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>{{ alertum.emailContacto }}</td>
+                    </tr>
+                    <tr>
+                        <th>Teléfono</th>
+                        <td>{{ alertum.telefonoContacto }}</td>
+                    </tr>
+                <div>
+            </div>
+            </tbody>
+        </table>
 
-    <div class="butonContainer">
-        <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button class='btnEmojiEditar'>{{ button_label|default('') }}<img class ="emojiEditar" src="\assets\img\editar.png" alt="Editar" /></button></a>
-        {{ include('alerta/_delete_form.html.twig') }}
-    </div>
-{% endblock %}
+        <div class="butonContainer">
+            <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button class='btnEmojiEditar'>{{ button_label|default('') }}<img class ="emojiEditar" src="\assets\img\editar.png" alt="Editar" /></button></a>
+            {{ include('alerta/_delete_form.html.twig') }}
+        </div>
+    </section>
+    {% endblock %}
