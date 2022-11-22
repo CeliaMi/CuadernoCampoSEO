@@ -68,13 +68,13 @@ class AlertaType extends AbstractType
                 'placeholder' => 'Seleccione una opción',
                 ])
             ->add('agreeTerms', CheckboxType::class, [
-                'label' => 'Sí, he leído y acepto las condiciones',
+                // 'label' => 'Sí, he leído y acepto las condiciones',
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([
                         'message' => 'Debes aceptar nuestras condiciones',
                     ]),
-                ],
+                ]
             ])
         ;
     }
