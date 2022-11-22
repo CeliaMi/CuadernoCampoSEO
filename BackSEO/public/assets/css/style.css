@@ -211,24 +211,32 @@ button{
     margin:10px;    
 }
 
-.btnEmoji1 {
+.btnEmojiVer {
     border-radius: 6px;
     border-color: #68be5e00;
     height: 30px;
     width:35px;
     color:white;
     background-color:#1D9BD5;
-    margin-right: 5.5px;
+    *margin-right: 5.5px;
 }
 
-.btnEmoji2 {
+.btnEmojiEditar {
     border-radius: 6px;
     border-color: #68be5e00;
     height: 30px;
     width:35px;
     color:white;
-    background-color: #CCE5C9;
-    margin-right: 5.5px;
+    background-color: #68BE5E;
+    margin-right: 5.5px; 
+}
+.emojiVer {
+    width: 20px;
+    height: 10px;
+}
+.emojiEditar {
+    width: 12px;
+    height: 20px;
 }
 
 .butonContainer{
@@ -251,6 +259,10 @@ button{
     background-color: #fd4f4f;
     height: 30px;
     width:35px;
+}
+.emojiBorrar {
+    width: 12px;
+    height: 20px;
 }
 
 
