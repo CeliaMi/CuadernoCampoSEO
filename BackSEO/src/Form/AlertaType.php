@@ -43,10 +43,6 @@ class AlertaType extends AbstractType
                 'choices'=>Respuestas::TIEMPO,
                 'placeholder' => 'Seleccione una opción',
             ])
-            ->add('nombreContacto')
-            ->add('emailContacto')
-            ->add('telefonoContacto')
-            ->add('observaciones')
             ->add('espacioProtegido', ChoiceType::class, [
                 'choices'=>Respuestas::RESPUESATIPO,
                 'placeholder' => 'Seleccione una opción',
@@ -67,15 +63,18 @@ class AlertaType extends AbstractType
                 'choices'=>Respuestas::RESPUESATIPO,
                 'placeholder' => 'Seleccione una opción',
                 ])
+            ->add('observaciones')
+            ->add('nombreContacto')
+            ->add('emailContacto')
+            ->add('telefonoContacto')
             ->add('agreeTerms', CheckboxType::class, [
-                'label' => 'Sí, he leído y acepto las condiciones',
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([
-                        'message' => 'Debes aceptar nuestras condiciones',
+                        'message' => 'You should agree to our terms.',
                     ]),
                 ],
-            ])
+            ])    
         ;
     }
     public function configureOptions(OptionsResolver $resolver): void

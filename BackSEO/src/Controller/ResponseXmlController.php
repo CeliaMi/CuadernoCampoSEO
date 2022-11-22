@@ -41,26 +41,26 @@ class ResponseXmlController extends AbstractController
         $response->setContent($xmlEncoder->encode($data, 'xml'));
         $response->headers->set('Content-Type', 'xml');
 
-                // nombre para su archivo con extensión
-                $filename = 'Alerta.xml';
+                // // nombre para su archivo con extensión
+                // $filename = 'Alerta.xml';
         
                 
-                $fileContent = $response;
+                // $fileContent = $response;
                 
                 
-                $respuesta= new Response($fileContent);
+                // $respuesta= new Response($fileContent);
         
-                // aquí me pone los headers
-                $disposition = $respuesta->headers->makeDisposition(
-                    ResponseHeaderBag::DISPOSITION_ATTACHMENT,
-                    $filename
-                );
+                // // aquí me pone los headers
+                // $disposition = $respuesta->headers->makeDisposition(
+                //     ResponseHeaderBag::DISPOSITION_ATTACHMENT,
+                //     $filename
+                // );
         
-                // Establecer la disposición del contenido
-                $respuesta->headers->set('Content-Disposition', $disposition);
+                // // Establecer la disposición del contenido
+                // $respuesta->headers->set('Content-Disposition', $disposition);
         
-               
-                return $respuesta;
+                $informe = $this->render($response);
+                return $informe;
   }
         
 }

@@ -88,7 +88,7 @@
                 <br>
                 <a class="enlacito" href="https://seo.org/consentimiento/">Aquí puedes leer nuestras condiciones</a>
                 <div>
-                    {{ form_row(form.agreeTerms) }}
+                    {{ form_row(form.agreeTerms) }} 
                 </div>
                 <div class="g-recaptcha"
                 data-sitekey="6LdVfvsiAAAAAFxkRYUuO9HlfizXqeQgpI1RC1Rz">
@@ -97,6 +97,7 @@
                     <button class="btnalert">{{ button_label|default('Enviar') }}</button>
                 </div>
         </div>
+        <script src="/assets/js/validationForm.js"></script>
         
     {{form_end(form)}}
     </div>
