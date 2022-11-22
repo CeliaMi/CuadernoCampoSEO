@@ -34,6 +34,7 @@ class AlertaController extends AbstractController
     {
         $form = $this->createForm(AlertaType::class, $alertum);
         $form->handleRequest($request);
+        $form->remove('agreeTerms');
 
         if ($form->isSubmitted() && $form->isValid()) {
             $alertaRepository->save($alertum, true);

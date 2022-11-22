@@ -18,7 +18,7 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 class NuevaAlertaController extends AbstractController
 {
-    #[Route('/new', name: 'app_alerta_new', methods: ['GET', 'POST'])]
+    #[Route('/crear/alerta', name: 'app_alerta_new', methods: ['GET', 'POST'])]
     public function new(Request $request, AlertaRepository $alertaRepository, SluggerInterface $slugger): Response
     {
         $alertum = new Alerta();

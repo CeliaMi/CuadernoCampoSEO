@@ -10,7 +10,7 @@ DATABASE_URL="mysql://root@127.0.0.1:3306/alertseo"
 composer require symfony/runtime
 composer require symfony/asset
 composer require symfony/security-bundle
-composer require symfony/filesystem
+<!-- composer require symfony/filesystem -->
 
 
 3. Migra las entidades a tu base de datos

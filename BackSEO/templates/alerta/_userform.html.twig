@@ -1,97 +1,104 @@
 {% block body %}
 
-    <div class="container p-5"> 
-        <div>
-            <h4>¿Qué ocurre?</h4>
-            <div>                   
-                {{form_start(form)}}
+    <div class="carduser"> 
+    {{form_start(form)}}
+        <div class='question'>
+                <h4>¿Qué ocurre?</h4>                   
+                    <div class="set">
+                    {{ form_label(form.tipoAmenaza, 'Tipo de Amenaza') }}
+                    {{ form_widget(form.tipoAmenaza) }} 
+                </div>
+        </div>
+        <div class='question'>
+                <h4>¿Dónde?</h4>
+                <p>Arrastra el marcador para indicar la ubicación de tu alerta. El punto de partida es tu ubicación actual</p>
+                <div class="invisible set">
+                    {{ form_label(form.ubicacion, 'Ubicación') }}
+                    {{ form_widget(form.ubicacion) }}
+                </div>
+                <div id= 'map'></div>
+                    {{ form_label(form.ubicacion, 'Ubicación') }}
+                <div class="ubicacion"><p id='visualizacionUbicacion'></p></div>
                 <div class="set">
-                {{ form_label(form.tipoAmenaza, 'Tipo de Amenaza') }}
-                {{ form_widget(form.tipoAmenaza) }} 
-            </div>
-            <h4>¿Dónde?</h4>
-            <p>Arrastra el marcador para indicar la ubicación de tu alerta. El punto de partida es tu ubicación actual</p>
-            <div class="invisible">
-                {{ form_label(form.ubicacion, 'Ubicación') }}
-                {{ form_widget(form.ubicacion) }}
-            </div>
-            <div id= 'map'></div>
-                {{ form_label(form.ubicacion, 'Ubicación') }}
-            <div class="ubicacion"><p id='visualizacionUbicacion'></p></div>
-            <div class="set">
-                {{ form_label(form.foto, 'Foto') }}
-                {{ form_widget(form.foto) }}
-            </div>
-            <div class="set">
-                {{ form_label(form.descripcion, 'Descripción') }}
-                {{ form_widget(form.descripcion) }}
-            </div>
-            <h4>Ayudanos a determinar el nivel de alerta</h4>
-            <div class="set">
-                {{ form_label(form.severidadAmenaza, 'Nivel de Gravedad') }}
-                {{ form_widget(form.severidadAmenaza) }}
-            </div>
-            <div class="set">
-                {{ form_label(form.superficieAfectada, 'Superficie Afectada') }}
-                {{ form_widget(form.superficieAfectada) }}
-            </div>
-            <div class="set">
-                {{ form_label(form.tiempoDesarrollo, 'Tiempo de Desarrollo') }}
-                {{ form_widget(form.tiempoDesarrollo) }}
-            </div>
-            <h4>Información complementaria</h4>
-             <div class="set">
-                {{ form_label(form.IBA, '¿Esta dentro de una zona IBA?') }}
-                {{ form_widget(form.IBA) }}
-            </div>
-            <div class="set">
-                {{ form_label(form.espacioProtegido, '¿Esta todo el área o una parte legalmente protegido?') }}
-                {{ form_widget(form.espacioProtegido) }}
-            </div>
-            <div class="set">
-                {{ form_label(form.planDeGestion, '¿Hay algún plan de gestión en la zona?') }}
-                {{ form_widget(form.planDeGestion) }}
-            </div>
-            <div class="set">
-                {{ form_label(form.actividadesDeConservacion, '¿Se llevan a cabo actividades de conservación en el área?') }}
-                {{ form_widget(form.actividadesDeConservacion) }}
-            </div>
-            <div class="set">
-                {{ form_label(form.organizaciones, '¿Hay organizaciones revirtiendo esta amenaza ya?') }}
-                {{ form_widget(form.organizaciones) }}
-            </div>
-            <div class="set">
-                {{ form_label(form.observaciones, 'Observaciones') }}
-                {{ form_widget(form.observaciones) }}
-            </div>
-            <h4>Contacto</h4>
-            <h6>Si necesitamos más información nos gustaria contactar contigo...</h6>
-            <div class="set">
-                {{ form_label(form.nombreContacto, 'Nombre') }}
-                {{ form_widget(form.nombreContacto) }}
-            </div>
-            <div class="set">
-                {{ form_label(form.emailContacto, 'Email') }}
-                {{ form_widget(form.emailContacto) }}
-            </div>
-            <div class="set">
-                {{ form_label(form.telefonoContacto, 'Teléfono') }}
-                {{ form_widget(form.telefonoContacto) }}
-            </div>
-            <br>
-            <a class="enlacito" href="https://seo.org/consentimiento/">Aquí puedes leer nuestras condiciones</a>
-            <div>
-                {{ form_row(form.agreeTerms) }}
-            </div>
-            <div class="g-recaptcha"
-              data-sitekey="6LdVfvsiAAAAAFxkRYUuO9HlfizXqeQgpI1RC1Rz">
-            </div>
-            </div>
-            <div class='acciones-btn'>
-            <button class="btnalert">{{ button_label|default('Enviar') }}</button>
+                    {{ form_label(form.foto, 'Foto') }}
+                    {{ form_widget(form.foto) }}
+                </div>
+                <div class="set">
+                    {{ form_label(form.descripcion, 'Descripción') }}
+                    {{ form_widget(form.descripcion) }}
+                </div>
         </div>
+            <div class='question'>
+                <h4>Ayudanos a determinar el nivel de alerta</h4>
+                <div class="set">
+                    {{ form_label(form.severidadAmenaza, 'Nivel de Gravedad') }}
+                    {{ form_widget(form.severidadAmenaza) }}
+                </div>
+                <div class="set">
+                    {{ form_label(form.superficieAfectada, 'Superficie Afectada') }}
+                    {{ form_widget(form.superficieAfectada) }}
+                </div>
+                <div class="set">
+                    {{ form_label(form.tiempoDesarrollo, 'Tiempo de Desarrollo') }}
+                    {{ form_widget(form.tiempoDesarrollo) }}
+                </div>
+            </div> 
+        <div class='question'>
+                <h4>Información complementaria</h4>
+                <div class="set">
+                    {{ form_label(form.IBA, '¿Esta dentro de una zona IBA?') }}
+                    {{ form_widget(form.IBA) }}
+                </div>
+                <div class="set">
+                    {{ form_label(form.espacioProtegido, '¿Esta todo el área o una parte legalmente protegido?') }}
+                    {{ form_widget(form.espacioProtegido) }}
+                </div>
+                <div class="set">
+                    {{ form_label(form.planDeGestion, '¿Hay algún plan de gestión en la zona?') }}
+                    {{ form_widget(form.planDeGestion) }}
+                </div>
+                <div class="set">
+                    {{ form_label(form.actividadesDeConservacion, '¿Se llevan a cabo actividades de conservación en el área?') }}
+                    {{ form_widget(form.actividadesDeConservacion) }}
+                </div>
+                <div class="set">
+                    {{ form_label(form.organizaciones, '¿Hay organizaciones revirtiendo esta amenaza ya?') }}
+                    {{ form_widget(form.organizaciones) }}
+                </div>
+                <div class="set">
+                    {{ form_label(form.observaciones, 'Observaciones') }}
+                    {{ form_widget(form.observaciones) }}
+                </div>
         </div>
-        {{form_end(form)}}
+        <div class='question'>
+                <h4>Contacto</h4>
+                <h6>Si necesitamos más información nos gustaria contactar contigo...</h6>
+                <div class="set">
+                    {{ form_label(form.nombreContacto, 'Nombre') }}
+                    {{ form_widget(form.nombreContacto) }}
+                </div>
+                <div class="set">
+                    {{ form_label(form.emailContacto, 'Email') }}
+                    {{ form_widget(form.emailContacto) }}
+                </div>
+                <div class="set">
+                    {{ form_label(form.telefonoContacto, 'Teléfono') }}
+                    {{ form_widget(form.telefonoContacto) }}
+                </div>
+                <br>
+                <a class="enlacito" href="https://seo.org/consentimiento/">Aquí puedes leer nuestras condiciones</a>
+                <div>
+                    {{ form_row(form.agreeTerms) }}
+                </div>
+                <div class="g-recaptcha"
+                data-sitekey="6LdVfvsiAAAAAFxkRYUuO9HlfizXqeQgpI1RC1Rz">
+                </div>
+                <div class='acciones-btn'>
+                    <button class="btnalert">{{ button_label|default('Enviar') }}</button>
+                </div>
+        </div>
+        
+    {{form_end(form)}}
     </div>
     {% for message in app.flashes('exito') %}
         <div class="alert alert-success">

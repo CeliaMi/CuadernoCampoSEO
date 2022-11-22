@@ -3,8 +3,9 @@ box-sizing: border-box;
 }
 
 body{
-    background-color: #CCE5C9;
+    background-image: url(../img/fondo_AVE.png);
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    min-width: 100px;
 }
 
 
@@ -23,8 +24,10 @@ button{
     align-items: center;
     text-align: center;
     width: 200px;
+    min-width: 90px;
 }
 
+<<<<<<< HEAD
 .banner {
     display: flex;
     justify-content: center;
@@ -43,6 +46,8 @@ button{
     left: 50%;
     font-size: 6rem;
  }
+=======
+>>>>>>> 0d9baca30bbc0e7f08f70a513bf050ba4fc5419e
 
 /* FORMULARIO */
 
@@ -55,6 +60,13 @@ button{
     margin:auto;
  }
 
+ .carduser{
+    max-width: 600px;
+    min-width: 90px;
+    margin:auto;
+    margin-top: 10px;
+ }
+
  .card{
     max-width: 600px;
     min-width: 100px;
@@ -62,23 +74,35 @@ button{
     margin-top: 50px;
  }
 
+ .question{
+    background-color: #ffffff;
+    margin:20px;
+    padding:10%;
+    border-radius: 8px;
+    min-width: 80px;
+ }
+ 
+
  .title{
     text-align: center;
-    margin-top:40px;
+    margin:40px;
+    color:white;
  }
 
  label{
-    font-size: small;
+    font-size:medium;
+    margin-top: 10px;
  }
+
 
  h4{
     max-width:50%;
-    margin-top: 50px;
+    margin-top: 10px;
  }
 
  .set{
     max-width: 400px;
-    min-width: 200px;
+    min-width: 80px;
  }
 
 ::placeholder{
@@ -88,7 +112,8 @@ button{
 
 #map { 
     height: 380px;
-    width: 380px;
+    max-width: 380px;
+    min-width: 80px;
     margin: 10px;
 }
 
@@ -103,7 +128,8 @@ button{
 }
 
 .ubicacion{
-    width: 400px;
+    max-width: 400px;
+    min-width: 80px;
     height: 35px;
     display: block;
     border-radius: 5px;
@@ -142,6 +168,18 @@ button{
  }
 
  /* LOGIN */
+
+
+.cardLogin{
+    max-width: 500px;
+    min-width: 100px;
+    margin:auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    padding:2%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
  
  .login{
     max-width: 500px;
@@ -173,8 +211,13 @@ button{
     margin-top: 15px;
 }
 
-.btnVolver{
+.btnVolver1{
     margin-left: 15px;
+    background-color: #ffffff48;
+    color:#68BE5E;
+}
+
+.btnVolver2{
     background-color: #ffffff48;
     color:#68BE5E;
 }
@@ -183,8 +226,9 @@ button{
     width: 80px;
     background-color: #4a4d4948;
     border-color: #68be5e00;
-    border-radius: 0px;
-    margin-top: 0px;     
+    border-radius: 8px; 
+    color:white;
+    margin:10px;    
 }
 
 .btnEmoji1 {
@@ -213,7 +257,7 @@ button{
     justify-content: center;
     margin: auto;    
 }
-.btnEditar{
+/* .btnEditar{
     margin-left: 15px;
     border-radius: 6px;
     border-color: #68be5e00;
@@ -221,14 +265,14 @@ button{
     width:35px;
     color:white;
     background-color: #CCE5C9;
-}
+} */
 
 .btnBorrar{
-    margin-left: 15px;
     background-color: #fd4f4f;
     height: 30px;
     width:35px;
 }
+
 
 /* ADMIN/SOW */
 
