@@ -9,8 +9,8 @@
         <thead>
             <tr>
                 <th>Foto</th>
-                <th>Descripción</th>
                 <th>Nivel</th>
+                <th>Descripción</th>
                 <th>Tipo</th>
                 <th>Opciones</th>
             </tr>
@@ -28,8 +28,8 @@
                 <td>{{ alertum.emailContacto }}</td>
                 <td>{{ alertum.telefonoContacto }}</td> #}
                 <td>
-                <a href="{{ path('app_alerta_show', {'id': alertum.id}) }}"><button class='btnEmoji1'>{{ button_label|default('👁') }}</button></a>
-                <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button class='btnEmoji2'>{{ button_label|default('✏') }}</button></a>
+                <a href="{{ path('app_alerta_show', {'id': alertum.id}) }}"><button class='btnEmojiVer'>{{ button_label|default('') }}<img class ="emojiVer" src="\assets\img\ver.png" alt="Ver" /></button></a>
+                <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button class='btnEmojiEditar'>{{ button_label|default('') }}<img class ="emojiEditar" src="\assets\img\editar.png" alt="Editar" /></button></a>
                 </td>
             </tr>
         {% else %}

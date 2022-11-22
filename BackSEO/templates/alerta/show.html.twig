@@ -5,7 +5,7 @@
 {% block body %}
     <h1 class="title">Alerta</h1>
 
-    <a href="{{ path('app_alerta_index') }}"><button class='btnVolver'>{{ button_label|default('Volver') }}</button></a>
+    <a href="{{ path('app_alerta_index') }}"><button class='btnVolver2'>{{ button_label|default('Volver') }}</button></a>
 
     <table class="table">
         <tbody>
@@ -57,7 +57,7 @@
     </table>
 
     <div class="butonContainer">
-        <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button class='btnEditar'>{{ button_label|default('✏') }}</button></a>
+        <a href="{{ path('app_alerta_edit', {'id': alertum.id}) }}"><button class='btnEmojiEditar'>{{ button_label|default('') }}<img class ="emojiEditar" src="\assets\img\editar.png" alt="Editar" /></button></a>
         {{ include('alerta/_delete_form.html.twig') }}
     </div>
 {% endblock %}
