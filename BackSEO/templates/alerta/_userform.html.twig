@@ -46,9 +46,11 @@
         <div class='question'>
                 <h4>Información complementaria</h4>
                 <div class="set">
-                    {{ form_label(form.IBA, '¿Esta dentro de una zona IBA?') }}
+                    {{ form_label(form.IBA, '¿Esta dentro de una zona IBA*?') }}
                     {{ form_widget(form.IBA) }}
+                    <p class='significadoIba'> *Áreas Importantes para la Conservación de las Aves y la Biodiversidad en España</p>
                 </div>
+                
                 <div class="set">
                     {{ form_label(form.espacioProtegido, '¿Está todo el área o una parte legalmente protegido?') }}
                     {{ form_widget(form.espacioProtegido) }}
