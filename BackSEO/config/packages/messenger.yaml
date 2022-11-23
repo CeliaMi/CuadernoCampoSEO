@@ -1,5 +1,6 @@
 framework:
     messenger:
+        reset_on_message: true
         failure_transport: failed
 
         transports:
@@ -13,7 +14,7 @@ framework:
                     max_retries: 3
                     multiplier: 2
             failed: 'doctrine://default?queue_name=failed'
-            # sync: 'sync://'
+            sync: 'sync://'
 
         routing:
             Symfony\Component\Mailer\Messenger\SendEmailMessage: async

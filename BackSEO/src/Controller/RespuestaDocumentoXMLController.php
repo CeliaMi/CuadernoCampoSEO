@@ -10,6 +10,7 @@ use App\Repository\AlertaRepository;
 use App\Entity\Alerta;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class RespuestaDocumentoXMLController extends AbstractController
 {
@@ -39,7 +40,8 @@ class RespuestaDocumentoXMLController extends AbstractController
     
             $response = new Response();
             $response->setContent($xmlEncoder->encode($data, 'xml'));
-            // $response->headers->set('Content-Type', 'xml');
+            $response->headers->set('Content-Type', 'xml');
+            $file = new UploadedFile($response);
             
     
                     // // nombre para su archivo con extensión
@@ -62,7 +64,7 @@ class RespuestaDocumentoXMLController extends AbstractController
             
                    
                    
-             return $response;
+             return $file;
 
     }
 }

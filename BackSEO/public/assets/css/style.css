@@ -280,6 +280,21 @@ button{
     
 }
 
+#boton-xml{
+    background-color:#1D9BD5;
+    width:100px;
+    height: 35px;
+    color:white;
+    margin-left: 5px;
+}
+
+.btnEmojiEditarSow{
+    background-color: #68BE5E;
+    width:100px;
+    height: 35px;
+    color:white;
+    margin-right: 5px;
+}
 .imgSow{
     width: 250px;
 }

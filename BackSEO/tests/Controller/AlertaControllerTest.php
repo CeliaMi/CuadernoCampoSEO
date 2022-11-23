@@ -6,12 +6,32 @@ use App\Entity\Alerta;
 use App\Repository\AlertaRepository;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use App\Repository\UserRepository;
+use Doctrine\DBAL\Driver\Middleware;
 
 class AlertaControllerTest extends WebTestCase
 {
     private KernelBrowser $client;
     private AlertaRepository $repository;
     private string $path = '/alerta/';
+
+    public function testVisitingWhileLoggedIn()
+    {
+        self::ensureKernelShutdown();
+        $client = static::createClient();
+        $userRepository = static::getContainer()->get(UserRepository::class);
+
+        // retrieve the test user
+        $testUser = $userRepository->findOneByEmail('test@test.com');
+
+        // simulate $testUser being logged in
+        $client->loginUser($testUser);
+
+        // test e.g. the profile page
+        $client->request('GET', '/alerta/');
+        $this->assertResponseIsSuccessful();
+        $this->assertSelectorTextContains('h1', 'Alertas');
+    }
 
     protected function setUp(): void
     {
