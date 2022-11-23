@@ -54,6 +54,12 @@ class AlertaControllerTest extends WebTestCase
             'alertum[superficieAfectada]' => 'Testing',
             'alertum[tiempoDesarrollo]' => 'Testing',
             'alertum[nombreTipoDeAmenaza]' => 'Testing',
+            'alertum[espacioProtegido]' => 'Testing',
+            'alertum[planDeGestion]' => 'Testing',
+            'alertum[actividadesDeConservacion]' => 'Testing',
+            'alertum[organizaciones]' => 'Testing',
+            'alertum[IBA]' => 'Testing',
+            'alertum[observaciones]' => 'Testing',
         ]);
 
         self::assertResponseRedirects('/alerta/');
@@ -75,6 +81,12 @@ class AlertaControllerTest extends WebTestCase
         $fixture->setSuperficieAfectada('My Title');
         $fixture->setTiempoDesarrollo('My Title');
         $fixture->setNombreTipoDeAmenaza('My Title');
+        $fixture->setEspacioProtegido('My Title');
+        $fixture->setPlanDeGestion('My Title');
+        $fixture->setActividadesDeConservacion('My Title');
+        $fixture->setOrganizaciones('My Title');
+        $fixture->setIBA('My Title');
+        $fixture->setObservaciones('My Title');
 
         $this->repository->add($fixture, true);
 
@@ -100,6 +112,12 @@ class AlertaControllerTest extends WebTestCase
         $fixture->setSuperficieAfectada('My Title');
         $fixture->setTiempoDesarrollo('My Title');
         $fixture->setNombreTipoDeAmenaza('My Title');
+        $fixture->setEspacioProtegido('My Title');
+        $fixture->setPlanDeGestion('My Title');
+        $fixture->setActividadesDeConservacion('My Title');
+        $fixture->setOrganizaciones('My Title');
+        $fixture->setIBA('My Title');
+        $fixture->setObservaciones('My Title');
 
         $this->repository->add($fixture, true);
 
@@ -116,6 +134,12 @@ class AlertaControllerTest extends WebTestCase
             'alertum[superficieAfectada]' => 'Something New',
             'alertum[tiempoDesarrollo]' => 'Something New',
             'alertum[nombreTipoDeAmenaza]' => 'Something New',
+            'alertum[espacioProtegido]' => 'Something New',
+            'alertum[planDeGestion]' => 'Something New',
+            'alertum[actividadesDeConservacion]' => 'Something New',
+            'alertum[organizaciones]' => 'Something New',
+            'alertum[IBA]' => 'Something New',
+            'alertum[observaciones]' => 'Something New',
         ]);
 
         self::assertResponseRedirects('/alerta/');
@@ -132,6 +156,12 @@ class AlertaControllerTest extends WebTestCase
         self::assertSame('Something New', $fixture[0]->getSuperficieAfectada());
         self::assertSame('Something New', $fixture[0]->getTiempoDesarrollo());
         self::assertSame('Something New', $fixture[0]->getNombreTipoDeAmenaza());
+        self::assertSame('Something New', $fixture[0]->getEspacioProtegido());
+        self::assertSame('Something New', $fixture[0]->getPlanDeGestion());
+        self::assertSame('Something New', $fixture[0]->getActividadesDeConservacion());
+        self::assertSame('Something New', $fixture[0]->getOrganizaciones());
+        self::assertSame('Something New', $fixture[0]->getIBA());
+        self::assertSame('Something New', $fixture[0]->getObservaciones());
     }
 
     public function testRemove(): void
@@ -151,6 +181,12 @@ class AlertaControllerTest extends WebTestCase
         $fixture->setSuperficieAfectada('My Title');
         $fixture->setTiempoDesarrollo('My Title');
         $fixture->setNombreTipoDeAmenaza('My Title');
+        $fixture->setEspacioProtegido('My Title');
+        $fixture->setPlanDeGestion('My Title');
+        $fixture->setActividadesDeConservacion('My Title');
+        $fixture->setOrganizaciones('My Title');
+        $fixture->setIBA('My Title');
+        $fixture->setObservaciones('My Title');
 
         $this->repository->add($fixture, true);
 
