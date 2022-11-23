@@ -61,10 +61,10 @@ button{
     min-width: 80px;
  }
  
- /*.significadoIba{
-    font-size: xx-small;
-    color: #cdcccc;
-}*/
+.significadoIba{
+    font-size: 12px;
+    color: #26b826;
+}
 
  .title{
     text-align: center;
