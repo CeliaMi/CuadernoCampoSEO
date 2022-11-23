@@ -1,4 +1,4 @@
-<form  method="post" action="{{ path('app_alerta_delete', {'id': alertum.id}) }}" onsubmit="return confirm('¿Estas seguro de eliminar esta Alerta?');">
+<form  method="post" action="{{ path('app_alerta_delete', {'id': alertum.id}) }}" onsubmit="return confirm('¿Estás seguro de eliminar esta Alerta?');">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ alertum.id) }}">
     <button class="btnBorrar"><img class ="emojiBorrar" src="\assets\img\borrar.png" alt="Borrar"/> Borrar</button>
 </form>
