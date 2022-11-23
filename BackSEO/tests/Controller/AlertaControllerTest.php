@@ -39,7 +39,7 @@ class AlertaControllerTest extends WebTestCase
         $originalNumObjectsInRepository = count($this->repository->findAll());
 
         $this->markTestIncomplete();
-        $this->client->request('GET', sprintf('%snew', $this->path));
+        $this->client->request('GET', sprintf('%snuevalerta', $this->path));
 
         self::assertResponseStatusCodeSame(200);
 
