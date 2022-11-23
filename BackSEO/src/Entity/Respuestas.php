@@ -24,8 +24,8 @@ class Respuestas
 
     
     const SEVERIDAD = [
-        'muy poco' => '0',
-        'poco'=> '1',
+        'Muy poco' => '0',
+        'Poco'=> '1',
         'Moderado'=> '2',
         'Alto'=> '3',
     ];

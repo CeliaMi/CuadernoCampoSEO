@@ -2,11 +2,11 @@
 
     <div class="container p-5"> 
         <div>
-            <h4>Datos Amenaza</h4>
+            <h4>Datos amenaza</h4>
             <div>                   
                 {{form_start(form)}}
                 <div class="set">
-                {{ form_label(form.tipoAmenaza, 'tipo de Amenaza') }}
+                {{ form_label(form.tipoAmenaza, 'Tipo de amenaza') }}
                 {{ form_widget(form.tipoAmenaza) }} 
             </div>
             <div class="set">
@@ -24,24 +24,24 @@
             </div>
             <h4>Nivel de alerta</h4>
             <div class="set">
-                {{ form_label(form.severidadAmenaza, 'Nivel de Gravedad') }}
+                {{ form_label(form.severidadAmenaza, 'Nivel de gravedad') }}
                 {{ form_widget(form.severidadAmenaza) }}
             </div>
             <div class="set">
-                {{ form_label(form.superficieAfectada, 'Superficie Afectada') }}
+                {{ form_label(form.superficieAfectada, 'Superficie afectada') }}
                 {{ form_widget(form.superficieAfectada) }}
             </div>
             <div class="set">
-                {{ form_label(form.tiempoDesarrollo, 'Tiempo de Desarrollo') }}
+                {{ form_label(form.tiempoDesarrollo, 'Tiempo de desarrollo') }}
                 {{ form_widget(form.tiempoDesarrollo) }}
             </div>
             <h4>Información complementaria</h4>
              <div class="set">
-                {{ form_label(form.IBA, '¿Esta dentro de una zona IBA?') }}
+                {{ form_label(form.IBA, '¿Está dentro de una zona IBA?') }}
                 {{ form_widget(form.IBA) }}
             </div>
             <div class="set">
-                {{ form_label(form.espacioProtegido, '¿Esta todo el área o una parte legalmente protegido?') }}
+                {{ form_label(form.espacioProtegido, '¿Está todo el área o una parte legalmente protegido?') }}
                 {{ form_widget(form.espacioProtegido) }}
             </div>
             <div class="set">
@@ -74,7 +74,7 @@
                 {{ form_widget(form.telefonoContacto) }}
             </div>
             <div>
-                {{ form_row(form.agreeTerms, {label: '¿Estas seguro de los cambios que vas a realizar?'}) }}
+                {{ form_row(form.agreeTerms, {label: '¿Estás seguro de los cambios que vas a realizar?'}) }}
             </div>
             <div class='acciones-btn'>
                 <button class="btnalert">{{ button_label|default('Enviar') }}</button>

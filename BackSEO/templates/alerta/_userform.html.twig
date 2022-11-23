@@ -5,7 +5,7 @@
         <div class='question'>
                 <h4>¿Qué ocurre?</h4>                   
                     <div class="set">
-                    {{ form_label(form.tipoAmenaza, 'Tipo de Amenaza') }}
+                    {{ form_label(form.tipoAmenaza, 'Tipo de amenaza') }}
                     {{ form_widget(form.tipoAmenaza) }} 
                 </div>
         </div>
@@ -29,17 +29,17 @@
                 </div>
         </div>
             <div class='question'>
-                <h4>Ayudanos a determinar el nivel de alerta</h4>
+                <h4>Ayúdanos a determinar el nivel de alerta</h4>
                 <div class="set">
-                    {{ form_label(form.severidadAmenaza, 'Nivel de Gravedad') }}
+                    {{ form_label(form.severidadAmenaza, 'Nivel de gravedad') }}
                     {{ form_widget(form.severidadAmenaza) }}
                 </div>
                 <div class="set">
-                    {{ form_label(form.superficieAfectada, 'Superficie Afectada') }}
+                    {{ form_label(form.superficieAfectada, 'Superficie afectada') }}
                     {{ form_widget(form.superficieAfectada) }}
                 </div>
                 <div class="set">
-                    {{ form_label(form.tiempoDesarrollo, 'Tiempo de Desarrollo') }}
+                    {{ form_label(form.tiempoDesarrollo, 'Tiempo de desarrollo') }}
                     {{ form_widget(form.tiempoDesarrollo) }}
                 </div>
             </div> 
@@ -50,7 +50,7 @@
                     {{ form_widget(form.IBA) }}
                 </div>
                 <div class="set">
-                    {{ form_label(form.espacioProtegido, '¿Esta todo el área o una parte legalmente protegido?') }}
+                    {{ form_label(form.espacioProtegido, '¿Está todo el área o una parte legalmente protegido?') }}
                     {{ form_widget(form.espacioProtegido) }}
                 </div>
                 <div class="set">
@@ -72,7 +72,7 @@
         </div>
         <div class='question'>
                 <h4>Contacto</h4>
-                <h6>Si necesitamos más información nos gustaria contactar contigo...</h6>
+                <h6>Si necesitamos más información nos gustaría contactar contigo</h6>
                 <div class="set">
                     {{ form_label(form.nombreContacto, 'Nombre') }}
                     {{ form_widget(form.nombreContacto) }}
@@ -80,6 +80,7 @@
                 <div class="set">
                     {{ form_label(form.emailContacto, 'Email') }}
                     {{ form_widget(form.emailContacto) }}
+                        <p id="emailMensaje"> </p>
                 </div>
                 <div class="set">
                     {{ form_label(form.telefonoContacto, 'Teléfono (opcional)') }}
