@@ -13,6 +13,7 @@ composer require symfony/security-bundle
 <!-- composer require symfony/filesystem -->
 composer require symfony/serializer
 composer require --dev symfony/test-pack
+composer require --dev doctrine/doctrine-fixtures-bundle
 
 
 3. Migra las entidades a tu base de datos

@@ -57,31 +57,6 @@
         return cadena;
     };
 
-    //Genera un objeto Blob con los datos en un archivo TXT
-    // function generarTexto(datos) {
-    //     var texto = [];
-    //     texto.push('Alerta:\n');
-    //     texto.push('Descripcion: ');
-    //     texto.push(datos.descripcion);
-    //     texto.push('\n');
-    //     texto.push('Nivel: ');
-    //     texto.push(datos.nivel);
-    //     texto.push('\n');
-    //     texto.push('Tipo: ');
-    //     texto.push(datos.tipo);
-    //     texto.push('\n');
-    //     console.log(datos.tipo);
-    //     //El contructor de Blob requiere un Array en el primer parámetro
-    //     //así que no es necesario usar toString. el segundo parámetro
-    //     //es el tipo MIME del archivo
-    //     return new Blob(texto, {
-    //         type: 'text/plain'
-    //     });
-
-        
-    // };
-
-
     //Genera un objeto Blob con los datos en un archivo XML
     function generarXml(datos) {
         var texto = [];
@@ -112,7 +87,7 @@
         texto.push(escaparXML(datos.contacto));
         texto.push('</contacto>\n');
         texto.push('</datos>');
-        //No olvidemos especificar el tipo MIME correcto :)
+ 
         return new Blob(texto, {
             type: 'application/xml'
         });
@@ -123,7 +98,3 @@
         descargarArchivo(generarXml(datos), 'tablaAmenaza.xml');
     }, false);
 
-    // document.getElementById('boton-txt').addEventListener('click', function () {
-    //     var datos = obtenerDatos();
-    //     descargarArchivo(generarTexto(datos), 'archivo.txt');
-    // }, false);

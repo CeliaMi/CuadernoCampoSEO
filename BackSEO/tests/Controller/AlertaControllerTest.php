@@ -1,221 +1,226 @@
 <?php
 
-namespace App\Test\Controller;
+// namespace App\Test\Controller;
 
-use App\Entity\Alerta;
-use App\Repository\AlertaRepository;
-use Symfony\Bundle\FrameworkBundle\KernelBrowser;
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use App\Repository\UserRepository;
-use Doctrine\DBAL\Driver\Middleware;
+// use App\Entity\Alerta;
+// use App\Entity\User;
+// use App\Repository\AlertaRepository;
+// use App\Repository\UserRepository;
+// use Symfony\Bundle\FrameworkBundle\KernelBrowser;
+// use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+// use Doctrine\DBAL\Driver\Middleware;
+// use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+// use Symfony\Bundle\FrameworkBundle\BrowserKitAssertionsTrait;
 
-class AlertaControllerTest extends WebTestCase
-{
-    private KernelBrowser $client;
-    private AlertaRepository $repository;
-    private string $path = '/alerta/';
+// class AlertaControllerTest extends WebTestCase
+// {
+//     private KernelBrowser $client;
+//     private AlertaRepository $repository;
+//     private string $path = '/alerta/';
 
-    public function testVisitingWhileLoggedIn()
-    {
-        self::ensureKernelShutdown();
-        $client = static::createClient();
-        $userRepository = static::getContainer()->get(UserRepository::class);
 
-        // retrieve the test user
-        $testUser = $userRepository->findOneByEmail('test@test.com');
+//     protected function setUp(): void
+//     {
+//         $this->client = static::createClient();
+//         $this->repository = static::getContainer()->get('doctrine')->getRepository(Alerta::class);
 
-        // simulate $testUser being logged in
-        $client->loginUser($testUser);
+//         foreach ($this->repository->findAll() as $object) {
+//             $this->repository->remove($object, true);
+//         }
+//     }
 
-        // test e.g. the profile page
-        $client->request('GET', '/alerta/');
-        $this->assertResponseIsSuccessful();
-        $this->assertSelectorTextContains('h1', 'Alertas');
-    }
+//     public function testIndex(): void
+//     {
+//         $crawler = $this->client->request('GET', $this->path);
 
-    protected function setUp(): void
-    {
-        $this->client = static::createClient();
-        $this->repository = static::getContainer()->get('doctrine')->getRepository(Alerta::class);
+//         self::assertResponseStatusCodeSame(200);
+//         self::assertPageTitleContains('Alertum index');
 
-        foreach ($this->repository->findAll() as $object) {
-            $this->repository->remove($object, true);
-        }
-    }
+//         // Use the $crawler to perform additional assertions e.g.
+//         // self::assertSame('Some text on the page', $crawler->filter('.p')->first());
+//     }
 
-    public function testIndex(): void
-    {
-        $crawler = $this->client->request('GET', $this->path);
 
-        self::assertResponseStatusCodeSame(200);
-        self::assertPageTitleContains('Alertum index');
+//     // public function testVisitingWhileLoggedIn()
+//     // {
+//     //     // self::ensureKernelShutdown();
+//     //     $client = static::createClient();
+//     //     $userRepository = static::getContainer()->get(UserRepository::class);
 
-        // Use the $crawler to perform additional assertions e.g.
-        // self::assertSame('Some text on the page', $crawler->filter('.p')->first());
-    }
+//     //     // retrieve the test user
+//     //     $testUser = $userRepository->findOneByEmail('test@test.com');
 
-    public function testNew(): void
-    {
-        $originalNumObjectsInRepository = count($this->repository->findAll());
+//     //     // simulate $testUser being logged in
+//     //     $client->loginUser($testUser);
 
-        $this->markTestIncomplete();
-        $this->client->request('GET', sprintf('%snuevalerta', $this->path));
+//     //     // test e.g. the profile page
+//     //     $client->request('GET', '/alerta/');
+//     //     $this->assertResponseIsSuccessful();
+//     //     $this->assertSelectorTextContains('h1', 'Alertas');
+//     // }
 
-        self::assertResponseStatusCodeSame(200);
+//     public function testNew(): void
+//     {
+//         $originalNumObjectsInRepository = count($this->repository->findAll());
 
-        $this->client->submitForm('Save', [
-            'alertum[ubicacion]' => 'Testing',
-            'alertum[foto]' => 'Testing',
-            'alertum[descripcion]' => 'Testing',
-            'alertum[nombreContacto]' => 'Testing',
-            'alertum[emailContacto]' => 'Testing',
-            'alertum[telefonoContacto]' => 'Testing',
-            'alertum[nivelGravedad]' => 'Testing',
-            'alertum[superficieAfectada]' => 'Testing',
-            'alertum[tiempoDesarrollo]' => 'Testing',
-            'alertum[nombreTipoDeAmenaza]' => 'Testing',
-            'alertum[espacioProtegido]' => 'Testing',
-            'alertum[planDeGestion]' => 'Testing',
-            'alertum[actividadesDeConservacion]' => 'Testing',
-            'alertum[organizaciones]' => 'Testing',
-            'alertum[IBA]' => 'Testing',
-            'alertum[observaciones]' => 'Testing',
-        ]);
+//         $this->markTestIncomplete();
+//         $this->client->request('GET', sprintf('%snuevalerta', $this->path));
 
-        self::assertResponseRedirects('/alerta/');
+//         self::assertResponseStatusCodeSame(200);
 
-        self::assertSame($originalNumObjectsInRepository + 1, count($this->repository->findAll()));
-    }
+//         $this->client->submitForm('Save', [
+//             'alertum[ubicacion]' => 'Testing',
+//             'alertum[foto]' => 'Testing',
+//             'alertum[descripcion]' => 'Testing',
+//             'alertum[nombreContacto]' => 'Testing',
+//             'alertum[emailContacto]' => 'Testing',
+//             'alertum[telefonoContacto]' => 'Testing',
+//             'alertum[nivelGravedad]' => 'Testing',
+//             'alertum[superficieAfectada]' => 'Testing',
+//             'alertum[tiempoDesarrollo]' => 'Testing',
+//             'alertum[nombreTipoDeAmenaza]' => 'Testing',
+//             'alertum[espacioProtegido]' => 'Testing',
+//             'alertum[planDeGestion]' => 'Testing',
+//             'alertum[actividadesDeConservacion]' => 'Testing',
+//             'alertum[organizaciones]' => 'Testing',
+//             'alertum[IBA]' => 'Testing',
+//             'alertum[observaciones]' => 'Testing',
+//         ]);
 
-    public function testShow(): void
-    {
-        $this->markTestIncomplete();
-        $fixture = new Alerta();
-        $fixture->setUbicacion('My Title');
-        $fixture->setFoto('My Title');
-        $fixture->setDescripcion('My Title');
-        $fixture->setNombreContacto('My Title');
-        $fixture->setEmailContacto('My Title');
-        $fixture->setTelefonoContacto('My Title');
-        $fixture->setNivelGravedad('My Title');
-        $fixture->setSuperficieAfectada('My Title');
-        $fixture->setTiempoDesarrollo('My Title');
-        $fixture->setNombreTipoDeAmenaza('My Title');
-        $fixture->setEspacioProtegido('My Title');
-        $fixture->setPlanDeGestion('My Title');
-        $fixture->setActividadesDeConservacion('My Title');
-        $fixture->setOrganizaciones('My Title');
-        $fixture->setIBA('My Title');
-        $fixture->setObservaciones('My Title');
+//         self::assertResponseRedirects('/alerta/');
 
-        $this->repository->add($fixture, true);
+//         self::assertSame($originalNumObjectsInRepository + 1, count($this->repository->findAll()));
+//     }
 
-        $this->client->request('GET', sprintf('%s%s', $this->path, $fixture->getId()));
+//     public function testShow(): void
+//     {
+//         $this->markTestIncomplete();
+//         $fixture = new Alerta();
+//         $fixture->setUbicacion('My Title');
+//         $fixture->setFoto('My Title');
+//         $fixture->setDescripcion('My Title');
+//         $fixture->setNombreContacto('My Title');
+//         $fixture->setEmailContacto('My Title');
+//         $fixture->setTelefonoContacto('My Title');
+//         $fixture->setNivelGravedad('My Title');
+//         $fixture->setSuperficieAfectada('My Title');
+//         $fixture->setTiempoDesarrollo('My Title');
+//         $fixture->setNombreTipoDeAmenaza('My Title');
+//         $fixture->setEspacioProtegido('My Title');
+//         $fixture->setPlanDeGestion('My Title');
+//         $fixture->setActividadesDeConservacion('My Title');
+//         $fixture->setOrganizaciones('My Title');
+//         $fixture->setIBA('My Title');
+//         $fixture->setObservaciones('My Title');
 
-        self::assertResponseStatusCodeSame(200);
-        self::assertPageTitleContains('Alertum');
+//         $this->repository->add($fixture, true);
 
-        // Use assertions to check that the properties are properly displayed.
-    }
+//         $this->client->request('GET', sprintf('%s%s', $this->path, $fixture->getId()));
 
-    public function testEdit(): void
-    {
-        $this->markTestIncomplete();
-        $fixture = new Alerta();
-        $fixture->setUbicacion('My Title');
-        $fixture->setFoto('My Title');
-        $fixture->setDescripcion('My Title');
-        $fixture->setNombreContacto('My Title');
-        $fixture->setEmailContacto('My Title');
-        $fixture->setTelefonoContacto('My Title');
-        $fixture->setNivelGravedad('My Title');
-        $fixture->setSuperficieAfectada('My Title');
-        $fixture->setTiempoDesarrollo('My Title');
-        $fixture->setNombreTipoDeAmenaza('My Title');
-        $fixture->setEspacioProtegido('My Title');
-        $fixture->setPlanDeGestion('My Title');
-        $fixture->setActividadesDeConservacion('My Title');
-        $fixture->setOrganizaciones('My Title');
-        $fixture->setIBA('My Title');
-        $fixture->setObservaciones('My Title');
+//         self::assertResponseStatusCodeSame(200);
+//         self::assertPageTitleContains('Alertum');
 
-        $this->repository->add($fixture, true);
+//         // Use assertions to check that the properties are properly displayed.
+//     }
 
-        $this->client->request('GET', sprintf('%s%s/edit', $this->path, $fixture->getId()));
+//     public function testEdit(): void
+//     {
+//         $this->markTestIncomplete();
+//         $fixture = new Alerta();
+//         $fixture->setUbicacion('My Title');
+//         $fixture->setFoto('My Title');
+//         $fixture->setDescripcion('My Title');
+//         $fixture->setNombreContacto('My Title');
+//         $fixture->setEmailContacto('My Title');
+//         $fixture->setTelefonoContacto('My Title');
+//         $fixture->setNivelGravedad('My Title');
+//         $fixture->setSuperficieAfectada('My Title');
+//         $fixture->setTiempoDesarrollo('My Title');
+//         $fixture->setNombreTipoDeAmenaza('My Title');
+//         $fixture->setEspacioProtegido('My Title');
+//         $fixture->setPlanDeGestion('My Title');
+//         $fixture->setActividadesDeConservacion('My Title');
+//         $fixture->setOrganizaciones('My Title');
+//         $fixture->setIBA('My Title');
+//         $fixture->setObservaciones('My Title');
 
-        $this->client->submitForm('Update', [
-            'alertum[ubicacion]' => 'Something New',
-            'alertum[foto]' => 'Something New',
-            'alertum[descripcion]' => 'Something New',
-            'alertum[nombreContacto]' => 'Something New',
-            'alertum[emailContacto]' => 'Something New',
-            'alertum[telefonoContacto]' => 'Something New',
-            'alertum[nivelGravedad]' => 'Something New',
-            'alertum[superficieAfectada]' => 'Something New',
-            'alertum[tiempoDesarrollo]' => 'Something New',
-            'alertum[nombreTipoDeAmenaza]' => 'Something New',
-            'alertum[espacioProtegido]' => 'Something New',
-            'alertum[planDeGestion]' => 'Something New',
-            'alertum[actividadesDeConservacion]' => 'Something New',
-            'alertum[organizaciones]' => 'Something New',
-            'alertum[IBA]' => 'Something New',
-            'alertum[observaciones]' => 'Something New',
-        ]);
+//         $this->repository->add($fixture, true);
 
-        self::assertResponseRedirects('/alerta/');
+//         $this->client->request('GET', sprintf('%s%s/edit', $this->path, $fixture->getId()));
 
-        $fixture = $this->repository->findAll();
+//         $this->client->submitForm('Update', [
+//             'alertum[ubicacion]' => 'Something New',
+//             'alertum[foto]' => 'Something New',
+//             'alertum[descripcion]' => 'Something New',
+//             'alertum[nombreContacto]' => 'Something New',
+//             'alertum[emailContacto]' => 'Something New',
+//             'alertum[telefonoContacto]' => 'Something New',
+//             'alertum[nivelGravedad]' => 'Something New',
+//             'alertum[superficieAfectada]' => 'Something New',
+//             'alertum[tiempoDesarrollo]' => 'Something New',
+//             'alertum[nombreTipoDeAmenaza]' => 'Something New',
+//             'alertum[espacioProtegido]' => 'Something New',
+//             'alertum[planDeGestion]' => 'Something New',
+//             'alertum[actividadesDeConservacion]' => 'Something New',
+//             'alertum[organizaciones]' => 'Something New',
+//             'alertum[IBA]' => 'Something New',
+//             'alertum[observaciones]' => 'Something New',
+//         ]);
 
-        self::assertSame('Something New', $fixture[0]->getUbicacion());
-        self::assertSame('Something New', $fixture[0]->getFoto());
-        self::assertSame('Something New', $fixture[0]->getDescripcion());
-        self::assertSame('Something New', $fixture[0]->getNombreContacto());
-        self::assertSame('Something New', $fixture[0]->getEmailContacto());
-        self::assertSame('Something New', $fixture[0]->getTelefonoContacto());
-        self::assertSame('Something New', $fixture[0]->getNivelGravedad());
-        self::assertSame('Something New', $fixture[0]->getSuperficieAfectada());
-        self::assertSame('Something New', $fixture[0]->getTiempoDesarrollo());
-        self::assertSame('Something New', $fixture[0]->getNombreTipoDeAmenaza());
-        self::assertSame('Something New', $fixture[0]->getEspacioProtegido());
-        self::assertSame('Something New', $fixture[0]->getPlanDeGestion());
-        self::assertSame('Something New', $fixture[0]->getActividadesDeConservacion());
-        self::assertSame('Something New', $fixture[0]->getOrganizaciones());
-        self::assertSame('Something New', $fixture[0]->getIBA());
-        self::assertSame('Something New', $fixture[0]->getObservaciones());
-    }
+//         self::assertResponseRedirects('/alerta/');
 
-    public function testRemove(): void
-    {
-        $this->markTestIncomplete();
+//         $fixture = $this->repository->findAll();
 
-        $originalNumObjectsInRepository = count($this->repository->findAll());
+//         self::assertSame('Something New', $fixture[0]->getUbicacion());
+//         self::assertSame('Something New', $fixture[0]->getFoto());
+//         self::assertSame('Something New', $fixture[0]->getDescripcion());
+//         self::assertSame('Something New', $fixture[0]->getNombreContacto());
+//         self::assertSame('Something New', $fixture[0]->getEmailContacto());
+//         self::assertSame('Something New', $fixture[0]->getTelefonoContacto());
+//         self::assertSame('Something New', $fixture[0]->getNivelGravedad());
+//         self::assertSame('Something New', $fixture[0]->getSuperficieAfectada());
+//         self::assertSame('Something New', $fixture[0]->getTiempoDesarrollo());
+//         self::assertSame('Something New', $fixture[0]->getNombreTipoDeAmenaza());
+//         self::assertSame('Something New', $fixture[0]->getEspacioProtegido());
+//         self::assertSame('Something New', $fixture[0]->getPlanDeGestion());
+//         self::assertSame('Something New', $fixture[0]->getActividadesDeConservacion());
+//         self::assertSame('Something New', $fixture[0]->getOrganizaciones());
+//         self::assertSame('Something New', $fixture[0]->getIBA());
+//         self::assertSame('Something New', $fixture[0]->getObservaciones());
+//     }
 
-        $fixture = new Alerta();
-        $fixture->setUbicacion('My Title');
-        $fixture->setFoto('My Title');
-        $fixture->setDescripcion('My Title');
-        $fixture->setNombreContacto('My Title');
-        $fixture->setEmailContacto('My Title');
-        $fixture->setTelefonoContacto('My Title');
-        $fixture->setNivelGravedad('My Title');
-        $fixture->setSuperficieAfectada('My Title');
-        $fixture->setTiempoDesarrollo('My Title');
-        $fixture->setNombreTipoDeAmenaza('My Title');
-        $fixture->setEspacioProtegido('My Title');
-        $fixture->setPlanDeGestion('My Title');
-        $fixture->setActividadesDeConservacion('My Title');
-        $fixture->setOrganizaciones('My Title');
-        $fixture->setIBA('My Title');
-        $fixture->setObservaciones('My Title');
+//     public function testRemove(): void
+//     {
+//         $this->markTestIncomplete();
 
-        $this->repository->add($fixture, true);
+//         $originalNumObjectsInRepository = count($this->repository->findAll());
 
-        self::assertSame($originalNumObjectsInRepository + 1, count($this->repository->findAll()));
+//         $fixture = new Alerta();
+//         $fixture->setUbicacion('My Title');
+//         $fixture->setFoto('My Title');
+//         $fixture->setDescripcion('My Title');
+//         $fixture->setNombreContacto('My Title');
+//         $fixture->setEmailContacto('My Title');
+//         $fixture->setTelefonoContacto('My Title');
+//         $fixture->setNivelGravedad('My Title');
+//         $fixture->setSuperficieAfectada('My Title');
+//         $fixture->setTiempoDesarrollo('My Title');
+//         $fixture->setNombreTipoDeAmenaza('My Title');
+//         $fixture->setEspacioProtegido('My Title');
+//         $fixture->setPlanDeGestion('My Title');
+//         $fixture->setActividadesDeConservacion('My Title');
+//         $fixture->setOrganizaciones('My Title');
+//         $fixture->setIBA('My Title');
+//         $fixture->setObservaciones('My Title');
 
-        $this->client->request('GET', sprintf('%s%s', $this->path, $fixture->getId()));
-        $this->client->submitForm('Delete');
+//         $this->repository->add($fixture, true);
 
-        self::assertSame($originalNumObjectsInRepository, count($this->repository->findAll()));
-        self::assertResponseRedirects('/alerta/');
-    }
-}
+//         self::assertSame($originalNumObjectsInRepository + 1, count($this->repository->findAll()));
+
+//         $this->client->request('GET', sprintf('%s%s', $this->path, $fixture->getId()));
+//         $this->client->submitForm('Delete');
+
+//         self::assertSame($originalNumObjectsInRepository, count($this->repository->findAll()));
+//         self::assertResponseRedirects('/alerta/');
+//     }
+// }
