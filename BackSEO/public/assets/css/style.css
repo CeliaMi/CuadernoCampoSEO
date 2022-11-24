@@ -56,7 +56,7 @@ button{
     min-width: 100px;
     background-color: white;
     border-radius: 10px;
-    padding: 20px;
+    padding:40px;
     margin:auto;
  }
 
@@ -82,6 +82,10 @@ button{
     min-width: 80px;
  }
  
+.significadoIba{
+    font-size: 12px;
+    color: #26b826;
+}
 
  .title{
     text-align: center;
@@ -105,9 +109,6 @@ button{
     min-width: 80px;
  }
 
-::placeholder{
-    color:#6ef5f5;
-}
 /* FORMULARIO/MAPA */
 
 #map { 
@@ -217,9 +218,13 @@ button{
     color:#68BE5E;
 }
 
-.btnVolver2{
-    background-color: #ffffff48;
-    color:#68BE5E;
+.btnVolver{
+    width: 100px;
+    background-color: #4a4d4948;
+    border-color: #68be5e00;
+    border-radius: 8px; 
+    color:white;
+    margin-top: 10px;
 }
 
 .btnSalir {
@@ -231,24 +236,29 @@ button{
     margin:10px;    
 }
 
-.btnEmoji1 {
+.btnEmojiVer {
     border-radius: 6px;
-    border-color: #68be5e00;
-    height: 30px;
-    width:35px;
+    height:30px;
+    width:30px;
     color:white;
     background-color:#1D9BD5;
-    margin-right: 5.5px;
+    *margin-right: 5.5px;
 }
 
-.btnEmoji2 {
+.btnEmojiEditar {
     border-radius: 6px;
-    border-color: #68be5e00;
+    width:80px;
     height: 30px;
-    width:35px;
-    color:white;
-    background-color: #CCE5C9;
-    margin-right: 5.5px;
+    background-color: #68BE5E;
+    margin-right: 5.5px; 
+}
+.emojiVer {
+    width: 15px;
+    height: 10px;
+}
+.emojiEditar {
+    width: 15px;
+    height: 15px;
 }
 
 .butonContainer{
@@ -269,18 +279,47 @@ button{
 
 .btnBorrar{
     background-color: #fd4f4f;
-    height: 30px;
-    width:35px;
+    width:100px;
+    height: 35px;
+    color:white;
+    
+}
+.emojiBorrar {
+    width: 15px;
+    height: 20px;
+    margin:auto;
 }
 
 
 /* ADMIN/SOW */
 
 .table {
-    margin:20px;
-    max-width: 400px;
+    margin:10px;
     font-size: small;
     margin:auto;
-    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
+
+#boton-xml{
+    background-color:#1D9BD5;
+    width:100px;
+    height: 35px;
+    color:white;
+    margin-left: 5px;
+}
+
+.btnEmojiEditarSow{
+    background-color: #68BE5E;
+    width:100px;
+    height: 35px;
+    color:white;
+    margin-right: 5px;
+}
+.imgSow{
+    width: 250px;
+}
+ /* .delete{
+    display: flex;
+    justify-content: flex-end;
+ } */

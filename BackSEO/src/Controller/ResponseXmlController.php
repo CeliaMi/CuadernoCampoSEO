@@ -28,8 +28,6 @@ class ResponseXmlController extends AbstractController
                 'TipoAlerta' => $p->getTipoAmenaza(),
                 'Descripcion'=> $p->getDescripcion(),
                 'Ubicación' => $p->getUbicacion(),
-                'Tiempo de Desarrollo' => $p->getTiempoDesarrollo(),
-                'Superficie afectada' => $p->getSuperficieAfectada(),
                 'Gravedad' => $p->getSeveridadAmenaza(),
                 'Nombre' => $p->getNombreContacto(),
                 'Email' => $p->getEmailContacto(),
@@ -42,16 +40,16 @@ class ResponseXmlController extends AbstractController
         $response->setContent($xmlEncoder->encode($data, 'xml'));
         $response->headers->set('Content-Type', 'xml',);
 
-                // Proporcione un nombre para su archivo con extensión
+                // nombre para su archivo con extensión
                 $filename = 'Alerta.xml';
         
-                // El contenido creado dinámicamente del archivo
+                
                 $fileContent = $response;
                 
-                // Devuelve una respuesta con un contenido específico
+                
                 $respuesta= new Response($fileContent);
         
-                // Crea la disposición del archivo
+                // aquí me pone los headers
                 $disposition = $respuesta->headers->makeDisposition(
                     ResponseHeaderBag::DISPOSITION_ATTACHMENT,
                     $filename
@@ -60,8 +58,10 @@ class ResponseXmlController extends AbstractController
                 // Establecer la disposición del contenido
                 $respuesta->headers->set('Content-Disposition', $disposition);
         
-                // Dispatch request
-                return $respuesta;
-  }
+               
+                $response->setContentSafe();
+
+                return $response;
+            }
         
 }

@@ -1,16 +1,17 @@
 {% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Editar Alerta{% endblock %}
+{% block title %}Editar alerta{% endblock %}
 
 {% block body %}
-    <h1 class="title" >Editar Alerta</h1>
+    <h1 class="title" >Editar alerta</h1>
+    <section class="card container"> 
 
-    <a href="{{ path('app_alerta_index') }}"><button class='btnVolver1'>{{ button_label|default('Volver') }}</button></a>
+        <a href="{{ path('app_alerta_index') }}"><button class='btnSalir'>{{ button_label|default('Volver') }}</button></a>
 
-    {{ include('alerta/_form.html.twig', {'button_label': 'Actualizar'}) }}
-    
-    {{ include('alerta/_delete_form.html.twig') }}
-
-    <a href="{{ path('app_alerta_index') }}"><button class='btnVolver2'>{{ button_label|default('Volver') }}</button></a>
+        {{ include('alerta/_form.html.twig', {'button_label': 'Actualizar'}) }}
+        
+        <div class='delete'>{{ include('alerta/_delete_form.html.twig') }} </div>
+        <a href="{{ path('app_alerta_index') }}"><button class='btnVolver'>{{ button_label|default('Volver') }}</button></a>
+    </section>  
 
 {% endblock %}
