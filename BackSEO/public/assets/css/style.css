@@ -27,6 +27,27 @@ button{
     min-width: 90px;
 }
 
+<<<<<<< HEAD
+.banner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    clip-path: circle(50% at 50% 0)
+}
+.hero img{
+    background-size: auto;
+    
+}
+.hero h1{
+    color: #ffffff;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    font-size: 6rem;
+ }
+=======
+>>>>>>> 0d9baca30bbc0e7f08f70a513bf050ba4fc5419e
 
 /* FORMULARIO */
 
