@@ -65,28 +65,18 @@ nav{
     margin: 30px;
    
 }
-.baner img{
-    /*width: 1200px;*/
-    height: 200px;
+
+.imgPortada{
+    width: 100%;
+    height: 150px;
     display: flex;
-<<<<<<< HEAD
-    border-bottom-left-radius: 200px;
-    border-bottom-right-radius: 200px;
-    
-}
-=======
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
     
 } 
->>>>>>> 591a1d4f31e724dedde0932c11ec01bc5412aa5c
  
-<<<<<<< HEAD
-.baner h1{
-=======
 
 /* .banner img{
->>>>>>> 27ad74da83438130c18a9ffd4326be256e11eca6
     width: 1200px;
     width: 100%;
     display: flex;
@@ -149,6 +139,3 @@ p {
     width: 80px; 
     opacity: 50%;
 }
-
-
- 
