@@ -1,304 +1,304 @@
 * {
-    box-sizing: border-box;
-    }
+box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/fondo_AVE.png);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    min-width: 100px;
+}
+
+
+button{
+    color:white;
+    background-color: #68BE5E;
+    border-radius: 6px;
+    border-color: #68be5e00;
+    height: 30px;
+    width: 100px;
+}
+
+.contenedor {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    min-width: 90px;
+}
+
+
+/* FORMULARIO */
+
+.card-admin{
+    max-width: 800px;
+    min-width: 100px;
+    background-color: white;
+    border-radius: 10px;
+    padding:40px;
+    margin:auto;
+ }
+
+ .carduser{
+    max-width: 600px;
+    min-width: 90px;
+    margin:auto;
+    margin-top: 10px;
+ }
+
+ .card{
+    max-width: 600px;
+    min-width: 100px;
+    margin:auto;
+    margin-top: 50px;
+ }
+
+ .question{
+    background-color: #ffffff;
+    margin:20px;
+    padding:10%;
+    border-radius: 8px;
+    min-width: 80px;
+ }
+ 
+.significadoIba{
+    font-size: 12px;
+    color: #26b826;
+}
+
+ .title{
+    text-align: center;
+    margin:40px;
+    color:white;
+ }
+
+ label{
+    font-size:medium;
+    margin-top: 10px;
+ }
+
+
+ h4{
+    max-width:50%;
+    margin-top: 10px;
+ }
+
+ .set{
+    max-width: 400px;
+    min-width: 80px;
+ }
+
+/* FORMULARIO/MAPA */
+
+#map { 
+    height: 380px;
+    max-width: 380px;
+    min-width: 80px;
+    margin: 10px;
+}
+
+.invisible{
+    opacity: 0%;
+    height: 1px;
+}
+
+.visualizacionUbicacion{
+    height: 20px;
+    margin:auto;
+}
+
+.ubicacion{
+    max-width: 400px;
+    min-width: 80px;
+    height: 35px;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #cdcccc;
+    /* background-color: #E9ECEF; */
+    padding: 4px;
+
+}
+
+
+
+/* FORMULARIO/RESPUESTA */
+
+
+.logoSEO{
+    display: flex;
+    align-self: center;
+    width: 100px;
+}
+
+.textito{
+    font-size: small;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color: rgb(128, 127, 127);
+}
+
+.enlacito{
+    color: rgb(128, 127, 127);;
+}
+
+ .mundito {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+ }
+
+ /* LOGIN */
+
+
+.cardLogin{
+    max-width: 500px;
+    min-width: 100px;
+    margin:auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    padding:2%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+ 
+ .login{
+    max-width: 500px;
+    height: 325px;
+    width: 300px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    margin:auto;
+    margin-bottom: 50px;
+ }
+
+ .errorText{
+    color:rgb(247, 77, 77);
+    font-style: italic;
+}
+
+  /* ADMIN */
+
+nav{
+    display: flex;
+    justify-content: end;
+}
+
+button{
+    color:white;
+    background-color: #68BE5E;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.btnVolver1{
+    margin-left: 15px;
+    background-color: #ffffff48;
+    color:#68BE5E;
+}
+
+.btnVolver{
+    width: 100px;
+    background-color: #4a4d4948;
+    border-color: #68be5e00;
+    border-radius: 8px; 
+    color:white;
+    margin-top: 10px;
+}
+
+.btnSalir {
+    width: 80px;
+    background-color: #4a4d4948;
+    border-color: #68be5e00;
+    border-radius: 8px; 
+    color:white;
+    margin:10px;    
+}
+
+.btnEmojiVer {
+    border-radius: 6px;
+    height:30px;
+    width:30px;
+    color:white;
+    background-color:#1D9BD5;
+    *margin-right: 5.5px;
+}
+
+.btnEmojiEditar {
+    border-radius: 6px;
+    width:80px;
+    height: 30px;
+    background-color: #68BE5E;
+    margin-right: 5.5px; 
+}
+.emojiVer {
+    width: 15px;
+    height: 10px;
+}
+.emojiEditar {
+    width: 15px;
+    height: 15px;
+}
+
+.butonContainer{
+    display:block;
+    display: flex;
+    justify-content: center;
+    margin: auto;    
+}
+/* .btnEditar{
+    margin-left: 15px;
+    border-radius: 6px;
+    border-color: #68be5e00;
+    height: 30px;
+    width:35px;
+    color:white;
+    background-color: #CCE5C9;
+} */
+
+.btnBorrar{
+    background-color: #fd4f4f;
+    width:100px;
+    height: 35px;
+    color:white;
     
-    body{
-        background-image: url(../img/fondo_AVE.png);
-        font-family: 'Yanone Kaffeesatz', sans-serif;
-        min-width: 100px;
-    }
+}
+.emojiBorrar {
+    width: 15px;
+    height: 20px;
+    margin:auto;
+}
+
+
+/* ADMIN/SOW */
+
+.table {
+    margin:10px;
+    font-size: small;
+    margin:auto;
+    font-family: Arial, Helvetica, sans-serif;
     
-    
-    button{
-        color:white;
-        background-color: #68BE5E;
-        border-radius: 6px;
-        border-color: #68be5e00;
-        height: 30px;
-        width: 100px;
-    }
-    
-    .contenedor {
-        display: block;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 200px;
-        min-width: 90px;
-    }
-    
-    
-    /* FORMULARIO */
-    
-    .card-admin{
-        max-width: 800px;
-        min-width: 100px;
-        background-color: white;
-        border-radius: 10px;
-        padding:40px;
-        margin:auto;
-     }
-    
-     .carduser{
-        max-width: 600px;
-        min-width: 90px;
-        margin:auto;
-        margin-top: 10px;
-     }
-    
-     .card{
-        max-width: 600px;
-        min-width: 100px;
-        margin:auto;
-        margin-top: 50px;
-     }
-    
-     .question{
-        background-color: #ffffff;
-        margin:20px;
-        padding:10%;
-        border-radius: 8px;
-        min-width: 80px;
-     }
-     
-    .significadoIba{
-        font-size: 12px;
-        color: #26b826;
-    }
-    
-     .title{
-        text-align: center;
-        margin:40px;
-        color:white;
-     }
-    
-     label{
-        font-size:medium;
-        margin-top: 10px;
-     }
-    
-    
-     h4{
-        max-width:50%;
-        margin-top: 10px;
-     }
-    
-     .set{
-        max-width: 400px;
-        min-width: 80px;
-     }
-    
-    /* FORMULARIO/MAPA */
-    
-    #map { 
-        height: 380px;
-        max-width: 380px;
-        min-width: 80px;
-        margin: 10px;
-    }
-    
-    .invisible{
-        opacity: 0%;
-        height: 1px;
-    }
-    
-    .visualizacionUbicacion{
-        height: 20px;
-        margin:auto;
-    }
-    
-    .ubicacion{
-        max-width: 400px;
-        min-width: 80px;
-        height: 35px;
-        display: block;
-        border-radius: 5px;
-        border: 1px solid #cdcccc;
-        /* background-color: #E9ECEF; */
-        padding: 4px;
-    
-    }
-    
-    
-    
-    /* FORMULARIO/RESPUESTA */
-    
-    
-    .logoSEO{
-        display: flex;
-        align-self: center;
-        width: 100px;
-    }
-    
-    .textito{
-        font-size: small;
-        margin-top: 10px;
-        margin-bottom: 0px;
-        color: rgb(128, 127, 127);
-    }
-    
-    .enlacito{
-        color: rgb(128, 127, 127);;
-    }
-    
-     .mundito {
-        width: 300px;
-        display: flex;
-        justify-content: center;
-     }
-    
-     /* LOGIN */
-    
-    
-    .cardLogin{
-        max-width: 500px;
-        min-width: 100px;
-        margin:auto;
-        margin-top: 50px;
-        border-radius: 10px;
-        background-color: white;
-        padding:2%;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-     
-     .login{
-        max-width: 500px;
-        height: 325px;
-        width: 300px;
-        display:flex;
-        flex-direction:column;
-        justify-content: center;
-        margin:auto;
-        margin-bottom: 50px;
-     }
-    
-     .errorText{
-        color:rgb(247, 77, 77);
-        font-style: italic;
-    }
-    
-      /* ADMIN */
-    
-    nav{
-        display: flex;
-        justify-content: end;
-    }
-    
-    button{
-        color:white;
-        background-color: #68BE5E;
-        border-radius: 6px;
-        margin-top: 15px;
-    }
-    
-    .btnVolver1{
-        margin-left: 15px;
-        background-color: #ffffff48;
-        color:#68BE5E;
-    }
-    
-    .btnVolver{
-        width: 100px;
-        background-color: #4a4d4948;
-        border-color: #68be5e00;
-        border-radius: 8px; 
-        color:white;
-        margin-top: 10px;
-    }
-    
-    .btnSalir {
-        width: 80px;
-        background-color: #4a4d4948;
-        border-color: #68be5e00;
-        border-radius: 8px; 
-        color:white;
-        margin:10px;    
-    }
-    
-    .btnEmojiVer {
-        border-radius: 6px;
-        height:30px;
-        width:30px;
-        color:white;
-        background-color:#1D9BD5;
-        *margin-right: 5.5px;
-    }
-    
-    .btnEmojiEditar {
-        border-radius: 6px;
-        width:80px;
-        height: 30px;
-        background-color: #68BE5E;
-        margin-right: 5.5px; 
-    }
-    .emojiVer {
-        width: 15px;
-        height: 10px;
-    }
-    .emojiEditar {
-        width: 15px;
-        height: 15px;
-    }
-    
-    .butonContainer{
-        display:block;
-        display: flex;
-        justify-content: center;
-        margin: auto;    
-    }
-    /* .btnEditar{
-        margin-left: 15px;
-        border-radius: 6px;
-        border-color: #68be5e00;
-        height: 30px;
-        width:35px;
-        color:white;
-        background-color: #CCE5C9;
-    } */
-    
-    .btnBorrar{
-        background-color: #fd4f4f;
-        width:100px;
-        height: 35px;
-        color:white;
-        
-    }
-    .emojiBorrar {
-        width: 15px;
-        height: 20px;
-        margin:auto;
-    }
-    
-    
-    /* ADMIN/SOW */
-    
-    .table {
-        margin:10px;
-        font-size: small;
-        margin:auto;
-        font-family: Arial, Helvetica, sans-serif;
-        
-    }
-    
-    #boton-xml{
-        background-color:#1D9BD5;
-        width:100px;
-        height: 35px;
-        color:white;
-        margin-left: 5px;
-    }
-    
-    .btnEmojiEditarSow{
-        background-color: #68BE5E;
-        width:100px;
-        height: 35px;
-        color:white;
-        margin-right: 5px;
-    }
-    .imgSow{
-        width: 250px;
-    }
-     /* .delete{
-        display: flex;
-        justify-content: flex-end;
-     } */
+}
+
+#boton-xml{
+    background-color:#1D9BD5;
+    width:100px;
+    height: 35px;
+    color:white;
+    margin-left: 5px;
+}
+
+.btnEmojiEditarSow{
+    background-color: #68BE5E;
+    width:100px;
+    height: 35px;
+    color:white;
+    margin-right: 5px;
+}
+.imgSow{
+    width: 250px;
+}
+ /* .delete{
+    display: flex;
+    justify-content: flex-end;
+ } */

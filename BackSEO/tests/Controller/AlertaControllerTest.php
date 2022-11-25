@@ -21,7 +21,9 @@
 
 //     protected function setUp(): void
 //     {
-//         $this->client = static::createClient();
+//         // $this->client = static::createClient();
+//         // dump($this->client);
+//         // die;
 //         $this->repository = static::getContainer()->get('doctrine')->getRepository(Alerta::class);
 
 //         foreach ($this->repository->findAll() as $object) {

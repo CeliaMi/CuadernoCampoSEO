@@ -3,6 +3,8 @@ namespace App\tests\Controller;
  
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use App\Entity\Alerta;
+use App\Repository\AlertaRepository;
  
 class ProfileControllerTest extends WebTestCase
 {
@@ -21,7 +23,7 @@ class ProfileControllerTest extends WebTestCase
  
         // el usuario ya está logueado, así que pueden testear páginas protegidas
          $client->request('GET', 'http://127.0.0.1:8000/alerta/');
-        //  $this->assertResponseIsSuccessful();
+         $this->assertResponseIsSuccessful();
          $this->assertSelectorTextContains('h1', 'Alertas');
     }
 }
